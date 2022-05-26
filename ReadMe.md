@@ -64,7 +64,7 @@
 
 #### <-- =================== -->
 
-## `Public-Key`
+## [ Public-Key ]
 
 ### -- Go To Github Website - Settings - SSH And GPG Keys - Click On New SSH Key
 
@@ -74,7 +74,7 @@
 
 #### <-- =================== -->
 
-## `Privete-Key`
+## [ Privete-Key ]
 
 ### -- Go To Gethub Website - Repository - Settings - Deploy Key - Add Deploy Key
 
