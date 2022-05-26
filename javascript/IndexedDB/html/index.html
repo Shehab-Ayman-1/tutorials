@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IndexedDB</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+
+	<body>
+		<!-- ======================================== Header ========================================== -->
+		<header><h1>Indexed DB</h1></header>
+
+		<!-- ========================================= Main =========================================== -->
+		<main>
+			<p>This example is using plain vanilla JS and core indexedDB methods.</p>
+			<p>If you are familiar with document databases like MongoDB, you can think of an ObjectStore as a collection.</p>
+			<p>The Core Object and Interfaces are:</p>
+
+			<ul>
+				<li><code> window.indexedDB => </code> The database object holds Object Stores.</li>
+				<li><code> IDB ObjectStore => </code> An Object Store inside a database. ( A Collection of objects )</li>
+				<li><code> IDB Request => </code> A request object for add, put, delete, etc.</li>
+				<li><code> IDB Transaction => </code> A wrapper around requests.</li>
+				<li><code> IDB Index => </code> An index added to an Object Store</li>
+				<li><code> IDB Cursor => </code> To track current position inside the results of a request.</li>
+				<li><code> IDB KeyRange => </code> A range of values for matching a key.</li>
+			</ul>
+
+			<form id="Form" name="whiskeyForm">
+				<fieldset>
+					<label for="name">Whiskey: </label> <br />
+					<input type="text" id="name" placeholder="Enter Your Whiskey" />
+					<br />
+					<label for="country">Country of Origin: </label><br />
+					<input type="text" id="country" placeholder="Enter Your Country" />
+					<br />
+					<label for="age">Years Old: </label><br />
+					<input type="text" id="age" inputmode="numeric" pattern="[\d]+" placeholder="Enter Your Age" />
+					<br />
+					<br />
+					<input type="checkbox" id="isOwned" value="yes" />
+					<label for="isOwned">Owned: </label>
+					<br />
+					<button id="btnAdd">Add Whiskey</button>
+					<button id="btnDelete">Delete Whiskey</button>
+					<button id="btnUpdate">Update Whiskey</button>
+					<button id="btnClear">Reset Form</button>
+				</fieldset>
+			</form>
+
+			<section>
+				<h3>List of Whiskeys</h3>
+				<!-- build list here -->
+				<ul class="wList"></ul>
+			</section>
+		</main>
+
+		<!-- ======================================= JavaScript ======================================= -->
+		<script type="module" src="../js/Main.js"></script>
+	</body>
+</html>

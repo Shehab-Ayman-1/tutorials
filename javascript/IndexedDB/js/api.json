@@ -1,0 +1,37 @@
+[
+	{
+		"id": "L0H67UMJ-01DA977YJLNZ",
+		"name": "Shehab",
+		"age": 21,
+		"country": "Egypt",
+		"isOwned": true
+	},
+	{
+		"id": "L0H68EC4-01ZRSNATVAJX",
+		"name": "Hesham",
+		"age": 22,
+		"country": "Egypt",
+		"isOwned": false
+	},
+	{
+		"id": "L0H68NDZ-02E38H8AXT1Z",
+		"name": "Aya",
+		"age": 23,
+		"country": "Egypt",
+		"isOwned": true
+	},
+	{
+		"id": "L0H68U2S-00QXODE8FABZ",
+		"name": "Salma",
+		"age": 24,
+		"country": "Egypt",
+		"isOwned": false
+	},
+	{
+		"id": "L0H68ZRK-01MU2524C3SB",
+		"name": "Rahma",
+		"age": 25,
+		"country": "Egypt",
+		"isOwned": true
+	}
+]
