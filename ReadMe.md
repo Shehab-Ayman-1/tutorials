@@ -1,6 +1,6 @@
 #### <-- =================================== -->
 
-# `Upload Files From Workspace To Remote Repository`
+# `Upload From Workspace To Remote Repository`
 
 #### <-- =================================== -->
 

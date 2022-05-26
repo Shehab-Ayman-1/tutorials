@@ -2,13 +2,13 @@
 
 #### <-- =================================== -->
 
-# [ Upload Files From Workspace To Remote Repository ]
+# `Upload From Workspace To Remote Repository`
 
 #### <-- =================================== -->
 
 ### -- [ 1 ] git status <!-- fetch all the files thats not in the stage -->
 
-### -- [ 2 ] git add \* <!-- upload all the files from the workspace to the local stage -->
+### -- [ 2 ] git add [filename | | *] <!-- upload all the files from the workspace to the local stage -->
 
 ### -- [ 3 ] git commit -m "commit description" <!-- upload all the files from the local stage to the local Repository -->
 
@@ -38,7 +38,7 @@
 
 #### <-- =================================== -->
 
-# [ Branches ]
+# `Branches`
 
 #### <-- =================================== -->
 
@@ -58,7 +58,7 @@
 
 #### <-- =================================== -->
 
-# [ ssh-Key ]
+# `ssh-Key`
 
 #### <-- =================================== -->
 
@@ -66,7 +66,7 @@
 
 #### <-- =================== -->
 
-## [ Public-Key ]
+## `Public-Key`
 
 ### -- Go To Github Website - Settings - SSH And GPG Keys - Click On New SSH Key
 
@@ -76,7 +76,7 @@
 
 #### <-- =================== -->
 
-## [ Privete-Key ]
+## `Privete-Key`
 
 ### -- Go To Gethub Website - Repository - Settings - Deploy Key - Add Deploy Key
 
@@ -88,7 +88,7 @@
 
 #### <-- =================================== -->
 
-# [ Config ]
+# `Config`
 
 #### <-- =================================== -->
 
@@ -100,7 +100,7 @@
 
 #### <-- =================================== -->
 
-# [ Alias ]
+# `Alias`
 
 #### <-- =================================== -->
 
@@ -112,7 +112,7 @@
 
 #### <-- =================================== -->
 
-# [ Reset-Commets ]
+# `Reset-Commets`
 
 #### <-- =================================== -->
 
@@ -133,7 +133,7 @@
 
 #### <-- =================================== -->
 
-# [ Tags ]
+# `Tags`
 
 #### <-- =================================== -->
 
@@ -161,4 +161,4 @@
 
 ### -- git tag -a [ tag version ] -m [ Description ] <!-- Create A New Tag -->
 
-### -- git push origin [ tag version | | * ] <!-- Upload The Tag On The Remote Repository  -->
+### -- git push origin [ tag version | | * ] <!-- Upload The Tag On The Remote Repository -->
