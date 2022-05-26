@@ -1,0 +1,60 @@
+.user-info {
+	@include Flex(space-between, center);
+	cursor: pointer;
+	img {
+		width: 40px;
+		height: 40px;
+		border-radius: Get(r100);
+	}
+	p {
+		font-weight: bold;
+		padding: padding(p0, p3) padding(p0, p1);
+	}
+}
+.mega-menu {
+	@include Absolute(tr, 50px, -15px);
+	background-color: Get(white);
+	color: Get(dark);
+	width: 550px;
+	box-shadow: Get(box-shadow);
+	clip-path: polygon(25% 0%, 75% 0%, 100% 0, 100% 0, 0 0, 0 0);
+	&.open {
+		clip-path: polygon(25% 0%, 75% 0%, 100% 0, 100% 100%, 0 100%, 0 0);
+	}
+	.mega-header {
+		padding: Get(p2);
+		h3 {
+			color: Get(dark);
+			font-size: 25px;
+		}
+		p {
+			color: Get(second-color);
+			font-size: 16px;
+		}
+	}
+	.mega-body {
+		padding: Get(p2);
+		line-height: 2;
+		p {
+			color: Get(light-color);
+			font-size: 16px;
+		}
+	}
+	.mega-footer {
+		@include Flex(space-between, center);
+		padding: Get(p2);
+		.label {
+			@include Flex(space-between, center);
+			gap: 1rem;
+			.fa-gear {
+				color: Get(main-color);
+			}
+			.fa-user {
+				color: Get(second-color);
+			}
+			.fa-power-off {
+				color: Get(main-color);
+			}
+		}
+	}
+}

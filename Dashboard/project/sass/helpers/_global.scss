@@ -1,0 +1,183 @@
+@use "./mixins" as *;
+
+// Set The Global Variables
+:root {
+	--white: #fff;
+	--black: #000;
+	--dark: #161a27;
+	--main-color: #e91e63;
+	--second-color: #2196f3;
+	--light-color: #aaa;
+	--light-bg: #eee;
+	--border: 1px solid var(--main-color);
+	--box-shadow: 5px 5px 15px var(--main-color);
+
+	--p0: 0;
+	--p1: 10px;
+	--p2: 15px;
+	--p3: 20px;
+	--p4: 25px;
+	--p5: 30px;
+
+	--m0: 0;
+	--m1: 10px;
+	--m2: 15px;
+	--m3: 20px;
+	--m4: 25px;
+	--m5: 30px;
+
+	--r0: 0;
+	--r1: 10px;
+	--r2: 15px;
+	--r3: 20px;
+	--r4: 25px;
+	--r5: 30px;
+	--r100: 100%;
+}
+
+@function Get($att) {
+	@return var(--#{$att});
+}
+
+@function padding($p1, $p2) {
+	@return var(--#{$p1}) var(--#{$p2});
+}
+
+// Basic Page Style
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	list-style: none !important;
+	box-sizing: border-box !important;
+	text-decoration: none !important;
+	text-transform: capitalize !important;
+	transition: all 0.2s ease-in-out;
+}
+
+html {
+	width: 100vw;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+
+	::-webkit-scrollbar {
+		width: 0.7rem;
+	}
+	::-webkit-scrollbar-thumb {
+		background: Get(main-color);
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-track {
+		background: Get(white);
+	}
+	::selection {
+		background: Get(main-color);
+		color: Get(white);
+		text-shadow: 10px 10px 10px Get(black);
+	}
+	p {
+		margin-bottom: 0;
+	}
+	i {
+		color: Get(black);
+		font-size: 22px;
+		padding: 0 5px;
+		cursor: pointer;
+		&:hover {
+			color: Get(main-color);
+		}
+	}
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+// Basic Classes
+.Show {
+	display: initial;
+}
+
+.Hide {
+	display: none;
+}
+
+.btn {
+	background: transparent;
+	color: Get(black);
+	font-size: 1.1em;
+	font-weight: 500;
+	padding: 5px 30px;
+	margin: 15px auto;
+	border: 2px solid Get(main-color);
+	border-radius: 7px;
+	cursor: pointer;
+	&:hover {
+		background-color: Get(main-color);
+		color: Get(white);
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.title {
+	color: Get(dark);
+	font-size: 2.5em;
+	font-weight: 900;
+	padding: Get(p5);
+	text-align: center;
+	white-space: nowrap;
+	@include Width(md) {
+		font-size: 2em;
+		padding: Get(p3);
+	}
+	@include Width(sm) {
+		font-size: 1.5em;
+		padding: Get(p1);
+	}
+	@include Width(xsm) {
+		font-size: 1.2em;
+		padding: Get(p0);
+	}
+	span {
+		background: Get(main-color);
+		color: Get(white);
+		padding: padding(p0, p5);
+		clip-path: polygon(100% 0, 95% 50%, 100% 100%, 0% 100%, 5% 50%, 0% 0%);
+		will-change: clip-path padding width font-size;
+		@include Width(xsm) {
+			padding: padding(p0, p4);
+		}
+	}
+}
+
+// Swiper Library
+.swiper-pagination {
+	bottom: -5px !important;
+	.swiper-pagination-bullet-active {
+		width: 20px;
+		border-radius: 4px;
+	}
+	.swiper-pagination-bullet {
+		background: Get(main-color);
+	}
+}
+
+// Basic Extends
+%box {
+	background-color: Get(white);
+	padding: padding(p5, p2);
+	margin: Get(p4) auto;
+	line-height: 2;
+	text-align: center;
+	outline: Get(border);
+	outline-offset: -15px;
+	cursor: pointer;
+	border-radius: Get(r1);
+	&:hover {
+		outline-offset: 0;
+		box-shadow: Get(box-shadow);
+	}
+}

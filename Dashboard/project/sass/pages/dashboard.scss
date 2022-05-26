@@ -1,0 +1,14 @@
+@use "../helpers/global" as *;
+@use "../helpers/mixins" as *;
+
+@use "../options/colors" as *;
+@use "../options/fonts" as *;
+
+@use "../components/header" as *;
+@use "../components/sidebar" as *;
+@use "../components/settings" as *;
+@use "../components/content-area" as *;
+
+body {
+	background-color: Get(light-bg);
+}

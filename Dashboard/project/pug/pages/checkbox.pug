@@ -1,0 +1,29 @@
+- let pageTitle = "Checkbox Page"
+doctype html
+html(lang="en")
+    head
+        // Import Meta Tags In The Page
+        include ../layout/meta
+        title #{pageTitle}
+        // Import Css Links In The Page
+        include ../layout/css-links
+
+    body.DashBoard-Body
+        // ========================================== Header ==============================================
+        include ../components/header
+
+        // ========================================== Sidebar =============================================
+        include ../components/sidebar
+
+        // ========================================== Settings ============================================
+        include ../components/settings
+
+        // ======================================== Content Area ==========================================
+        include ../components/contentArea
+
+        // ========================================= Javascript ===========================================
+        // Import js links
+        include ../layout/js-links
+        // Import script link
+        script(type="module" src="../js/pages/dashboard.js") 
+        

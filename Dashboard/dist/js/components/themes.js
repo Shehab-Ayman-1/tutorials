@@ -1,0 +1,1 @@
+export default function themes(){let e=document.querySelectorAll("aside.setting-side .nested-ul .nested-link"),t=[];e.forEach(e=>{t.push(e.dataset.theme),e.addEventListener("click",()=>{t.forEach(e=>document.body.classList.remove(e)),document.body.classList.add(e.dataset.theme)})})}

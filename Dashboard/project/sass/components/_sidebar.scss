@@ -1,0 +1,84 @@
+@use "../helpers/global" as *;
+@use "../helpers/mixins" as *;
+aside.sidebar#sidebar {
+	@include Fixed(tl, 0, 0);
+	background-color: #161a27;
+	color: Get(white);
+	width: 250px;
+	min-height: 100vh;
+	&.remove {
+		left: -250px;
+	}
+	.dashboard-title {
+		color: Get(white);
+		padding: Get(p2);
+		text-align: center;
+	}
+	.main-ul {
+		.main-link {
+			color: Get(white);
+			line-height: 2.3;
+			position: relative;
+			cursor: pointer;
+			&::before {
+				@include Absolute(tl, 14px, -15px);
+				content: "";
+				width: 10px;
+				height: 10px;
+				border: 2px solid white;
+				border-radius: Get(r100);
+			}
+
+			.main-head-link {
+				color: Get(white);
+				&.active-page {
+					color: Get(main-color);
+					font-weight: bold;
+				}
+			}
+
+			.link-title {
+				@include Flex(space-between, center);
+				padding-right: Get(p1);
+				.link-arrow {
+					color: Get(white);
+					padding-right: Get(p2);
+				}
+			}
+
+			.nested-ul {
+				padding-left: 3.5px;
+				transition: 0.3s ease-in-out;
+				.nested-link {
+					position: relative;
+					&:before {
+						@include Absolute(tl, 0, -15px);
+						content: "";
+						background-color: Get(light-color);
+						width: 3px;
+						height: 100%;
+					}
+					&:hover:after {
+						@include Absolute(tl, 0, -15px);
+						content: "";
+						background-color: Get(white);
+						width: 3px;
+						height: 100%;
+					}
+					.nested-head-link {
+						color: Get(light-color);
+						&.active-page {
+							color: Get(main-color);
+						}
+					}
+				}
+			}
+		}
+	}
+	@include Width(xmd) {
+		left: -250px;
+		&.remove {
+			left: 0;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+header.Header#Header 
+    .left-icons
+        i.fa.fa-bars#close-sidebar
+        span.dropdown
+            i.fa.fa-bell#Notifications(data-bs-toggle='dropdown' data-bs-auto-close="false" data-bs-display="static" aria-expanded='false')
+            ul.dropdown-menu(aria-labelledby='Notifications')
+                .noti-header 
+                    p Notifications 
+                    p 50
+                .nori-body
+                    ul 
+                        li 
+                            i.far.fa-envelope 
+                            p.content You Got Email From......
+                        li 
+                            i.fas.fa-money-bill-alt.money-icon.green
+                            p.content You Got Money From......
+                        li 
+                            i.fas.fa-thumbs-up 
+                            p.content You Got Like From......
+                        li 
+                            i.far.fa-envelope.green
+                            p.content You Got Email From......
+                        li 
+                            i.fas.fa-money-bill-alt.money-icon 
+                            p.content You Got Money From......
+                        li 
+                            i.fas.fa-thumbs-up.green
+                            p.content You Got Like From......
+                .noti-footer 
+                    p View All Notifications
+
+    .right-icons 
+        .user-info 
+            img(src="../images/pic-1.png", alt="pic-1")
+            p Shehab Ayman
+
+        i.fa.fa-gear.fa-spin.open-setting
+
+        include ./meguMenu

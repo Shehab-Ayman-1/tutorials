@@ -1,0 +1,113 @@
+$themes: (
+	blue-theme: (
+		maincolor: #00a8ff,
+		secondcolor: #0097e6,
+		lightcolor: #aaa,
+		lightbg: #eee,
+	),
+	purple-theme: (
+		maincolor: #9c88ff,
+		secondcolor: #8c7ae6,
+		lightcolor: #aaa,
+		lightbg: #eee,
+	),
+	yellow-theme: (
+		maincolor: #fbc531,
+		secondcolor: #e1b12c,
+		lightcolor: #aaa,
+		lightbg: #eee,
+	),
+	green-theme: (
+		maincolor: #4cd137,
+		secondcolor: #44bd32,
+		lightcolor: #aaa,
+		lightbg: #eee,
+	),
+	red-theme: (
+		maincolor: #e84118,
+		secondcolor: #c23616,
+		lightcolor: #aaa,
+		lightbg: #eee,
+	),
+	silver-theme: (
+		maincolor: #7f8fa6,
+		secondcolor: #718093,
+		lightcolor: #aaa,
+		lightbg: #eee,
+	),
+	darkBlue-theme: (
+		maincolor: #273c75,
+		secondcolor: #192a56,
+		lightcolor: #aaa,
+		lightbg: #eee,
+	),
+	black-theme: (
+		maincolor: #353b48,
+		secondcolor: #2f3640,
+		lightcolor: #aaa,
+		lightbg: #eee,
+	),
+);
+
+@each $theme, $map in $themes {
+	body.#{$theme} {
+		$main-color: map-get($map, maincolor);
+		$second-color: map-get($map, second);
+		@if $theme == "blue-theme" {
+			--main-color: #00a8ff;
+			--second-color: #2f3640;
+			--dark: #00a8ff;
+			--border: 1px solid var(--main-color);
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "purple-theme" {
+			--main-color: #9c88ff;
+			--second-color: #0097e6;
+			--dark: #9c88ff;
+			--border: 1px solid var(--main-color);
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "yellow-theme" {
+			--main-color: #fbc531;
+			--second-color: #8c7ae6;
+			--dark: #fbc531;
+			--border: 1px solid var(--main-color);
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "green-theme" {
+			--main-color: #4cd137;
+			--second-color: #e1b12c;
+			--dark: #4cd137;
+			--border: 1px solid var(--main-color);
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "red-theme" {
+			--main-color: #e84118;
+			--second-color: #44bd32;
+			--dark: #e84118;
+			--border: 1px solid var(--main-color);
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "silver-theme" {
+			--main-color: #7f8fa6;
+			--second-color: #c23616;
+			--dark: #7f8fa6;
+			--border: 1px solid var(--main-color);
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "darkBlue-theme" {
+			--main-color: #273c75;
+			--second-color: #718093;
+			--dark: #273c75;
+			--border: 1px solid var(--main-color);
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+		@if $theme == "black-theme" {
+			--main-color: #353b48;
+			--second-color: #192a56;
+			--dark: #353b48;
+			--border: 1px solid var(--main-color);
+			--box-shadow: 5px 5px 15px var(--main-color);
+		}
+	}
+}
