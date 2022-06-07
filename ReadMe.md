@@ -1,3 +1,4 @@
+<a href="https://cms-tc.pbskids.org/xavierriddlewebsite/resources/assets/img/xavier-tablet.png" align="center"></a>
 #### <-- =================================== -->
 
 # `Upload From Workspace To Remote Repository`
