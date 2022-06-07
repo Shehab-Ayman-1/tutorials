@@ -1,0 +1,1 @@
+export default function addNums(t,u){return t+u}

@@ -1,0 +1,14 @@
+include ../components/mixins
+doctype html
+html(lang="en")
+    head
+        include ../layout/meta
+        include ../layout/css-links
+        title About Page
+    body 
+        h3 About Page
+        +card("../images/img.png", "Card Title", "Card Description", "Card Footer")
+        
+        // ============================= Javascript =============================
+        include ../layout/js-links
+        script(src="../js/about.js" type="module" defer) 

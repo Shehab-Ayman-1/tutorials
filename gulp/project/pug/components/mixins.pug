@@ -1,0 +1,9 @@
+mixin card(img, title, desc, footer)
+    .card-box 
+        .card-img 
+            img(src=img, alt="img-found")
+        .card-body 
+            h3.title=title
+            p.desc=desc
+        .card-footer 
+            p.footer=footer

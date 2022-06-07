@@ -1,0 +1,1 @@
+export default function getFullName(e,t){return e+t}
