@@ -10,7 +10,7 @@ export default function Header() {
 		let angle = head.querySelector(".fas");
 
 		head.nextElementSibling.classList.toggle("hide-height");
-		if (head.nextElementSibling.classList.contains("hide-height")) angle.style.transform = "rotate(-90deg)";
+		if (!head.nextElementSibling.classList.contains("hide-height")) angle.style.transform = "rotate(90deg)";
 		else angle.style.transform = "rotate(0deg)";
 	};
 
@@ -55,7 +55,7 @@ export default function Header() {
 				<div className="phrase basics">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Basics</h3>
-						<i className="fas fa-angle-down"></i>
+						<i className="fas fa-angle-right"></i>
 					</li>
 					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">
@@ -88,22 +88,37 @@ export default function Header() {
 								conditions
 							</NavLink>
 						</li>
+					</ul>
+				</div>
+
+				<div className="phrase basics">
+					<li className="main-link" onClick={toggleList}>
+						<h3 className="link">style</h3>
+						<i className="fas fa-angle-right"></i>
+					</li>
+					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">
-							<NavLink to={"basics/simple-style"} className="link" onClick={closeNavbar}>
-								Styles
+							<NavLink to={"style/simple-style"} className="link" onClick={closeNavbar}>
+								simple style
 							</NavLink>
 						</li>
 						<li className="nested-link">
-							<NavLink to={"basics/multiple-style"} className="link" onClick={closeNavbar}>
+							<NavLink to={"style/multiple-style"} className="link" onClick={closeNavbar}>
 								Multiple Style
+							</NavLink>
+						</li>
+						<li className="nested-link">
+							<NavLink to={"style/styled-components-library"} className="link" onClick={closeNavbar}>
+								styled-component library
 							</NavLink>
 						</li>
 					</ul>
 				</div>
+
 				<div className="phrase forms">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Forms</h3>
-						<i className="fas fa-angle-down"></i>
+						<i className="fas fa-angle-right"></i>
 					</li>
 					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">
@@ -121,7 +136,7 @@ export default function Header() {
 				<div className="phrase life-cicles">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Life Cicles</h3>
-						<i className="fas fa-angle-down"></i>
+						<i className="fas fa-angle-right"></i>
 					</li>
 					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">
@@ -149,7 +164,7 @@ export default function Header() {
 				<div className="phrase ajax-requests">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Ajax Requests</h3>
-						<i className="fas fa-angle-down"></i>
+						<i className="fas fa-angle-right"></i>
 					</li>
 					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">
@@ -177,7 +192,7 @@ export default function Header() {
 				<div className="phrase hooks">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Hooks</h3>
-						<i className="fas fa-angle-down"></i>
+						<i className="fas fa-angle-right"></i>
 					</li>
 					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">
@@ -220,7 +235,7 @@ export default function Header() {
 				<div className="phrase redux">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Redux</h3>
-						<i className="fas fa-angle-down"></i>
+						<i className="fas fa-angle-right"></i>
 					</li>
 					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">
@@ -234,7 +249,7 @@ export default function Header() {
 							</NavLink>
 						</li>
 						<li className="nested-link">
-							<NavLink to={"redux/signin"} className="link" onClick={closeNavbar}>
+							<NavLink to={"redux/sign-in"} className="link" onClick={closeNavbar}>
 								Sign In
 							</NavLink>
 						</li>
@@ -248,12 +263,17 @@ export default function Header() {
 								to do list
 							</NavLink>
 						</li>
+						<li className="nested-link">
+							<NavLink to={"redux/redux-thunk"} className="link" onClick={closeNavbar}>
+								Redux Thunk
+							</NavLink>
+						</li>
 					</ul>
 				</div>
 				<div className="phrase practice">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Practice</h3>
-						<i className="fas fa-angle-down"></i>
+						<i className="fas fa-angle-right"></i>
 					</li>
 					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">

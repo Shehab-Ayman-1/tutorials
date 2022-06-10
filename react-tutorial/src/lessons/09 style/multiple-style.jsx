@@ -4,7 +4,6 @@ import classNames from "classnames";
 export default function multipleStyle() {
 	function simpleWay() {
 		let multipleClasses = "";
-
 		if (true) multipleClasses += "green ";
 		if (true) multipleClasses += "bold ";
 		if (true) multipleClasses += "black-text ";

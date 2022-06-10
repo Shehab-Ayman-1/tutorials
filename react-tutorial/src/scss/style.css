@@ -549,7 +549,7 @@ body[data-theme=nightMode-theme] .swiper-pagination-bullet-active {
   left: 0;
   background-color: #08071b;
   color: var(--white);
-  width: 265px;
+  width: 280px;
   height: 100vh;
   padding: var(--p3);
   text-align: left;

@@ -16,8 +16,11 @@ import State from "./lessons/03 state/state";
 import Events from "./lessons/04 events/onchange";
 import Loops from "./lessons/05 concepts/loops";
 import Conditions from "./lessons/05 concepts/conditions";
-import NormalStyle from "./lessons/09 style/normalStyle";
-import MultipleStyle from "./lessons/09 style/multipleStyle";
+
+/* Style */
+import NormalStyle from "./lessons/09 style/normal-style";
+import MultipleStyle from "./lessons/09 style/multiple-style";
+import StyledComponents from "./lessons/09 style/styled-components-lib";
 
 /* Life Cicle */
 import ComponentWillMount from "./lessons/06 lifeCicle/clock";
@@ -56,6 +59,7 @@ import ReduxNewCounter from "./lessons/13 redux/counter/new-counter";
 import ReduxSignin from "./lessons/13 redux/signin/signin";
 import Ecommerce from "./lessons/13 redux/e-commerce/e-commerce";
 import ReduxToDoList from "./lessons/13 redux/to-do-list/to-do-list";
+import ReduxThunk from "./lessons/13 redux/redux-thunk/redux-thunk.jsx";
 
 function App() {
 	return (
@@ -74,8 +78,12 @@ function App() {
 					<Route path="events" element={<Events />} />
 					<Route path="loops" element={<Loops />} />
 					<Route path="conditions" element={<Conditions />} />
+				</Route>
+
+				<Route path="/style">
 					<Route path="simple-style" element={<NormalStyle />} />
 					<Route path="multiple-style" element={<MultipleStyle />} />
+					<Route path="styled-components-library" element={<StyledComponents />} />
 				</Route>
 
 				{/* Life Cicle */}
@@ -121,9 +129,10 @@ function App() {
 				<Route path="/redux">
 					<Route path="old-counter" element={<ReduxOldCounter />} />
 					<Route path="new-counter" element={<ReduxNewCounter />} />
-					<Route path="signin" element={<ReduxSignin />} />
+					<Route path="sign-in" element={<ReduxSignin />} />
 					<Route path="e-commerce" element={<Ecommerce />} />
 					<Route path="to-do-list" element={<ReduxToDoList />} />
+					<Route path="redux-thunk" element={<ReduxThunk />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

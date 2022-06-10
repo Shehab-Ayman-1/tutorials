@@ -1,6 +1,6 @@
 import React from "react";
 import { UseCount } from "./hooks/counter";
-import { useRandomBg, randColor } from "./hooks/randomBg.js";
+import { useRandomBg, randColor } from "./hooks/randomBg";
 
 export default function CustomeHook() {
 	const { count, handleIncreament, handleDecreament } = UseCount();
