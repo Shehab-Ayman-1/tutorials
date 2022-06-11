@@ -24,11 +24,9 @@ export default function Header() {
 		navbar.classList.remove("hide-left-clip");
 	};
 
-	useEffect(() => {
-		setInterval(() => {
-			setTime(new Date());
-		}, 1000);
-	}, []);
+	setInterval(() => {
+		setTime(new Date());
+	}, 1000);
 
 	return (
 		<>
@@ -52,6 +50,7 @@ export default function Header() {
 						React Tutorial
 					</Link>
 				</div>
+
 				<div className="phrase basics">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Basics</h3>
@@ -91,7 +90,7 @@ export default function Header() {
 					</ul>
 				</div>
 
-				<div className="phrase basics">
+				<div className="phrase style">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">style</h3>
 						<i className="fas fa-angle-right"></i>
@@ -133,6 +132,7 @@ export default function Header() {
 						</li>
 					</ul>
 				</div>
+
 				<div className="phrase life-cicles">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Life Cicles</h3>
@@ -161,6 +161,7 @@ export default function Header() {
 						</li>
 					</ul>
 				</div>
+
 				<div className="phrase ajax-requests">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Ajax Requests</h3>
@@ -189,6 +190,7 @@ export default function Header() {
 						</li>
 					</ul>
 				</div>
+
 				<div className="phrase hooks">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Hooks</h3>
@@ -232,6 +234,7 @@ export default function Header() {
 						</li>
 					</ul>
 				</div>
+
 				<div className="phrase redux">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Redux</h3>
@@ -264,12 +267,13 @@ export default function Header() {
 							</NavLink>
 						</li>
 						<li className="nested-link">
-							<NavLink to={"redux/redux-thunk"} className="link" onClick={closeNavbar}>
+							<NavLink to={"redux/redux-thunk/view-posts"} className="link" onClick={closeNavbar}>
 								Redux Thunk
 							</NavLink>
 						</li>
 					</ul>
 				</div>
+
 				<div className="phrase practice">
 					<li className="main-link" onClick={toggleList}>
 						<h3 className="link">Practice</h3>

@@ -10,8 +10,8 @@ import ToDoListSlice from "../new-redux/to-do-list-slice";
 import thunkSlice from "../new-redux/thunk-slice";
 
 // Simple Redux =>With CombineReducers()
-const enhance = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
-export const oldStore = createStore(Reducers, enhance);
+// const enhance = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
+// export const oldStore = createStore(Reducers, enhance);
 
 // Redux Toolkit => Without CombineReducers()
 export const newStore = configureStore({

@@ -66,6 +66,7 @@
 	.phrase {
 		& {
 			&.hooks .main-list,
+			&.redux .main-list,
 			&.basics .main-list {
 				max-height: 300px;
 			}
@@ -91,7 +92,7 @@
 			}
 		}
 		.main-list {
-			max-height: 200px;
+			max-height: 150px;
 			padding-left: get(p5);
 			transition: all 0.5s linear;
 			overflow: hidden;

@@ -2,7 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchApiData = createAsyncThunk("usersData", async () => {
-	const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+	const response = await axios.get("https://jsonplaceholder.typicode.com/posts?_limit=20");
+	console.log(response);
 	return response.data;
 });
 
@@ -25,10 +26,20 @@ const thunkSlice = createSlice({
 		},
 		// This Action Is Work If The Request Is Success, To Load The Data In The State
 		[fetchApiData.fulfilled]: (state, action) => {
+			let stringify = (newData) => localStorage.setItem("data", JSON.stringify(newData));
+			let parse = () => JSON.parse(localStorage.getItem("data"));
 			state.data = action.payload;
 			state.loading = false;
 			state.error = false;
 			console.log(action);
+
+			if (action.payload.length > 0) {
+				stringify(action.payload);
+				state.data = parse();
+			} else {
+				stringify([]);
+				state.data = parse();
+			}
 		},
 		// This Action Is Work To Get The Error While The Asynchronous Function Is Not Get The Data From The Api
 		[fetchApiData.rejected]: (state, action) => {

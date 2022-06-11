@@ -1,4 +1,5 @@
 // React
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Css Style
@@ -59,6 +60,7 @@ import ReduxNewCounter from "./lessons/13 redux/counter/new-counter";
 import ReduxSignin from "./lessons/13 redux/signin/signin";
 import Ecommerce from "./lessons/13 redux/e-commerce/e-commerce";
 import ReduxToDoList from "./lessons/13 redux/to-do-list/to-do-list";
+import ReduxComponent from "./lessons/13 redux/redux-thunk/thunk-component";
 import ReduxThunk from "./lessons/13 redux/redux-thunk/redux-thunk.jsx";
 
 function App() {
@@ -69,8 +71,10 @@ function App() {
 				{/* 404 Page Now Found */}
 				<Route path="*" element={<NotFound />} />
 
-				{/* Basics */}
+				{/* Home Page */}
 				<Route path="/" element={<Start />} />
+
+				{/* Basics */}
 				<Route path="/basics">
 					<Route path="components" element={<Components />} />
 					<Route path="props" element={<Props />} />
@@ -80,6 +84,7 @@ function App() {
 					<Route path="conditions" element={<Conditions />} />
 				</Route>
 
+				{/* Style */}
 				<Route path="/style">
 					<Route path="simple-style" element={<NormalStyle />} />
 					<Route path="multiple-style" element={<MultipleStyle />} />
@@ -126,13 +131,17 @@ function App() {
 					<Route path="custome-hook" element={<CustomeHook />} />
 				</Route>
 
+				{/* Redux */}
 				<Route path="/redux">
 					<Route path="old-counter" element={<ReduxOldCounter />} />
 					<Route path="new-counter" element={<ReduxNewCounter />} />
 					<Route path="sign-in" element={<ReduxSignin />} />
 					<Route path="e-commerce" element={<Ecommerce />} />
 					<Route path="to-do-list" element={<ReduxToDoList />} />
-					<Route path="redux-thunk" element={<ReduxThunk />} />
+					<Route path="redux-thunk">
+						<Route path="view-posts" element={<ReduxThunk />} />
+						<Route path="post/:thunkID" element={<ReduxComponent />} />
+					</Route>
 				</Route>
 			</Routes>
 		</BrowserRouter>
