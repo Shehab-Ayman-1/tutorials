@@ -94,7 +94,17 @@ export default function ToDoList() {
 		});
 	};
 
-	const style = { padding: "5px 20px", fontSize: "1.8rem", margin: "0 10px", border: "1px solid var(--second-color)" };
+	const styledIco = { padding: "5px 15px", fontSize: "1.8rem" };
+
+	const syledTaskContent = (task) => {
+		return {
+			textDecoration: task.isFinished ? "line-through" : "none",
+			color: task.isFinished ? "crimson" : "white",
+			padding: "15px 10px",
+			borderBottom: "1px solid #4b4b4b",
+			cursor: "pointer",
+		};
+	};
 	return (
 		<div className="to-do-list">
 			<input type="text" className="task-input" placeholder="Task Name..." onKeyDown={handleKey} />
@@ -106,19 +116,11 @@ export default function ToDoList() {
 				{tasks.map((task, index) => {
 					return (
 						<li className="task" key={index}>
-							<p
-								className="task-content"
-								style={{
-									textDecoration: task.isFinished ? "line-through" : "none",
-									color: task.isFinished ? "crimson" : "white",
-									margin: "15px 10px",
-									cursor: "pointer",
-								}}
-								onClick={(event) => handleIsFinished(event, task)}>
+							<p className="task-content" style={syledTaskContent(task)} onClick={(event) => handleIsFinished(event, task)}>
 								{task.task}
 							</p>
-							<i className="fa fa-share" style={{ ...style, color: "white" }} onClick={() => updateTask(task, index)}></i>
-							<i className="second-color fa fa-trash" style={style} onClick={() => deleteTask(task)}></i>
+							<i className="fa fa-share" style={{ ...styledIco, color: "white" }} onClick={() => updateTask(task, index)}></i>
+							<i className="second-color fa fa-trash" style={styledIco} onClick={() => deleteTask(task)}></i>
 						</li>
 					);
 				})}

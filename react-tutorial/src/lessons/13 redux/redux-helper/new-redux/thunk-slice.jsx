@@ -2,14 +2,14 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchApiData = createAsyncThunk("usersData", async () => {
-	const response = await axios.get("https://jsonplaceholder.typicode.com/posts?_limit=20");
-	console.log(response);
+	const response = await axios.get("https://jsonplaceholder.typicode.com/posts?_limit=10");
 	return response.data;
 });
 
 const thunkSlice = createSlice({
 	name: "apiData",
 	initialState: { loading: null, data: [], error: null },
+
 	reducers: {
 		RESETDATA: (state, action) => {
 			state.loading = null;
@@ -17,6 +17,7 @@ const thunkSlice = createSlice({
 			state.error = null;
 		},
 	},
+
 	// extraReducers => Is Using To Let The Action Is Working As A Default Without Dispatcher
 	extraReducers: {
 		// This Action Is Work While The Website Is Waiting The Data From The Api
@@ -28,10 +29,17 @@ const thunkSlice = createSlice({
 		[fetchApiData.fulfilled]: (state, action) => {
 			let stringify = (newData) => localStorage.setItem("data", JSON.stringify(newData));
 			let parse = () => JSON.parse(localStorage.getItem("data"));
-			state.data = action.payload;
-			state.loading = false;
+
 			state.error = false;
-			console.log(action);
+			state.loading = false;
+
+			for (let i = 0; i < action.payload.length; i++) {
+				if (action.payload[i]) {
+					let item = action.payload[i];
+					item.img = `https://source.unsplash.com/720x400/?photos/:${i + 1}`;
+					state.data.push(item);
+				}
+			}
 
 			if (action.payload.length > 0) {
 				stringify(action.payload);

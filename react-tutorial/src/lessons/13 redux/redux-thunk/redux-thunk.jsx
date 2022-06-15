@@ -15,7 +15,7 @@ const CategoryCards = styled.div`
 const Card = styled.div`
 	background: var(--light-bg);
 	color: var(--black);
-	max-width: 480px;
+	flex: 480px 1 1;
 	font-weight: bold;
 	display: flex;
 	justify-content: space-between;
@@ -68,12 +68,11 @@ export default function ReduxThunk() {
 						</>
 					) : null}
 					<CategoryCards>
-						{/*  */}
 						{state.data.map((card, i) => {
 							return (
 								<Card key={i}>
-									<CardImage src={`https://source.unsplash.com/720x400/?${card.id}`} alt="img-logo" />
-									<CardTitle>{card.title}</CardTitle>
+									<CardImage src={card.img} alt="img-logo" />
+									<CardTitle className="main-color">{card.title}</CardTitle>
 									<CardParagraph>{card.body}</CardParagraph>
 									<Link className="mybtn" to={`../post/${card.id}`} style={CardLink}>
 										Read More
