@@ -29,29 +29,17 @@ class MulipleForm extends Component {
 
 				<div className="text-input">
 					<label htmlFor="text">UserName: </label>
-					<input
-						type="text"
-						name="text"
-						value={this.state.text}
-						onChange={(event) => this.handleMultipleStates(event)}
-					/>
+					<input type="text" name="text" value={this.state.text} onChange={(event) => this.handleMultipleStates(event)} />
 				</div>
 
 				<div className="text-area">
 					<label htmlFor="text-area">Message: </label>
-					<textarea
-						name="textarea"
-						value={this.state.textarea}
-						onChange={(event) => this.handleMultipleStates(event)}
-					/>
+					<textarea name="textarea" value={this.state.textarea} onChange={(event) => this.handleMultipleStates(event)} />
 				</div>
 
 				<div className="select-box">
 					<label htmlFor="select">Select Your Skill: </label>
-					<select
-						name="selected"
-						defaultValue={this.state.selected}
-						onChange={(event) => this.handleMultipleStates(event)}>
+					<select name="selected" defaultValue={this.state.selected} onChange={(event) => this.handleMultipleStates(event)}>
 						<option value="html">html</option>
 						<option value="css">css</option>
 						<option value="js">js</option>

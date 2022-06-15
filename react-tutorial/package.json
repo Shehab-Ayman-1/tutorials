@@ -10,6 +10,7 @@
 		"axios": "^0.27.2",
 		"classnames": "^2.3.1",
 		"formik": "^2.2.9",
+		"json-server": "^0.17.0",
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
 		"react-redux": "^8.0.2",
@@ -26,7 +27,8 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"server": "json-server --watch db/todos.json -p 5000"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -43,7 +45,8 @@
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",
-			"last 1 safari version"
+			"last 1 safari version",
+			"last 1 edge version"
 		]
 	}
 }

@@ -3,8 +3,8 @@
   --white: #fff;
   --black: #000;
   --dark-color: #130f40;
-  --main-color: #2196f3;
-  --second-color: #e91e63;
+  --main-color: #fbc531;
+  --second-color: #dc143c;
   --light-color: #aaa;
   --light-bg: #f7f7f7;
   --dark-bg: #ccc;
@@ -41,7 +41,7 @@
   border: none;
   outline: none;
   box-sizing: border-box !important;
-  text-decoration: none !important;
+  text-decoration: none;
   text-transform: capitalize !important;
   transition: all 0.1s ease-in-out;
 }
@@ -555,6 +555,7 @@ body[data-theme=nightMode-theme] .swiper-pagination-bullet-active {
   text-align: left;
   overflow-y: auto;
   transition: all 0.2s linear;
+  z-index: 1000;
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0);
 }
@@ -584,7 +585,7 @@ body[data-theme=nightMode-theme] .swiper-pagination-bullet-active {
   font-weight: bold;
 }
 .nav-bar .phrase.hooks .main-list, .nav-bar .phrase.redux .main-list, .nav-bar .phrase.basics .main-list {
-  max-height: 300px;
+  max-height: 325px;
 }
 .nav-bar .phrase .main-link {
   display: flex;

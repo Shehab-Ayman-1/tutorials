@@ -108,12 +108,7 @@ function SecondForm(props) {
 								<div className="friend" key={i}>
 									<label>Friend {i + 1}: </label>
 									<div className="friend-input">
-										<Field
-											type="text"
-											name={`friends.${i}`}
-											placeholder="Add New Friend..."
-											value={friend}
-										/>
+										<Field type="text" name={`friends.${i}`} placeholder="Add New Friend..." value={friend} />
 										<button
 											type="button"
 											className="mybtn"

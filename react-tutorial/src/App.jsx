@@ -1,12 +1,12 @@
 // React
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Css Style
 import "./scss/style.css";
 
 // Layout
-import Header from "./components/header";
+import Header from "./layout/header";
 import Start from "./lessons/00 start/start";
 
 // Lessons
@@ -17,6 +17,7 @@ import State from "./lessons/03 state/state";
 import Events from "./lessons/04 events/onchange";
 import Loops from "./lessons/05 concepts/loops";
 import Conditions from "./lessons/05 concepts/conditions";
+import JsonLocalServer_ToDoList from "./lessons/14 json-local-server/json-local-server";
 
 /* Style */
 import NormalStyle from "./lessons/09 style/normal-style";
@@ -28,10 +29,6 @@ import ComponentWillMount from "./lessons/06 lifeCicle/clock";
 import ComponentDidMount from "./lessons/06 lifeCicle/component-did-mount";
 import ComponentDidUpdate from "./lessons/06 lifeCicle/component-did-update";
 import ComponentDidUnmount from "./lessons/06 lifeCicle/component-did-unmount";
-
-/* Practice */
-import ToDoList from "./lessons/07 practice/07 to-do-list/ToDoList";
-import Login from "./lessons/07 practice/login/login";
 
 /* Forms */
 import DefaultForms from "./lessons/08 forms/defaultForm";
@@ -63,6 +60,10 @@ import ReduxToDoList from "./lessons/13 redux/to-do-list/to-do-list";
 import ReduxComponent from "./lessons/13 redux/redux-thunk/thunk-component";
 import ReduxThunk from "./lessons/13 redux/redux-thunk/redux-thunk.jsx";
 
+/* Practice */
+import ToDoList from "./lessons/07 practice/07 to-do-list/ToDoList";
+import Login from "./lessons/07 practice/login/login";
+
 function App() {
 	return (
 		<BrowserRouter>
@@ -82,6 +83,7 @@ function App() {
 					<Route path="events" element={<Events />} />
 					<Route path="loops" element={<Loops />} />
 					<Route path="conditions" element={<Conditions />} />
+					<Route path="json-local-server" element={<JsonLocalServer_ToDoList />} />
 				</Route>
 
 				{/* Style */}
@@ -103,12 +105,6 @@ function App() {
 				<Route path="/forms">
 					<Route path="default-form" element={<DefaultForms />} />
 					<Route path="formik" element={<Formik />} />
-				</Route>
-
-				{/* Practice */}
-				<Route path="/practice">
-					<Route path="to-do-list" element={<ToDoList />} />
-					<Route path="login" element={<Login />} />
 				</Route>
 
 				{/* Ajax Request */}
@@ -142,6 +138,12 @@ function App() {
 						<Route path="view-posts" element={<ReduxThunk />} />
 						<Route path="post/:thunkID" element={<ReduxComponent />} />
 					</Route>
+				</Route>
+
+				{/* Practice */}
+				<Route path="/practice">
+					<Route path="to-do-list" element={<ToDoList />} />
+					<Route path="login" element={<Login />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

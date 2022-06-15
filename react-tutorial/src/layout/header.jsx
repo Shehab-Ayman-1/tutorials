@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
@@ -85,6 +85,11 @@ export default function Header() {
 						<li className="nested-link">
 							<NavLink to={"basics/conditions"} className="link" onClick={closeNavbar}>
 								conditions
+							</NavLink>
+						</li>
+						<li className="nested-link">
+							<NavLink to={"/basics/json-local-server"} className="link" onClick={closeNavbar}>
+								json local server
 							</NavLink>
 						</li>
 					</ul>
@@ -198,8 +203,8 @@ export default function Header() {
 					</li>
 					<ul className={`main-list ${hide}`}>
 						<li className="nested-link">
-							<NavLink to={"hooks/context-api"} className="link" onClick={closeNavbar}>
-								context Api
+							<NavLink to={"hooks/use-state"} className="link" onClick={closeNavbar}>
+								Use State
 							</NavLink>
 						</li>
 						<li className="nested-link">
@@ -208,13 +213,8 @@ export default function Header() {
 							</NavLink>
 						</li>
 						<li className="nested-link">
-							<NavLink to={"hooks/use-state"} className="link" onClick={closeNavbar}>
-								Use State
-							</NavLink>
-						</li>
-						<li className="nested-link">
-							<NavLink to={"hooks/use-ref"} className="link" onClick={closeNavbar}>
-								Use Ref
+							<NavLink to={"hooks/use-navigate"} className="link" onClick={closeNavbar}>
+								Use Navigate
 							</NavLink>
 						</li>
 						<li className="nested-link">
@@ -223,13 +223,18 @@ export default function Header() {
 							</NavLink>
 						</li>
 						<li className="nested-link">
-							<NavLink to={"hooks/use-navigate"} className="link" onClick={closeNavbar}>
-								Use Navigate
+							<NavLink to={"hooks/use-ref"} className="link" onClick={closeNavbar}>
+								Use Ref
 							</NavLink>
 						</li>
 						<li className="nested-link">
 							<NavLink to={"hooks/custome-hook"} className="link" onClick={closeNavbar}>
 								Custome Hook
+							</NavLink>
+						</li>
+						<li className="nested-link">
+							<NavLink to={"hooks/context-api"} className="link" onClick={closeNavbar}>
+								context Api
 							</NavLink>
 						</li>
 					</ul>
