@@ -1,8 +1,8 @@
 /* 
 	[1] npm i -g json-server
 	[2] npm i json-server 
-	[3] In package.json/scripts add [ "server": "json-server --watch db/todos.json -p 5000" ]
-	[4] npm run server 
+	[3] In package.json/scripts add [ "my-json-server": "json-server --watch db/todos.json -p 5000" ]
+	[4] npm run my-json-server 
 	[5] Look To The To-Do-List Script Below Now 
 */
 
