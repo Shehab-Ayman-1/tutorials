@@ -1,4 +1,5 @@
 <a href="https://cms-tc.pbskids.org/xavierriddlewebsite/resources/assets/img/xavier-tablet.png" align="center"></a>
+
 #### <-- =================================== -->
 
 # `Upload From Workspace To Remote Repository`
@@ -19,7 +20,7 @@
 
 ### -- [ 5 ] git remote add origin [ repository ssh ] <!-- connect my local repository with the remote repository -->
 
-### -- [ 6 ] git push -u origin main | | git pull origin main <!-- get all files from the remote repo to the local repo-->
+### -- [ 6 ] git push -u origin main | | git pull origin main -r <!-- get all files from the remote repo to the local repo-->
 
 #### <-- =================== -->
 

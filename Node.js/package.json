@@ -1,0 +1,15 @@
+{
+	"name": "node",
+	"version": "1.0.0",
+	"description": "Node.js Toturial",
+	"main": "app.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Shehab Ayman",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.1"
+	}
+}
