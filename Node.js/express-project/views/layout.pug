@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body(style="background: black; color: white")
+    block content
+
+    - let age = 22
+    if age > 20
+      h3 OOBS!!, Your Age Is More Than 20 Years => #[span(style="color: red")=age]
+    else if age < 15
+      h3 OOBS!!, Your Age Is Less Than 15 Year => #[span(style="color: red")=age]
+    else 
+      h3 OOBS!!, Your Age Is Between 15 Year & 20 Years => #[span(style="color: green")=age]
+    - let fruits = ["html", "css", "js", "bootstrap" ,"react", "node.js"]
+
+    ul
+      each val in fruits
+        li(style="color: orange")= val
+    
