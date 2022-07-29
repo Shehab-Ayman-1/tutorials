@@ -1,0 +1,97 @@
+@use "../helpers/mixins" as *;
+
+.nav-bar {
+	@include Fixed(tl, 0, 0);
+	background-color: #08071b;
+	color: get(white);
+	width: 280px;
+	height: 100vh;
+	padding: get(p3);
+	text-align: left;
+	overflow-y: auto;
+	transition: all 0.2s linear;
+	z-index: 1000;
+	clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0);
+	&::-webkit-scrollbar-track {
+		background-color: #08071b;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #08071b;
+	}
+	&:hover::-webkit-scrollbar-thumb {
+		background-color: #fff;
+	}
+	.navbar-head {
+		@include Flex(flex-start, center);
+		padding-left: 5px;
+		.cross {
+			color: get(white);
+		}
+		.head-title {
+			color: get(main-color);
+			padding-left: get(p2);
+			text-align: center;
+			font-size: 2.5rem;
+			font-weight: bold;
+		}
+	}
+	.phrase {
+		& {
+			&.hooks .main-list,
+			&.redux .main-list,
+			&.basics .main-list {
+				max-height: 325px;
+			}
+		}
+		.main-link {
+			@include Flex(space-between, center);
+			color: get(second-color);
+			font-size: 1.8rem;
+			padding-top: get(p5);
+			padding-left: get(p4);
+			cursor: pointer;
+			position: relative;
+			&::before {
+				@include Absolute(tl, 62%, 0);
+				content: "";
+				width: 5px;
+				height: 5px;
+				border: 3px solid get(white);
+				border-radius: get(circle);
+			}
+			i {
+				color: get(main-color);
+			}
+		}
+		.main-list {
+			max-height: 150px;
+			padding-left: get(p5);
+			transition: all 0.5s linear;
+			overflow: hidden;
+			.nested-link {
+				padding-top: get(p2);
+				position: relative;
+				&:hover .link::after {
+					background-color: get(main-color);
+				}
+				.link {
+					color: get(light-color);
+					width: 100%;
+					display: block;
+					font-size: 1.7rem;
+					&::after {
+						@include Absolute(tl, 5px, -20px);
+						background-color: get(dark-bg);
+						content: "";
+						width: 3px;
+						height: 100%;
+					}
+					&.active {
+						color: get(main-color);
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}

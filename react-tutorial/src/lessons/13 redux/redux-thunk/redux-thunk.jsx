@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchApiData, RESETDATA } from "../redux-helper/new-redux/thunk-slice";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const CategoryCards = styled.div`
 	display: flex;
@@ -61,11 +61,9 @@ export default function ReduxThunk() {
 							Fetch
 						</button>
 					) : state.loading === false ? (
-						<>
-							<button className="mybtn" onClick={() => dispatch(RESETDATA())}>
-								Reset
-							</button>
-						</>
+						<button className="mybtn" onClick={() => dispatch(RESETDATA())}>
+							Reset
+						</button>
 					) : null}
 					<CategoryCards>
 						{state.data.map((card, i) => {

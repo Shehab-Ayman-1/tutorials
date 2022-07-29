@@ -7,7 +7,7 @@ function UserDetails() {
 	let { userID } = useParams();
 	useEffect(() => {
 		getUser(userID).then((result) => setUser(result.data));
-	}, []);
+	}, [userID]);
 
 	let createUser = () => {
 		if (user)
@@ -30,16 +30,16 @@ function UserDetails() {
 				</div>
 				<div className="address-details">
 					<h3 className="main-color">Address Details</h3>
-					<p>{"city" + " => " + user.address.city}</p>
-					<p>{"street" + " => " + user.address.street}</p>
-					<p>{"suite" + " => " + user.address.suite}</p>
-					<p>{"zipcode" + " => " + user.address.zipcode}</p>
+					<p>{`city => ${user.address.city}`}</p>
+					<p>{`street => ${user.address.street}`}</p>
+					<p>{`suite => ${user.address.suite}`}</p>
+					<p>{`zipcode => ${user.address.zipcode}`}</p>
 				</div>
 				<div className="compony-details">
 					<h3 className="main-color">Compony Details</h3>
-					<p>{"name" + " => " + user.company.name}</p>
-					<p>{"bs" + " => " + user.company.bs}</p>
-					<p>{"catchPhrase" + " => " + user.company.catchPhrase}</p>
+					<p>{`name => ${user.address.name}`}</p>
+					<p>{`bs => ${user.address.bs}`}</p>
+					<p>{`catchPhrase => ${user.address.catchPhrase}`}</p>
 				</div>
 			</>;
 	};

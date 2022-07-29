@@ -1,5 +1,3 @@
-import React from "react";
-import { useSelector } from "react-redux";
 import { COMPLITETASK } from "../../redux-helper/new-redux/to-do-list-slice";
 
 export default function CompletedTask(event, completedTask, states, dispatch) {

@@ -1,5 +1,7 @@
 // The Old Way
+// eslint-disable-next-line
 import { createStore } from "redux";
+// eslint-disable-next-line
 import Reducers from "../old-redux/reducer/all-reducers";
 
 // The New Way

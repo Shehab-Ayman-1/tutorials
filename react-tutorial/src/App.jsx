@@ -1,40 +1,41 @@
-// React
+/* React */
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Css Style
+/* Css Style */
 import "./scss/style.css";
 
-// Layout
-import Header from "./layout/header";
+/* Layout */
 import Start from "./lessons/00 start/start";
+import Header from "./layout/header";
+import Sidebar from "./layout/sidebar";
 
-// Lessons
-/* Basics */
+/* Lessons */
+// Basics
 import Components from "./lessons/01 intro/components";
 import Props from "./lessons/02 props/parent";
 import State from "./lessons/03 state/state";
 import Events from "./lessons/04 events/onchange";
 import Loops from "./lessons/05 concepts/loops";
 import Conditions from "./lessons/05 concepts/conditions";
-import JsonLocalServer_ToDoList from "./lessons/14 json-local-server/json-local-server";
+import JsonLocalServerToDoList from "./lessons/14 json-local-server/json-local-server";
 
-/* Style */
+// Style
 import NormalStyle from "./lessons/09 style/normal-style";
 import MultipleStyle from "./lessons/09 style/multiple-style";
 import StyledComponents from "./lessons/09 style/styled-components-lib";
 
-/* Life Cicle */
+// Life Cicle
 import ComponentWillMount from "./lessons/06 lifeCicle/clock";
 import ComponentDidMount from "./lessons/06 lifeCicle/component-did-mount";
 import ComponentDidUpdate from "./lessons/06 lifeCicle/component-did-update";
 import ComponentDidUnmount from "./lessons/06 lifeCicle/component-did-unmount";
 
-/* Forms */
+// Forms
 import DefaultForms from "./lessons/08 forms/defaultForm";
 import Formik from "./lessons/08 forms/formik";
 
-/* Ajax Request */
+// Ajax Request
 import GetAllUsers from "./lessons/10 ajax-request/get-all";
 import GetUser from "./lessons/10 ajax-request/get-user";
 import AddUser from "./lessons/10 ajax-request/add-user";
@@ -42,7 +43,7 @@ import DeleteUser from "./lessons/10 ajax-request/delete-user";
 import UpdateUser from "./lessons/10 ajax-request/update-user";
 import NotFound from "./lessons/11 not-found/not-found";
 
-/* Hooks */
+// Hooks
 import ContextApi from "./lessons/12 react-hooks/context-api/context-api";
 import UseEffect from "./lessons/12 react-hooks/use-effect/useEffect";
 import UseState from "./lessons/12 react-hooks/use-state/useState";
@@ -51,16 +52,19 @@ import UseReducer from "./lessons/12 react-hooks/use-reducer/useReducer";
 import UseNavigate from "./lessons/12 react-hooks/use-navigate/useNavigate";
 import CustomeHook from "./lessons/12 react-hooks/custome-hook/customeHook";
 
-/* Redux */
+// Redux
 import ReduxOldCounter from "./lessons/13 redux/counter/old-counter";
 import ReduxNewCounter from "./lessons/13 redux/counter/new-counter";
 import ReduxSignin from "./lessons/13 redux/signin/signin";
 import Ecommerce from "./lessons/13 redux/e-commerce/e-commerce";
 import ReduxToDoList from "./lessons/13 redux/to-do-list/to-do-list";
 import ReduxComponent from "./lessons/13 redux/redux-thunk/thunk-component";
-import ReduxThunk from "./lessons/13 redux/redux-thunk/redux-thunk.jsx";
+import ReduxThunk from "./lessons/13 redux/redux-thunk/redux-thunk";
 
-/* Practice */
+// Material Ui
+import Materials from "./lessons/15 material-ui/materials";
+
+// Practice
 import ToDoList from "./lessons/07 practice/07 to-do-list/ToDoList";
 import Login from "./lessons/07 practice/login/login";
 
@@ -68,6 +72,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Header />
+			<Sidebar />
 			<Routes>
 				{/* 404 Page Now Found */}
 				<Route path="*" element={<NotFound />} />
@@ -83,7 +88,7 @@ function App() {
 					<Route path="events" element={<Events />} />
 					<Route path="loops" element={<Loops />} />
 					<Route path="conditions" element={<Conditions />} />
-					<Route path="json-local-server" element={<JsonLocalServer_ToDoList />} />
+					<Route path="json-local-server" element={<JsonLocalServerToDoList />} />
 				</Route>
 
 				{/* Style */}
@@ -138,6 +143,11 @@ function App() {
 						<Route path="view-posts" element={<ReduxThunk />} />
 						<Route path="post/:thunkID" element={<ReduxComponent />} />
 					</Route>
+				</Route>
+
+				{/* Material Ui */}
+				<Route path="/material-ui">
+					<Route index element={<Materials />} />
 				</Route>
 
 				{/* Practice */}

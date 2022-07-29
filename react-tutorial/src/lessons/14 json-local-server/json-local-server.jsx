@@ -90,7 +90,7 @@ export default function ToDoList() {
 		const emptyTasks = tasks;
 		emptyTasks.map((item) => {
 			deleteNewTask(item.id);
-			setTasks([]);
+			return setTasks([]);
 		});
 	};
 
