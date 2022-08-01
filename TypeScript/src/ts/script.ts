@@ -11,11 +11,16 @@
     [6] noUnusedLocals // Mind Compile Any Unused Variable In The File
     [7] noUnusedParameters // Mind Any Unused Parameters
 */
-import Annotations from "./annotations/annotations";
-import Functions from "./functions/functions";
+
+// import Annotations from "./annotations/annotations";
+// import Functions from "./functions/functions";
+import dataTypes from "./data types/dataTypes";
 
 // ============================================ Annotations ============================================
-Annotations();
+// Annotations();
 
 // ============================================= Functions =============================================
-Functions();
+// Functions();
+
+// ============================================= Data Types ============================================
+dataTypes();

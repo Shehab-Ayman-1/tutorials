@@ -11,6 +11,7 @@ const annotations = () => {
     let numArr = [1, 2, 3, 4, 5];
     let stNumArr = ["string value", "number value"];
     let anyArr = ["name", 21, true, ["Nested Array", ["", "", 2, false]], { obj: "value" }];
+    console.log(st, num, bool, cus, any, stArr, numArr, stNumArr, anyArr);
     // Can't Loop On Now Available Type
     let loopArr = ["html | ", "css | ", "js | "]; // Invalude Array ["html | ", "css | ", "js | ", 100]
     for (let val of loopArr) {
