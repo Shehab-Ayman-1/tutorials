@@ -1,0 +1,168 @@
+/* From 01 To 10 */
+.assign-1 {
+	$main: "school";
+	$child: "box";
+	$language: "en";
+	$gap: 20px;
+
+	.#{$main} {
+		padding: 20px;
+		margin-left: 20px;
+		@if $language == "en" {
+			direction: ltr;
+		} @else if $language == "ar" {
+			direction: rtl;
+		}
+		&:hover .#{$main}-#{$child} {
+			background-color: #eee;
+		}
+		.#{$main}-#{$child} {
+			padding: $gap / 2;
+		}
+	}
+}
+
+.assign-2 {
+	.content {
+		& > .box {
+			padding: 15px;
+			& > .title {
+				font-size: 18px;
+			}
+		}
+		.cat {
+			padding: 15px;
+		}
+		&.premium:before {
+			content: "Premium Box";
+		}
+		&.premium:hover {
+			background-color: #eee;
+		}
+	}
+}
+
+.assign-3 {
+	.parent > .child {
+		padding: 10px;
+	}
+	.parent {
+		& > .child {
+			padding: 10px;
+		}
+		> .child {
+			padding: 10px;
+		}
+	}
+}
+
+.assign-4 {
+	.parent {
+		font-size: 20px;
+		font-weight: bold;
+		& {
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+}
+
+.assign-5 {
+	// Set Margin To The Sibling Element
+	.parent + .sibling {
+		margin: auto;
+		margin-top: 10px;
+	}
+	// Set Padding With The Same Level With Sibling Element
+	.parent ~ .last {
+		padding: 10px;
+	}
+}
+
+/* From 11 To 19 */
+@mixin arrow($dir) {
+	border: 20px solid transparent;
+	&::before {
+		@if $dir == "top" {
+			/* Top */
+			content: "";
+			position: absolute;
+			top: -40px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-bottom-color: red;
+		} @else if $dir == "right" {
+			/* Right */
+			content: "";
+			position: absolute;
+			right: -40px;
+			top: 50%;
+			transform: translateY(-50%);
+			border-left-color: red;
+		} @else if $dir == "bottom" {
+			/* Bottom */
+			content: "";
+			position: absolute;
+			bottom: -40px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-top-color: red;
+		} @else if $dir == "left" {
+			/* Left */
+			content: "";
+			position: absolute;
+			left: -40px;
+			top: 50%;
+			transform: translateY(-50%);
+			border-right-color: red;
+		}
+	}
+}
+.assign-1 {
+	@include arrow("top");
+	@include arrow("right");
+	@include arrow("bottom");
+	@include arrow("left");
+}
+
+.assign-2 {
+	$columns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16;
+	@each $column in $columns {
+		.col-#{$column} {
+			width: calc((100% / 16) * $column);
+		}
+	}
+}
+
+.assign-3 {
+	$names: "books" 20px red 18, "games" 30px green 18, "dvds" 20px blue;
+	@each $class, $padding, $color, $fs in $names {
+		.#{$class} {
+			color: $color;
+			padding: $padding;
+			@if $fs {
+				font-size: #{$fs}px;
+			} @else {
+				font-size: 16px;
+			}
+			border: 2px solid $color;
+		}
+	}
+}
+
+.assign-4 {
+	$num: 2;
+	$start: 100;
+
+	@function double($size) {
+		@return $size * $num;
+	}
+
+	@for $val from $start to 105 {
+		.box-#{$start} {
+			width: #{$start}px;
+			height: #{double($start)}px;
+		}
+		$start: double($start);
+	}
+}
