@@ -14,7 +14,7 @@ export default function Tuple() {
 	// const errTuple: [string, number, boolean] = ["Title", "1", true, 21]; // Can't Assign UnAssinable Type OR Add More Element
 
 	// Readonly Tuple
-	const artical2: readonly [string, number, boolean] = ["Title", 1, true];
+	const artical2: readonly [string, number, boolean] = ["Title", 2, false];
 	// artical2.push("can't push any thing in the readonly tuple")
 
 	// Destracturing

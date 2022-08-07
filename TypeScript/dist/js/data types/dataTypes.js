@@ -1,15 +1,20 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 // import Alias from "./alias";
-// import Literal from "./literal";
-const tuple_1 = __importDefault(require("./tuple"));
+// import Literals from "./literal";
+// import Tuples from "./tuple";
+// import VoidAndNever from "./void-never";
+// import Enums from "./enums";
+// import Assertions from "./assertions";
+// import Intersections from "./intersections";
+Object.defineProperty(exports, "__esModule", { value: true });
 function dataTypes() {
     // Alias();
-    // Literal();
-    (0, tuple_1.default)();
+    // Literals();
+    // Tuples();
+    // VoidAndNever();
+    // Enums();
+    // Assertions();
+    // Intersections();
 }
 exports.default = dataTypes;
 //# sourceMappingURL=dataTypes.js.map

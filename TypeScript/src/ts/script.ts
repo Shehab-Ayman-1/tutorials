@@ -14,7 +14,7 @@
 
 // import Annotations from "./annotations/annotations";
 // import Functions from "./functions/functions";
-import dataTypes from "./data types/dataTypes";
+// import dataTypes from "./data types/dataTypes";
 
 // ============================================ Annotations ============================================
 // Annotations();
@@ -23,4 +23,4 @@ import dataTypes from "./data types/dataTypes";
 // Functions();
 
 // ============================================= Data Types ============================================
-dataTypes();
+// dataTypes();
