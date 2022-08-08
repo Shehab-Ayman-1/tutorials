@@ -1,36 +1,17 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const annotations_1 = __importDefault(require("./annotations"));
+const arrow_function_1 = __importDefault(require("./arrow-function"));
+const optional_parameters_1 = __importDefault(require("./optional-parameters"));
+const rest_parameters_1 = __importDefault(require("./rest-parameters"));
 const Functions = () => {
-    /* Annotations In Functions */
-    // In Js, Maybe The User Enter String So The Compiler Will Concatenat The Value Not Sum Them
-    function sum(num1, num2) {
-        return num1 + num2;
-    }
-    sum(1, 2);
-    /* Arrow Functions */
-    const showDetails = (name, age, salary) => {
-        if (false)
-            return "SomeThing, Has An Error !";
-        return `Hello: ${name}, Age: ${age}, Salary: ${salary}`;
-    };
-    showDetails("shehab", 21, 5000);
-    /* Options Parameters */
-    // ? => Optional Parameter [ Have To Be In The Last Parameters ]
-    function showUser(name, age, country = "egypt", isAvailable) {
-        if (!isAvailable)
-            return console.log("Sorry, This User Is Not Available");
-        return `My Name: ${name}, Age: ${age}, Country: ${country}`;
-    }
-    showUser("shehab", 21, "egypt", true);
-    /* Rest Parameters */
-    function restParams(...nums) {
-        let result = 0;
-        for (let num of nums) {
-            result += num;
-        }
-        return result;
-    }
-    console.log("Rest Parameters => ", restParams(1, 2, 3, 4, 5, 6, 7, 8, 9));
+    (0, annotations_1.default)();
+    (0, arrow_function_1.default)();
+    (0, optional_parameters_1.default)();
+    (0, rest_parameters_1.default)();
 };
 exports.default = Functions;
 //# sourceMappingURL=functions.js.map

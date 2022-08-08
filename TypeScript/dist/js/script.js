@@ -12,13 +12,23 @@
     [6] noUnusedLocals // Mind Compile Any Unused Variable In The File
     [7] noUnusedParameters // Mind Any Unused Parameters
 */
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 // import Annotations from "./annotations/annotations";
 // import Functions from "./functions/functions";
 // import dataTypes from "./data types/dataTypes";
-// ============================================ Annotations ============================================
+// import Interfaces from "./interfaces/interface";
+const classes_1 = __importDefault(require("./classes/classes"));
+// ============================================= Annotations ===========================================
 // Annotations();
 // ============================================= Functions =============================================
 // Functions();
 // ============================================= Data Types ============================================
 // dataTypes();
+// ============================================= Interfaces ============================================
+// Interfaces();
+// ============================================= classes ===============================================
+(0, classes_1.default)();
 //# sourceMappingURL=script.js.map

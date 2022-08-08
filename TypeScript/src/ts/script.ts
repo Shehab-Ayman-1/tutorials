@@ -15,8 +15,10 @@
 // import Annotations from "./annotations/annotations";
 // import Functions from "./functions/functions";
 // import dataTypes from "./data types/dataTypes";
+// import Interfaces from "./interfaces/interface";
+import Classes from "./classes/classes";
 
-// ============================================ Annotations ============================================
+// ============================================= Annotations ===========================================
 // Annotations();
 
 // ============================================= Functions =============================================
@@ -24,3 +26,9 @@
 
 // ============================================= Data Types ============================================
 // dataTypes();
+
+// ============================================= Interfaces ============================================
+// Interfaces();
+
+// ============================================= classes ===============================================
+Classes();
