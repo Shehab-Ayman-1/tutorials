@@ -2,71 +2,36 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-/* Css Style */
-import "./scss/style.css";
+/* Scss Style */
+import "./scss/style.scss";
 
 /* Layout */
-import Start from "./lessons/00 start/start";
-import Header from "./layout/header";
-import Sidebar from "./layout/sidebar";
+import { Start, Header, Sidebar, NotFound } from "./layout";
 
 /* Lessons */
 // Basics
-import Components from "./lessons/01 intro/components";
-import Props from "./lessons/02 props/parent";
-import State from "./lessons/03 state/state";
-import Events from "./lessons/04 events/onchange";
-import Loops from "./lessons/05 concepts/loops";
-import Conditions from "./lessons/05 concepts/conditions";
-import JsonLocalServerToDoList from "./lessons/14 json-local-server/json-local-server";
+import { Components, Conditions, States, Props, Loop, Events, JsonLocalServer } from "./lessons/01 basics";
 
 // Style
-import NormalStyle from "./lessons/09 style/normal-style";
-import MultipleStyle from "./lessons/09 style/multiple-style";
-import StyledComponents from "./lessons/09 style/styled-components-lib";
+import { NormalStyle, MultipleStyle, StyledComponents } from "./lessons/02 style";
 
 // Life Cicle
-import ComponentWillMount from "./lessons/06 lifeCicle/clock";
-import ComponentDidMount from "./lessons/06 lifeCicle/component-did-mount";
-import ComponentDidUpdate from "./lessons/06 lifeCicle/component-did-update";
-import ComponentDidUnmount from "./lessons/06 lifeCicle/component-did-unmount";
+import { ComponentWillMount, ComponentDidMount, ComponentDidUnmount, ComponentDidUpdate } from "./lessons/03 lifeCicle";
 
 // Forms
-import DefaultForms from "./lessons/08 forms/defaultForm";
-import Formik from "./lessons/08 forms/formik";
+import { DefaultForm, FormikForm } from "./lessons/04 forms";
 
 // Ajax Request
-import GetAllUsers from "./lessons/10 ajax-request/get-all";
-import GetUser from "./lessons/10 ajax-request/get-user";
-import AddUser from "./lessons/10 ajax-request/add-user";
-import DeleteUser from "./lessons/10 ajax-request/delete-user";
-import UpdateUser from "./lessons/10 ajax-request/update-user";
-import NotFound from "./lessons/11 not-found/not-found";
+import { GetUsers, GetUser, AddUser, DeleteUser, UpdateUser } from "./lessons/05 ajax-request";
 
 // Hooks
-import ContextApi from "./lessons/12 react-hooks/context-api/context-api";
-import UseEffect from "./lessons/12 react-hooks/use-effect/useEffect";
-import UseState from "./lessons/12 react-hooks/use-state/useState";
-import UseRef from "./lessons/12 react-hooks/use-ref/useRef";
-import UseReducer from "./lessons/12 react-hooks/use-reducer/useReducer";
-import UseNavigate from "./lessons/12 react-hooks/use-navigate/useNavigate";
-import CustomeHook from "./lessons/12 react-hooks/custome-hook/customeHook";
+import { ContextApi, UseEffect, UseState, UseRef, UseReducer, UseNavigate, CustomeHook } from "./lessons/06 react-hooks";
 
 // Redux
-import ReduxOldCounter from "./lessons/13 redux/counter/old-counter";
-import ReduxNewCounter from "./lessons/13 redux/counter/new-counter";
-import ReduxSignin from "./lessons/13 redux/signin/signin";
-import Ecommerce from "./lessons/13 redux/e-commerce/e-commerce";
-import ReduxToDoList from "./lessons/13 redux/to-do-list/to-do-list";
-import ReduxComponent from "./lessons/13 redux/redux-thunk/thunk-component";
-import ReduxThunk from "./lessons/13 redux/redux-thunk/redux-thunk";
+import { ReduxOldCounter, ReduxNewCounter, ReduxSignin, ReduxToDoList, ReduxThunk, ReduxThunkComponent } from "./lessons/07 redux";
 
 // Material Ui
-import Materials from "./lessons/15 material-ui/materials";
-
-// Practice
-import ToDoList from "./lessons/07 practice/07 to-do-list/ToDoList";
-import Login from "./lessons/07 practice/login/login";
+import { MaterialUi } from "./lessons/08 material-ui";
 
 function App() {
 	return (
@@ -84,11 +49,11 @@ function App() {
 				<Route path="/basics">
 					<Route path="components" element={<Components />} />
 					<Route path="props" element={<Props />} />
-					<Route path="state" element={<State />} />
+					<Route path="state" element={<States />} />
 					<Route path="events" element={<Events />} />
-					<Route path="loops" element={<Loops />} />
+					<Route path="loops" element={<Loop />} />
 					<Route path="conditions" element={<Conditions />} />
-					<Route path="json-local-server" element={<JsonLocalServerToDoList />} />
+					<Route path="json-local-server" element={<JsonLocalServer />} />
 				</Route>
 
 				{/* Style */}
@@ -108,13 +73,13 @@ function App() {
 
 				{/* Forms */}
 				<Route path="/forms">
-					<Route path="default-form" element={<DefaultForms />} />
-					<Route path="formik" element={<Formik />} />
+					<Route path="default-form" element={<DefaultForm />} />
+					<Route path="formik" element={<FormikForm />} />
 				</Route>
 
 				{/* Ajax Request */}
 				<Route path="/ajax-request">
-					<Route path="get-all-users" element={<GetAllUsers />} />
+					<Route path="get-all-users" element={<GetUsers />} />
 					<Route path="user/:userID" element={<GetUser />} />
 					<Route path="add-user" element={<AddUser />} />
 					<Route path="delete-user" element={<DeleteUser />} />
@@ -137,23 +102,16 @@ function App() {
 					<Route path="old-counter" element={<ReduxOldCounter />} />
 					<Route path="new-counter" element={<ReduxNewCounter />} />
 					<Route path="sign-in" element={<ReduxSignin />} />
-					<Route path="e-commerce" element={<Ecommerce />} />
 					<Route path="to-do-list" element={<ReduxToDoList />} />
 					<Route path="redux-thunk">
 						<Route path="view-posts" element={<ReduxThunk />} />
-						<Route path="post/:thunkID" element={<ReduxComponent />} />
+						<Route path="post/:thunkID" element={<ReduxThunkComponent />} />
 					</Route>
 				</Route>
 
 				{/* Material Ui */}
 				<Route path="/material-ui">
-					<Route index element={<Materials />} />
-				</Route>
-
-				{/* Practice */}
-				<Route path="/practice">
-					<Route path="to-do-list" element={<ToDoList />} />
-					<Route path="login" element={<Login />} />
+					<Route index element={<MaterialUi />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

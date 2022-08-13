@@ -5,12 +5,12 @@ import App from "./App";
 
 // Material Ui
 import { ThemeProvider } from "@mui/material";
-import theme from "./lessons/15 material-ui/theme/theme";
+import theme from "./lessons/08 material-ui/theme/theme";
 
 // Redux
 import { Provider } from "react-redux";
 // eslint-disable-next-line
-import { newStore, oldStore } from "./lessons/13 redux/redux-helper/store/store";
+import { newStore, oldStore } from "./lessons/07 redux/redux-helper/store/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,22 +1,23 @@
 // Import The Global Scss Files
-@use "./helpers" as *;
-@use "./components/start" as *;
-@use "./components/header" as *;
-@use "./lessons/toDoList" as *;
-@use "./lessons/form" as *;
-@use "./lessons/styles" as *;
-@use "./lessons/ajax-request" as *;
+@use "./mixins" as *;
+@use "./global" as *;
+@use "./classes" as *;
+@use "./themes" as *;
+@use "./toDos" as *;
 
 .title {
 	color: get(white);
 	text-align: left;
 }
+
 .main-color {
 	color: get(main-color);
 }
+
 .second-color {
 	color: get(second-color);
 }
+
 .mybtn {
 	color: get(white);
 	font-size: 2rem;
@@ -27,6 +28,7 @@
 		margin-left: 15px;
 	}
 }
+
 input {
 	background-color: get(dark-color);
 	color: get(light-color);
@@ -36,23 +38,28 @@ input {
 	margin: get(m3);
 	border: get(border);
 }
+
 textarea {
 	@extend input;
 	height: 150px;
 }
+
 select {
 	@extend input;
 	cursor: pointer;
 }
+
 hr {
 	background: get(light-color);
 	height: 1px;
 	margin: gutter(m6, p0);
 }
+
 .f-20,
 .f-30 {
 	padding: get(p4);
 }
+
 .pointer {
 	cursor: pointer;
 }
