@@ -1,4 +1,4 @@
-export default function Arrays() {
+export function Arrays() {
 	// let stArr: string[] = ["html | ", "css | ", "js | ", 100] // Invalue Array
 	let stArr: string[] = ["html", "css", "js", "ts"];
 	let numArr: number[] = [1, 2, 3, 4, 5];

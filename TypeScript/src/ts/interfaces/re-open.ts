@@ -1,4 +1,4 @@
-export default function ReOpen() {
+export function ReOpen() {
 	// Homepage
 	interface settings {
 		theme?: boolean;

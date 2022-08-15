@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Alias = void 0;
 function Alias() {
     let name = "shehab";
     let age = 21;
@@ -22,5 +23,5 @@ function Alias() {
     }
     move2({ up: "Go Up", bottom: "Go Down", right: "Go Right", left: "Go Left", space: "Jump" });
 }
-exports.default = Alias;
+exports.Alias = Alias;
 //# sourceMappingURL=alias.js.map

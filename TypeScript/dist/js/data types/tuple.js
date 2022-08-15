@@ -5,6 +5,7 @@
     -- We Know The Entries Type With Specific Position
 */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tuple = void 0;
 function Tuple() {
     // Simple Tuple
     const article1 = ["Title", 1, true];
@@ -19,5 +20,5 @@ function Tuple() {
     const [title, id, isPublished] = artical2;
     console.log(title, id, isPublished);
 }
-exports.default = Tuple;
+exports.Tuple = Tuple;
 //# sourceMappingURL=tuple.js.map

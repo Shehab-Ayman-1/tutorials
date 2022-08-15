@@ -4,7 +4,7 @@
     protected => Just Use In The Subclasses
 */
 
-export default function Modifiers() {
+export function Modifiers() {
 	class User {
 		// readonly id: number
 		// private username: string;

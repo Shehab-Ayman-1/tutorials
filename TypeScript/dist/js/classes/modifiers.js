@@ -5,6 +5,7 @@
     protected => Just Use In The Subclasses
 */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Modifiers = void 0;
 function Modifiers() {
     class User {
         constructor(id, username, salary) {
@@ -23,5 +24,5 @@ function Modifiers() {
     console.log(user.msg());
     console.log(user.Power(5));
 }
-exports.default = Modifiers;
+exports.Modifiers = Modifiers;
 //# sourceMappingURL=modifiers.js.map

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImplementInterface = void 0;
 function ImplementInterface() {
     class Page {
         constructor(username, theme, font) {
@@ -17,5 +18,5 @@ function ImplementInterface() {
     const page = new Page("shehab", true, "open sans");
     console.log(page);
 }
-exports.default = ImplementInterface;
+exports.ImplementInterface = ImplementInterface;
 //# sourceMappingURL=implement-interface.js.map

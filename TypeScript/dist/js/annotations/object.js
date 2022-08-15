@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Objects = void 0;
 function Objects() {
     let myObj = {
         username: "shehab",
@@ -10,5 +11,5 @@ function Objects() {
     myObj.available = false;
     console.log(myObj);
 }
-exports.default = Objects;
+exports.Objects = Objects;
 //# sourceMappingURL=object.js.map

@@ -1,4 +1,4 @@
-const methods = () => {
+export const Methods = () => {
 	interface user {
 		id: number;
 		readonly username: string;
@@ -24,5 +24,3 @@ const methods = () => {
 	console.log(myUser.sayWelcome());
 	console.log(myUser.getPower(3));
 };
-
-export default methods;

@@ -1,4 +1,4 @@
-const GetSet = () => {
+export const GetSet = () => {
 	class User {
 		public msg: () => string;
 
@@ -22,5 +22,3 @@ const GetSet = () => {
 	console.log(user.username); // get
 	console.log(user.msg()); // get
 };
-
-export default GetSet;

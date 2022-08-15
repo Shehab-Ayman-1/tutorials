@@ -1,4 +1,4 @@
-export default function RestParameters() {
+export function RestParameters() {
 	function restParams(...nums: number[]) {
 		let result: number = 0;
 		nums.forEach((num) => (result += num));

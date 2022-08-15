@@ -1,4 +1,4 @@
-export default function Literal() {
+export  function Literal() {
 	type compareType = 0 | 1 | -1;
 	const compare = (num1: number, num2: number): compareType => {
 		if (num1 === num2) {

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Extends = void 0;
 function Extends() {
     const user = {
         id: 1,
@@ -12,5 +13,5 @@ function Extends() {
     };
     console.log(user);
 }
-exports.default = Extends;
+exports.Extends = Extends;
 //# sourceMappingURL=extend.js.map

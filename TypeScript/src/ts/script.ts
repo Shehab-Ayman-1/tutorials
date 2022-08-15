@@ -1,4 +1,4 @@
-/* 
+/* Typescript 
     Create New Typescript Project [ tsc --init ]
     Typescript Is Checking The Errors Before Run Code And Settings This Checkers In The tsConfig.json File
 
@@ -12,23 +12,49 @@
     [7] noUnusedParameters // Mind Any Unused Parameters
 */
 
-// import Annotations from "./annotations/annotations";
-// import Functions from "./functions/functions";
-// import dataTypes from "./data types/dataTypes";
-// import Interfaces from "./interfaces/interface";
-import Classes from "./classes/classes";
+// import { Globals, Arrays, Objects } from "./annotations";
+// import { Annotations, ArrowFunction, OptionalParameters, RestParameters } from "./functions";
+// import { Alias, Assertions, Enums, Intersections, Literal, Tuple, VoidAndNever } from "./data types";
+// import { Extends, Methods, ReOpen } from "./interfaces";
+// import { Abstract, CreateClass, GetSet, ImplementInterface, Modifiers, Polimorphism, StaticMembers } from "./classes";
+// import { OneType, MultipleType, Classes, Interfaces } from "./generics";
 
 // ============================================= Annotations ===========================================
-// Annotations();
+// Globals();
+// Arrays();
+// Objects();
 
 // ============================================= Functions =============================================
-// Functions();
+// Annotations();
+// ArrowFunction();
+// OptionalParameters();
+// RestParameters();
 
 // ============================================= Data Types ============================================
-// dataTypes();
+// Alias();
+// Assertions();
+// Enums();
+// Intersections();
+// Literal();
+// Tuple();
+// VoidAndNever();
 
 // ============================================= Interfaces ============================================
-// Interfaces();
+// Extends();
+// Methods();
+// ReOpen();
 
 // ============================================= classes ===============================================
-Classes();
+// Abstract();
+// CreateClass();
+// GetSet();
+// ImplementInterface();
+// Modifiers();
+// Polimorphism();
+// StaticMembers();
+
+// ============================================= Generics ==============================================
+// OneType();
+// MultipleType();
+// Classes();
+// Interfaces();

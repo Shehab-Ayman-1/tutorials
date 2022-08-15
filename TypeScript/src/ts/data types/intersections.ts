@@ -3,7 +3,7 @@
     -- Can To Compine More Types Without Any Extend 
 */
 
-export default function Intersections() {
+export  function Intersections() {
 	type a = { one: string };
 
 	type b = { two: string };

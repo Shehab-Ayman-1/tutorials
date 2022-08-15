@@ -1,15 +1,13 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 // import Global from "./global";
 // import Array from "./array";
-const object_1 = __importDefault(require("./object"));
+// import Object from "./object";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.annotations = void 0;
 const annotations = () => {
     // Global();
     // Array();
-    (0, object_1.default)();
+    // Object();
 };
-exports.default = annotations;
+exports.annotations = annotations;
 //# sourceMappingURL=annotations.js.map

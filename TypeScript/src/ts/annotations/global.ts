@@ -1,4 +1,4 @@
-export default function Globals() {
+export function Globals() {
 	// Global Variablts
 	let st: string = "Shehab";
 	let num: number = 21;

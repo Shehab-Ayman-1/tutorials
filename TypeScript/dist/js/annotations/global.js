@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Globals = void 0;
 function Globals() {
     // Global Variablts
     let st = "Shehab";
@@ -9,5 +10,5 @@ function Globals() {
     let any = `name: shehab, age: ${21}, isHired: ${true}`;
     console.log(st, num, bool, stnum, any);
 }
-exports.default = Globals;
+exports.Globals = Globals;
 //# sourceMappingURL=global.js.map

@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GetSet = void 0;
 const GetSet = () => {
     class User {
         constructor(_username, _salary) {
@@ -19,5 +20,5 @@ const GetSet = () => {
     console.log(user.username); // get
     console.log(user.msg()); // get
 };
-exports.default = GetSet;
+exports.GetSet = GetSet;
 //# sourceMappingURL=get-set.js.map

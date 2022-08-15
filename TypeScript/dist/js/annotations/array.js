@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Arrays = void 0;
 function Arrays() {
     // let stArr: string[] = ["html | ", "css | ", "js | ", 100] // Invalue Array
     let stArr = ["html", "css", "js", "ts"];
@@ -10,5 +11,5 @@ function Arrays() {
     let loopArr = ["html | ", "css | ", "js | "];
     loopArr.forEach((item) => console.log(item.repeat(3)));
 }
-exports.default = Arrays;
+exports.Arrays = Arrays;
 //# sourceMappingURL=array.js.map

@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DT_Assign8 = exports.DT_Assign7 = exports.DT_Assign6 = exports.DT_Assign5 = exports.DT_Assign4 = exports.DT_Assign3 = exports.DT_Assign2 = exports.DT_Assign1 = void 0;
+var assign_1_1 = require("./assign-1");
+Object.defineProperty(exports, "DT_Assign1", { enumerable: true, get: function () { return assign_1_1.DT_Assign1; } });
+var assign_2_1 = require("./assign-2");
+Object.defineProperty(exports, "DT_Assign2", { enumerable: true, get: function () { return assign_2_1.DT_Assign2; } });
+var assign_3_1 = require("./assign-3");
+Object.defineProperty(exports, "DT_Assign3", { enumerable: true, get: function () { return assign_3_1.DT_Assign3; } });
+var assign_4_1 = require("./assign-4");
+Object.defineProperty(exports, "DT_Assign4", { enumerable: true, get: function () { return assign_4_1.DT_Assign4; } });
+var assign_5_1 = require("./assign-5");
+Object.defineProperty(exports, "DT_Assign5", { enumerable: true, get: function () { return assign_5_1.DT_Assign5; } });
+var assign_6_1 = require("./assign-6");
+Object.defineProperty(exports, "DT_Assign6", { enumerable: true, get: function () { return assign_6_1.DT_Assign6; } });
+var assign_7_1 = require("./assign-7");
+Object.defineProperty(exports, "DT_Assign7", { enumerable: true, get: function () { return assign_7_1.DT_Assign7; } });
+var assign_8_1 = require("./assign-8");
+Object.defineProperty(exports, "DT_Assign8", { enumerable: true, get: function () { return assign_8_1.DT_Assign8; } });
+//# sourceMappingURL=index.js.map

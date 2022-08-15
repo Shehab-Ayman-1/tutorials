@@ -1,1 +1,1 @@
-{"version":3,"file":"annotations.js","sourceRoot":"","sources":["../../../src/ts/annotations/annotations.ts"],"names":[],"mappings":";;;;;AAAA,iCAAiC;AACjC,+BAA+B;AAC/B,sDAA8B;AAE9B,MAAM,WAAW,GAAG,GAAG,EAAE;IACxB,YAAY;IACZ,WAAW;IACX,IAAA,gBAAM,GAAE,CAAC;AACV,CAAC,CAAC;AAEF,kBAAe,WAAW,CAAC"}
+{"version":3,"file":"annotations.js","sourceRoot":"","sources":["../../../src/ts/annotations/annotations.ts"],"names":[],"mappings":";AAAA,iCAAiC;AACjC,+BAA+B;AAC/B,iCAAiC;;;AAE1B,MAAM,WAAW,GAAG,GAAG,EAAE;IAC/B,YAAY;IACZ,WAAW;IACX,YAAY;AACb,CAAC,CAAC;AAJW,QAAA,WAAW,eAItB"}

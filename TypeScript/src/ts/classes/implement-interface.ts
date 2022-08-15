@@ -1,4 +1,4 @@
-export default function ImplementInterface() {
+export function ImplementInterface() {
 	interface settings {
 		theme: boolean;
 		font?: string;

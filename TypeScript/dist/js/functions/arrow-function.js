@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ArrowFunction = void 0;
 function ArrowFunction() {
     const showDetails = (name, age, salary) => {
         if (false)
@@ -8,5 +9,5 @@ function ArrowFunction() {
     };
     showDetails("shehab", 21, 5000);
 }
-exports.default = ArrowFunction;
+exports.ArrowFunction = ArrowFunction;
 //# sourceMappingURL=arrow-function.js.map

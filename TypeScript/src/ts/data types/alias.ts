@@ -1,4 +1,4 @@
-export default function Alias() {
+export function Alias() {
 	// Single Type
 	type st = string;
 	let name: st = "shehab";

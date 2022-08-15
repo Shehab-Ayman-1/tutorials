@@ -1,4 +1,4 @@
-export default function StaticMembers() {
+export function StaticMembers() {
 	class User {
 		static created: number = 0;
 		static getCount(): void {

@@ -6,6 +6,7 @@
     -- Never Function => Have To Return No Thing => No Value And No Undefined => No Thing
 */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.VoidAndNever = void 0;
 function VoidAndNever() {
     // Void
     const login = (msg) => {
@@ -28,5 +29,5 @@ function VoidAndNever() {
     };
     alwaysReturn("msg");
 }
-exports.default = VoidAndNever;
+exports.VoidAndNever = VoidAndNever;
 //# sourceMappingURL=void-never.js.map

@@ -4,7 +4,7 @@
     -- The Ts Compiler Doesn't Check Any Thing After We Use As To Select The Type
 */
 
-export default function Assertions() {
+export function Assertions() {
 	const img = document.getElementById("img") as HTMLImageElement;
 	// console.log(img.value); // Image Can't Has Value As An Attribute
 	console.log(img.src); // image src

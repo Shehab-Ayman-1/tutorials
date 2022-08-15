@@ -1,4 +1,4 @@
-export default function Extends() {
+export function Extends() {
 	interface client {
 		readonly id: string | number;
 		fName: string;

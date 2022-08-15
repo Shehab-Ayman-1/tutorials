@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Literal = void 0;
 function Literal() {
     const compare = (num1, num2) => {
         if (num1 === num2) {
@@ -15,5 +16,5 @@ function Literal() {
     };
     console.log(compare(3, 3), compare(4, 3), compare(2, 3));
 }
-exports.default = Literal;
+exports.Literal = Literal;
 //# sourceMappingURL=literal.js.map

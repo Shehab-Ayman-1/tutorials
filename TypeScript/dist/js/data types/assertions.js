@@ -5,6 +5,7 @@
     -- The Ts Compiler Doesn't Check Any Thing After We Use As To Select The Type
 */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Assertions = void 0;
 function Assertions() {
     const img = document.getElementById("img");
     // console.log(img.value); // Image Can't Has Value As An Attribute
@@ -16,5 +17,5 @@ function Assertions() {
     const age = 21.54321;
     console.log(age.repeat(3)); // Error => Compiler Doesn't Check If Age Value Is A String OR Number
 }
-exports.default = Assertions;
+exports.Assertions = Assertions;
 //# sourceMappingURL=assertions.js.map

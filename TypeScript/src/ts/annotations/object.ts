@@ -1,4 +1,4 @@
-export default function Objects() {
+export function Objects() {
 	let myObj: {
 		readonly username: string;
 		age?: number; // ? To Make It Optional

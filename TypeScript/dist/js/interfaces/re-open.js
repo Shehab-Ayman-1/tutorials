@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReOpen = void 0;
 function ReOpen() {
     const homePage = {
         theme: true,
@@ -19,5 +20,5 @@ function ReOpen() {
     };
     console.log(contactPage);
 }
-exports.default = ReOpen;
+exports.ReOpen = ReOpen;
 //# sourceMappingURL=re-open.js.map

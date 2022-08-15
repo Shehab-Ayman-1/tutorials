@@ -7,13 +7,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // import Modifiers from "./modifiers";
 // import GetSet from "./get-set";
 // import StaticMembers from "./static-members";
-const implement_interface_1 = __importDefault(require("./implement-interface"));
+// import ImplementInterface from "./implement-interface";
+// import Abstract from "./abstract";
+const polimorphism_1 = __importDefault(require("./polimorphism"));
 function Classes() {
     // CreateClass();
     // Modifiers();
     // GetSet();
     // StaticMembers();
-    (0, implement_interface_1.default)();
+    // ImplementInterface();
+    // Abstract();
+    (0, polimorphism_1.default)();
 }
 exports.default = Classes;
 //# sourceMappingURL=classes.js.map

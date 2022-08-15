@@ -8,7 +8,7 @@
     -- Can Set The Key Number
 */
 
-export default function Enums() {
+export function Enums() {
 	// We Create The Enum As A Variable To Organize The Code In Js File
 	const enum kidsAges {
 		toSeven = 7,

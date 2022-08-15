@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateClass = void 0;
 function CreateClass() {
     class User {
         constructor(username, salary) {
@@ -15,5 +16,5 @@ function CreateClass() {
     console.log(user.msg());
     console.log(user.Power(5));
 }
-exports.default = CreateClass;
+exports.CreateClass = CreateClass;
 //# sourceMappingURL=create-class.js.map

@@ -1,4 +1,4 @@
-export default function CreateClass() {
+export function CreateClass() {
 	class User {
 		user: string;
 		sal: number;

@@ -9,6 +9,7 @@
     -- Can Set The Key Number
 */
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Enums = void 0;
 function Enums() {
     const getHardSeconds = () => 6;
     let levels;
@@ -35,5 +36,5 @@ function Enums() {
         console.log(`Player Level Is [ ${lvl} ], You Have Just [ ${levels.medium} ] To Write This Word`);
     }
 }
-exports.default = Enums;
+exports.Enums = Enums;
 //# sourceMappingURL=enums.js.map

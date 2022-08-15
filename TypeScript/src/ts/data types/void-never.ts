@@ -5,7 +5,7 @@
     -- Never Function => Have To Return No Thing => No Value And No Undefined => No Thing
 */
 
-export default function VoidAndNever() {
+export function VoidAndNever() {
 	// Void
 	const login = (msg: string): void => {
 		console.log(msg);

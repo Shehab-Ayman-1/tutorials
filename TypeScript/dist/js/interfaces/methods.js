@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const methods = () => {
+exports.Methods = void 0;
+const Methods = () => {
     const myUser = {
         id: 1,
         username: "shehab",
@@ -17,5 +18,5 @@ const methods = () => {
     console.log(myUser.sayWelcome());
     console.log(myUser.getPower(3));
 };
-exports.default = methods;
+exports.Methods = Methods;
 //# sourceMappingURL=methods.js.map

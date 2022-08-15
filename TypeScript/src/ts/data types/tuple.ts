@@ -4,7 +4,7 @@
     -- We Know The Entries Type With Specific Position
 */
 
-export default function Tuple() {
+export  function Tuple() {
 	// Simple Tuple
 	const article1: [string, number, boolean] = ["Title", 1, true];
 	article1.push("can add any thing in tuples by push method");
