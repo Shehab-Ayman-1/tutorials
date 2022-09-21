@@ -19,8 +19,36 @@
 }
 
 .mybtn {
-	color: get(white);
-	font-size: 2rem;
+	background: linear-gradient(0deg, rgba(255, 27, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+	color: white;
+	position: relative;
+	font-size: 18px;
+	&:hover {
+		color: #f0094a;
+		background: transparent;
+		box-shadow: none;
+		&:before,
+		&:after {
+			width: 100%;
+			transition: 800ms ease all;
+		}
+	}
+	&:before,
+	&:after {
+		@include Absolute(tr, 0, 0);
+		background: #f0094a;
+		content: "";
+		width: 0;
+		height: 2px;
+		transition: 400ms ease all;
+		box-shadow: -1px -1px 5px 0px #fff, 7px 7px 20px 0px #0003, 4px 4px 5px 0px #0002;
+	}
+	&:after {
+		top: inherit;
+		right: inherit;
+		bottom: 0;
+		left: 0;
+	}
 	&.toDos-btn {
 		width: 100px;
 		padding: 5px 15px;

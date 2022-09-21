@@ -1,2 +1,9 @@
-import firstAssignment from "./lessons/From-1-to-9.js";
-firstAssignment();
+import { multipleValues } from "./lessons/multiple-value.js";
+import { assign1, assign2 } from "./lessons/console-style.js";
+
+// ============================================ Multiple Values ============================================
+// multipleValues();
+
+// ============================================ Console - Style ============================================
+// assign1();
+// assign2();

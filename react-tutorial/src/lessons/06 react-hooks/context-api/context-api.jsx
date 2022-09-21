@@ -10,23 +10,27 @@
 
 import React, { useContext } from "react";
 import { AuthContext, AuthProvider } from "./context/create-context";
-import Component1 from "./components/component-1";
-import Component2 from "./components/component-2";
-import Component3 from "./components/component-3";
+import Component1 from "./components/one";
+import Component2 from "./components/two";
+import Component3 from "./components/three";
 
 function ParentContext() {
 	const props = useContext(AuthContext);
 
 	return (
 		<div className="f-20">
-			<div className="parent">
+			<div className="parent" style={{ paddingLeft: "20px" }}>
 				<h3 className="dark-color">Parent .js</h3>
-				<span className="main-color">Theme Color: </span> <span className="second-color">{props.theme}</span> <br />
-				<span className="main-color">user data: </span>
-				<span className="second-color">
-					{props.data.name} | {props.data.age} | {props.data.country}
-				</span>
-				<br />
+				<div>
+					<span className="main-color">Theme Color: </span>
+					<span className="second-color">{props.theme}</span>
+				</div>
+				<div>
+					<span className="main-color">user data: </span>
+					<span className="second-color">
+						{props.data.name} | {props.data.age} | {props.data.country}
+					</span>
+				</div>
 				<button className="mybtn" onClick={() => props.handleTheme()}>
 					Change The Theme Color
 				</button>
