@@ -234,17 +234,283 @@ export const assign10 = () => {
 	console.log(solution); // Elzero Web School
 };
 
-export const assign11 = () => {};
+export const assign11 = () => {
+	/* 
+	- Create Container Element Has A Class Name = Product
+	- The Container Has 2 Element [h3, p], And The Element Have Any Text
+	- Repeat The Container 100 Time
+	*/
 
-export const assign12 = () => {};
+	let container = document.createElement("div");
+	for (let i = 1; i <= 100; i++) {
+		let div = document.createElement("div");
+		let h3 = document.createElement("h3");
+		let p = document.createElement("p");
+		let h3Text = document.createTextNode(`Product Name: ${i}`);
+		let pText = document.createTextNode("Product Description");
 
-export const assign13 = () => {};
+		container.classList = "product-container";
+		div.classList = "product";
+		h3.classList = "product-title";
+		p.classList = "product-desciption";
 
-export const assign14 = () => {};
+		h3.appendChild(h3Text);
+		p.appendChild(pText);
 
-export const assign15 = () => {};
+		container.appendChild(div);
+		div.appendChild(h3);
+		div.appendChild(p);
+		document.body.appendChild(container);
+	}
+};
 
-export const assign16 = () => {};
+export const assign12 = () => {
+	// ======== Header ========
+	// Elements
+	let header = document.createElement("header");
+	let title = document.createElement("h3");
+	let navbar = document.createElement("nav");
+
+	// Texts
+	let titleText = document.createTextNode("Elzero");
+	let linksText = ["Home", "About", "Services", "Contant"];
+
+	// Appends
+	header.append(title);
+	title.appendChild(titleText);
+	header.append(navbar);
+	linksText.forEach((lnk) => {
+		let link = document.createElement("a");
+		link.className = "link";
+		link.href = "#";
+		link.append(lnk);
+		link.style.cssText = `font-family: cursive`;
+		navbar.appendChild(link);
+	});
+	document.body.prepend(header);
+
+	// Attributes
+	navbar.className = "navbar";
+	header.className = "header";
+	title.className = "title";
+
+	// Styling
+	let flex = `display: flex; justify-content: space-between; align-items: center;`;
+	header.style.cssText = `${flex} background-color: #333; padding: 0 15px; border-radius: 10px`;
+	title.style.cssText = `color: orange; letter-spacing: 2px; font-family: cursive`;
+	navbar.style.cssText = flex;
+
+	// ======== Section ========
+	let section = document.createElement("section");
+	for (let i = 1; i <= 15; i++) {
+		// Elements
+		let product = document.createElement("div");
+		let description = document.createElement("p");
+
+		// Texts
+		let descText = document.createTextNode("Product");
+		let count = document.createElement("span");
+
+		// Appends
+		header.after(section);
+		section.appendChild(product);
+		product.prepend(count);
+		product.append(description);
+		description.append(descText);
+		count.prepend(i);
+
+		// Attributes
+		product.className = "product-box";
+		count.className = "product-count";
+		description.className = "product-desc";
+
+		// Styling
+		section.style.cssText = `${flex} flex-wrap: wrap; padding: 10px 0; gap: 10px`;
+		product.style.cssText = `background-color: #333; width: calc((100% / 3) - 30px); display: flex; flex-direction: column; align-items: center; padding: 10px; border-radius: 10px`;
+		count.style.cssText = `font-size: 30px; font-family: cursive`;
+		description.style.cssText = `color: #999; font-size: 14px; font-family: cursive`;
+	}
+
+	// ======== Footer =========
+	// Elements
+	let footer = document.createElement("footer");
+	let copyright = document.createElement("h3");
+
+	// Texts
+	let copyrightText = document.createTextNode("Copyright");
+
+	// Appends
+	section.after(footer);
+	footer.append(copyright);
+	copyright.appendChild(copyrightText);
+
+	// Attributes
+	footer.className = "footer";
+	footer.id = "footer";
+	copyright.className = "text";
+
+	// Styles
+	footer.style.cssText = `background: #333; width: 100%; text-align: center; border-radius: 10px`;
+	copyright.style.cssText = "padding: 10px; letter-spacing: 2px; font-family: cursive";
+};
+
+export const assign13 = () => {
+	/* 
+	[1] Create The Order Section
+	[2] Show Tasks Section
+	[3] Add Data From The Tasks
+	[4] Delete Data From The Tasks
+	*/
+
+	// [1] Create The Order Section
+	// Create
+	let todos = document.createElement("section");
+	let getTask = document.createElement("div");
+	let input = document.createElement("input");
+	let addBtn = document.createElement("button");
+	let addBtnText = document.createTextNode("add");
+
+	// Attribute
+	todos.className = "todos-section";
+	todos.id = "todos-section";
+	getTask.className = "get-task";
+	input.className = "input-task";
+	addBtn.className = "add-btn";
+
+	// Appends
+	document.body.prepend(todos);
+	todos.prepend(getTask);
+	getTask.append(addBtn);
+	getTask.prepend(input);
+	input.placeholder = "new task";
+	addBtn.appendChild(addBtnText);
+
+	// Styles
+	let flex = `display: flex; justify-content: space-between; align-items: center;`;
+	document.body.style.cssText = "display: flex; justify-content: center";
+	todos.style.cssText = `background: #444; width: 400px; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px 0`;
+	getTask.style.cssText = `${flex} background: #333; width: 90%; position:`;
+	addBtn.style.cssText = `background: orange; color: black; font-size: 14px; font-weight: bold; padding: 10px 10px; border-radius: 5px; cursor: pointer`;
+	input.style.cssText = "font-size: 16px";
+
+	// [2] Add Data To The Tasks
+	let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+	function addNewTask() {
+		if (input.value === "") return;
+		if (!Array.isArray(tasks)) return console.log(`tasks Is Not An Array: ${tasks}`);
+
+		tasks.push({ id: new Date().getTime(), task: input.value });
+		window.localStorage.setItem("tasks", JSON.stringify(tasks));
+		input.value = "";
+		tasksList();
+	}
+
+	addBtn.addEventListener("click", addNewTask);
+	window.addEventListener("keypress", (event) => event.key === "Enter" && addNewTask());
+
+	// [3] Show Tasks Section
+	let showTasks = document.createElement("div");
+	showTasks.className = "tasks-list";
+	todos.append(showTasks);
+	function tasksList() {
+		showTasks.innerHTML = "";
+		for (let i in tasks) {
+			// Create
+			let task = document.createElement("div");
+			let taskField = document.createElement("input");
+			let deleteBtn = document.createElement("button");
+			let index = document.createElement("span");
+			let deleteBtnText = document.createTextNode("delete");
+
+			// Attribute
+			taskField.disabled = true;
+			task.className = "task";
+			taskField.className = "task-field";
+			deleteBtn.className = "delete-btn";
+
+			// Appends
+			showTasks.append(task);
+			task.prepend(index);
+			task.append(taskField);
+			task.append(deleteBtn);
+			index.innerHTML = `${+i + 1}-`;
+			deleteBtn.append(deleteBtnText);
+			deleteBtn.setAttribute("data-task-index", i);
+			taskField.value = tasks[i].task;
+
+			// Styles
+			showTasks.style.cssText = `width: 90%`;
+			task.style.cssText = `${flex} background: #333; padding: 5px; margin: 5px 0`;
+			deleteBtn.style.cssText = `background: red; color: white; font-size: 12px; font-weight: bold; padding: 5px; border-radius: 5px; cursor: pointer`;
+
+			// [4] Delete Data From The Tasks
+			deleteBtn.addEventListener("click", () => {
+				let taskIndex = deleteBtn.getAttribute("data-task-index");
+				tasks.splice(taskIndex, 1);
+				window.localStorage.setItem("tasks", JSON.stringify(tasks));
+				tasksList();
+			});
+		}
+	}
+	tasksList();
+};
+
+export const assign14 = () => {
+	let i = 1;
+
+	let friends = [
+		{ title: "shehab", age: 23, avail: true, skills: ["html", "css"] },
+		{ title: "hesham", age: 22, avail: false, skills: ["python", "django"] },
+		{ title: "aya", age: 22, avail: true, skills: ["php", "laravel"] },
+	];
+	let {
+		title,
+		age,
+		avail,
+		skills: [, two],
+	} = friends[i];
+
+	console.log(`Name Is: ${title}, age Is: ${age}, Is ${avail ? "Available" : "Not Available"}, skill: ${two}`);
+};
+
+export const assign15 = () => {
+	/*
+	Requirements: 
+	- Print 210 In The Console
+	- Can't Use Numbers, True OR False
+	- Can't Use Array Indexes Methods
+	- Can't Use Loops OR Heigher Order Functions
+	- Solution In One Line Inside The Console
+	- Can Use Length Just One Time
+
+	Hints To Make Solation Easy:
+	- In Calculations Just Use [*] Operator
+	- Set
+	- Spread Operator [...arr]
+	- Math Object Method
+	*/
+
+	let n1 = [10, 30, 10, 20];
+	let n2 = [30, 20, 10];
+
+	console.log(++n1[new Set(n1).size] * n1[--n2.length]); // 210
+};
+
+export const assign16 = () => {
+	let url1 = "elzero.org";
+	let url2 = "http://elzero.org";
+	let url3 = "https://elzero.org";
+	let url4 = "https://www.elzero.org";
+	let url5 = "https://www.elzero.org:8080/articles.php?id=100&cat=topics";
+
+	let regex = /(https?:\/\/)?(www.)?\w+.\w+((:\d{4})?(\/.+)\??)?/gi; //
+	console.log(url1.match(regex));
+	console.log(url2.match(regex));
+	console.log(url3.match(regex));
+	console.log(url4.match(regex));
+	console.log(url5.match(regex));
+};
 
 export const assign17 = () => {};
 

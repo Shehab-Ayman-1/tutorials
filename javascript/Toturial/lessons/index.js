@@ -12,10 +12,33 @@ export { numbers, numberMethods, math } from "./numbers.js";
 export { finding, cutting, checkers } from "./strings.js";
 
 // Arrays
-export { control, adding, removing, search, sorting, slicing, joining } from "./arrays.js";
+export { control, adding, removing, search, sorting, slicing, joining, from, copyWithIn, some, every } from "./arrays.js";
 
 // Higher Order Functions
 export { map, filter, reduce, forEach } from "./higher-order-functions.js";
 
 // Objects
-export {} from "./objects.js";
+export { createObject, create, assign } from "./objects.js";
+
+// DOM
+export { selectors, attributes, elements, children, events, classList, styles, siblings, clone } from "./DOM.js";
+
+// BOM
+export { windowMessages, setTimes, location, scrolling, storages } from "./BOM.js";
+
+// Destructer
+export { arrays, objects } from "./destructer.js";
+
+// Data Type
+export { set, weekSet, newMap } from "./data-type.js";
+
+// [12] Regular Expression
+export { pattern, ranges, characters, quantifiers, validation } from "./regex.js";
+
+// [13] Object Orianted Programing
+
+// [14] Date & Time
+
+// [15] JSON API
+
+// [16] Promise

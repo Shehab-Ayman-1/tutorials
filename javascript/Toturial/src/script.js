@@ -1,82 +1,148 @@
 // Problem Solving Website: [Edabit(Easy), HackerRank(Medium), leetCode(Hard)]
 
-// Assignments
+// [1] Assignments
 import { assign01, assign02, assign03, assign04, assign05, assign06, assign07, assign08, assign09, assign10 } from "../lessons/index.js";
 import { assign11, assign12, assign13, assign14, assign15, assign16, assign17, assign18, assign19, assign20 } from "../lessons/index.js";
 
-// Public
+// [2] Public
 import { typeOf, unary, alert, write, consolee } from "../lessons/index.js";
 
-// Numbers
+// [3] Numbers
 import { numbers, numberMethods, math } from "../lessons/index.js";
 
-// Strings
+// [4] Strings
 import { finding, cutting, checkers } from "../lessons/index.js";
 
-// Arrays
-import { control, adding, removing, search, sorting, slicing, joining } from "../lessons/index.js";
+// [5] Arrays
+import { control, adding, removing, search, sorting, slicing, joining, from, copyWithIn, some, every } from "../lessons/index.js";
 
-// Higher Order Functions
+// [6] Higher Order Functions
 import { map, filter, reduce, forEach } from "../lessons/index.js";
 
-// Objects
-import {} from "../lessons/index.js";
+// [7] Objects
+import { createObject, create, assign } from "../lessons/index.js";
 
-// =================================================== Assignments ==============================================
-// assign01();
-// assign02();
-// assign03();
-// assign04();
-// assign05();
-// assign06();
-// assign07();
-// assign08();
-// assign09();
-// assign10();
-assign11();
-assign12();
-assign13();
-assign14();
-assign15();
-assign16();
-assign17();
-assign18();
-assign19();
-assign20();
+// [8] DOM
+import { selectors, attributes, elements, children, events, classList, styles, siblings, clone } from "../lessons/index.js";
+
+// [9] BOM
+import { windowMessages, setTimes, location, scrolling, storages } from "../lessons/index.js";
+
+// [10] Destructer
+import { arrays, objects } from "../lessons/index.js";
+
+// [11] Data Type
+import { set, weekSet, newMap } from "../lessons/index.js";
+
+// [12] Regular Expression
+import { pattern, ranges, characters, quantifiers, validation } from "../lessons/index.js";
+
+// [13] Object Orianted Programing
+
+// [14] Date & Time
+
+// [15] JSON API
+
+// [16] Promise
 
 // =================================================== Publics ===================================================
-// typeOf();
-// unary();
-// alert();
-// write();
-// consolee();
+(function () {
+	// typeOf();
+	// unary();
+	// alert();
+	// write();
+	// consolee();
+})();
 
 // =================================================== Numbers ===================================================
-// numbers();
-// numberMethods();
-// math();
+(function () {
+	// numbers();
+	// numberMethods();
+	// math();
+})();
 
 // =================================================== Strings ===================================================
-// finding();
-// cutting();
-// checkers();
+(function () {
+	// finding();
+	// cutting();
+	// checkers();
+})();
 
 // =================================================== Arrays ====================================================
-// control();
-// adding();
-// removing();
-// search();
-// sorting();
-// slicing();
-// joining();
+(function () {
+	// control();
+	// adding();
+	// removing();
+	// search();
+	// sorting();
+	// slicing();
+	// joining();
+	// from();
+	// copyWithIn();
+	// some();
+	// every();
+})();
 
 // =========================================== Higher Order Functions ============================================
-// map();
-// filter();
-// reduce();
-// forEach();
+(function () {
+	// map();
+	// filter();
+	// reduce();
+	// forEach();
+})();
 
 // =================================================== Objects ===================================================
+(function () {
+	// createObject();
+	// create();
+	// assign();
+})();
+
+// ==================================================== DOM ======================================================
+(function () {
+	// selectors();
+	// attributes();
+	// elements();
+	// children();
+	// events();
+	// classList();
+	// styles();
+	// siblings();
+	// clone();
+})();
+
+// ==================================================== BOM ======================================================
+(function () {
+	// windowMessages();
+	// setTimes();
+	// location();
+	// scrolling();
+	// storages();
+})();
+
+// ================================================= Destructor ==================================================
+(function () {
+	// arrays();
+	// objects();
+})();
+
+// ================================================= Data Type ===================================================
+(function () {
+	// set();
+	// weekSet();
+	// newMap();
+})();
+
+// ============================================== Regular Expression =============================================
+(function () {
+	// pattern();
+	// ranges();
+	// characters();
+	// quantifiers();
+	// validation();
+})();
+
+// ==================================================== OOP ======================================================
 
 // =================================================== ====================================================
 
@@ -88,14 +154,26 @@ assign20();
 
 // =================================================== ====================================================
 
-// =================================================== ====================================================
-
-// =================================================== ====================================================
-
-// =================================================== ====================================================
-
-// =================================================== ====================================================
-
-// =================================================== ====================================================
-
-// =================================================== ====================================================
+// ================================================= Assignments =================================================
+(function () {
+	// assign01();
+	// assign02();
+	// assign03();
+	// assign04();
+	// assign05();
+	// assign06();
+	// assign07();
+	// assign08();
+	// assign09();
+	// assign10();
+	// assign11();
+	// assign12();
+	// assign13();
+	// assign14();
+	// assign15();
+	// assign16();
+	assign17();
+	assign18();
+	assign19();
+	assign20();
+})();

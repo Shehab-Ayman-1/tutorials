@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {
+		"baseUrl": "lessons"
+	},
+	"include": ["lessons"]
+}
