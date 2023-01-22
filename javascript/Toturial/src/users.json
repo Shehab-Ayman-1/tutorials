@@ -1,0 +1,32 @@
+{
+	"user1": {
+		"name": "shehab",
+		"age": 23,
+		"isAvailable": true,
+		"skills": ["html", "css", "js"],
+		"countries": {
+			"egypt": "alex",
+			"usa": "new york"
+		}
+	},
+	"user2": {
+		"name": "hesham",
+		"age": 22,
+		"isAvailable": false,
+		"skills": ["php", "laravel"],
+		"countries": {
+			"egypt": "alex",
+			"usa": "shekago"
+		}
+	},
+	"user3": {
+		"name": "aya",
+		"age": 23,
+		"isAvailable": true,
+		"skills": ["python", "Django"],
+		"countries": {
+			"egypt": "Cairo",
+			"usa": "shekago"
+		}
+	}
+}

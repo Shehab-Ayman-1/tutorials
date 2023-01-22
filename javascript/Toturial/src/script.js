@@ -38,12 +38,22 @@ import { set, weekSet, newMap } from "../lessons/index.js";
 import { pattern, ranges, characters, quantifiers, validation } from "../lessons/index.js";
 
 // [13] Object Orianted Programing
+import { constructor, inheritance, encapsulation, prototype } from "../lessons/index.js";
 
-// [14] Date & Time
+// [14] Object Meta Data
+import { defineProperty, defineProperties, propertyDescriptor } from "../lessons/index.js";
 
-// [15] JSON API
+// [15] Date & Time
+import { gets, formats } from "../lessons/index.js";
 
-// [16] Promise
+// [16] JSON API
+import { manageData, synchronous } from "../lessons/index.js";
+
+// [17] Ajax
+import { response } from "../lessons/index.js";
+
+// [18] Promise
+import { promise, promiseXHR, Fetch, methods, sync, Await, tryCatch } from "../lessons/index.js";
 
 // =================================================== Publics ===================================================
 (function () {
@@ -143,16 +153,47 @@ import { pattern, ranges, characters, quantifiers, validation } from "../lessons
 })();
 
 // ==================================================== OOP ======================================================
+(function () {
+	// constructor();
+	// inheritance();
+	// encapsulation();
+	// prototype();
+})();
 
-// =================================================== ====================================================
+// ============================================== Object Meta Data ===============================================
+(function () {
+	// defineProperty();
+	// defineProperties();
+	// propertyDescriptor();
+})();
 
-// =================================================== ====================================================
+// ================================================ Date & Time ==================================================
+(function () {
+	// gets();
+	// formats();
+})();
 
-// =================================================== ====================================================
+// ================================================= JSON API ====================================================
+(function () {
+	// manageData();
+	// synchronous();
+})();
 
-// =================================================== ====================================================
+// ================================================== Ajax =======================================================
+(function () {
+	// response();
+})();
 
-// =================================================== ====================================================
+// ================================================= Promise =====================================================
+(function () {
+	// promise();
+	// promiseXHR();
+	// Fetch();
+	// methods();
+	// sync();
+	// Await();
+	// tryCatch();
+})();
 
 // ================================================= Assignments =================================================
 (function () {
@@ -172,8 +213,4 @@ import { pattern, ranges, characters, quantifiers, validation } from "../lessons
 	// assign14();
 	// assign15();
 	// assign16();
-	assign17();
-	assign18();
-	assign19();
-	assign20();
 })();

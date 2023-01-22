@@ -36,9 +36,19 @@ export { set, weekSet, newMap } from "./data-type.js";
 export { pattern, ranges, characters, quantifiers, validation } from "./regex.js";
 
 // [13] Object Orianted Programing
+export { constructor, inheritance, encapsulation, prototype } from "./OOP.js";
 
-// [14] Date & Time
+// [14] Object Meta Data
+export { defineProperty, defineProperties, propertyDescriptor } from "./object-meta-data.js";
 
-// [15] JSON API
+// [15] Date & Time
+export { gets, formats } from "./date.js";
 
-// [16] Promise
+// [16] JSON API
+export { manageData, synchronous } from "./json.js";
+
+// [17] Ajax
+export { response } from "./ajax.js";
+
+// [18] Promise
+export { promise, promiseXHR, Fetch, methods, sync, Await, tryCatch } from "./promise.js";
