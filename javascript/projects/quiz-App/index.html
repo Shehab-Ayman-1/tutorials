@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz App</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+
+	<body data-theme="light-red-blue-theme">
+		<main class="main-widget">
+			<!-- =========================================== Top Widget =========================================== -->
+			<section class="top-widget" id="top-widget">
+				<p class="catagory-lang">Catagoty: <span>HTML</span></p>
+				<p class="question-no">Questions Count: <span></span></p>
+			</section>
+
+			<!-- =========================================== Mid Widget =========================================== -->
+			<section class="mid-widget" id="mid-widget">
+				<div class="open">
+					<h3 class="question-title">Why We Use Element</h3>
+					<div class="question-answers">
+						<div class="ans">
+							<input type="radio" name="answers" id="ans-1" checked="true" />
+							<label class="ans-1" for="ans-1">To Make Text Bold</label>
+						</div>
+						<div class="ans">
+							<input type="radio" name="answers" id="ans-2" />
+							<label class="ans-2" for="ans-2">To Make Text Italic</label>
+						</div>
+						<div class="ans">
+							<input type="radio" name="answers" id="ans-3" />
+							<label class="ans-3" for="ans-3">To Add Breakline</label>
+						</div>
+						<div class="ans">
+							<input type="radio" name="answers" id="ans-4" />
+							<label class="ans-4" for="ans-4">To Create Horizontal Line</label>
+						</div>
+					</div>
+					<button class="submit-btn" type="button">Submit Answer</button>
+					<p class="no">Question: <b>01</b></p>
+				</div>
+				<div class="close">
+					<p>Your Score Is: <span class="score"></span> From <span class="total-score"></span></p>
+					<h3 class="state"></h3>
+					<button class="again-btn">Again</button>
+				</div>
+			</section>
+
+			<!-- ========================================= Bottom Widget ========================================== -->
+			<section class="bottom-widget" id="bottom-widget">
+				<div class="bollets">
+					<div class="bollet" data-index="0"></div>
+					<div class="bollet" data-index="1"></div>
+					<div class="bollet" data-index="2"></div>
+					<div class="bollet" data-index="3"></div>
+					<div class="bollet" data-index="4"></div>
+					<div class="bollet" data-index="5"></div>
+					<div class="bollet" data-index="6"></div>
+					<div class="bollet" data-index="7"></div>
+					<div class="bollet" data-index="8"></div>
+				</div>
+				<span class="time">00:00</span>
+			</section>
+		</main>
+
+		<!-- =========================================== javascript =========================================== -->
+		<script src="./script.js" type="module"></script>
+	</body>
+</html>

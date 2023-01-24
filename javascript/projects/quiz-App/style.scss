@@ -1,0 +1,109 @@
+@use "./helpers/index" as *;
+
+html {
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+* {
+	user-select: none;
+}
+
+// main
+.main-widget {
+	@include absolute("tl", 50%, 50%);
+	background-color: get(light-bg);
+	width: 80%;
+	padding: 20px;
+	transform: translate(-50%, -50%);
+	border: 1px solid get(light-text);
+}
+
+// Top Widget
+.top-widget {
+	@include flex(space-between, center);
+	background-color: get(white);
+	width: 100%;
+	padding: 10px;
+	border: 1px solid get(light-text);
+}
+
+// Mid Widget
+.mid-widget {
+	background-color: get(white);
+	padding: 10px;
+	margin-top: 20px;
+	border: 1px solid get(light-text);
+	.open {
+		.question-title {
+			color: get(main-color);
+			font-size: 22px;
+		}
+		.question-answers {
+			background-color: get(light-bg);
+			.ans {
+				padding: 10px;
+				border-bottom: 1px solid get(light-text);
+				label,
+				input {
+					cursor: pointer;
+					font-size: 14px;
+				}
+			}
+		}
+		.submit-btn {
+			background-color: get(main-color);
+			color: white;
+			width: 100%;
+			padding: 10px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			&:hover {
+				background-color: get(second-color);
+			}
+		}
+	}
+	.close {
+		display: none;
+		.again-btn {
+			background-color: get(main-color);
+			color: white;
+			width: 50%;
+			padding: 10px;
+			font-size: 16px;
+			font-weight: bold;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			cursor: pointer;
+			transition: 0.5s ease-in-out;
+			&:hover {
+				background-color: get(second-color);
+			}
+		}
+	}
+}
+
+// Bottom Widget
+.bottom-widget {
+	@include flex(space-between, center);
+	background-color: get(white);
+	padding: 10px;
+	margin-top: 20px;
+	border: 1px solid get(light-text);
+	.bollets {
+		display: flex;
+		gap: 3px;
+		.bollet {
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			border: 1px solid get(light-text);
+			&.active {
+				background-color: get(main-color);
+			}
+		}
+	}
+}

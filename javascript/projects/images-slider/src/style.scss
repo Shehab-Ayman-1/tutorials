@@ -1,0 +1,80 @@
+@use "./scss/index.scss" as *;
+
+.mybtn {
+	width: 98%;
+	font-size: 20px;
+	margin-top: 80px;
+	text-align: center;
+}
+
+main.slider-widgets {
+	@include absolute("tl", 50%, 50%);
+	@include translate;
+	background-color: get(light-bg);
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	outline: 1px solid get(main-color);
+	outline-offset: 5px;
+	.wrapper {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		.widgets {
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				transition: 0.5s ease-in-out;
+				// opacity: 0;
+				transform: scale(0);
+				// max-height: 0;
+				max-width: 0;
+				&.active {
+					// opacity: 100%;
+					transform: scale(1);
+					// max-height: 100%;
+					max-width: 100%;
+				}
+			}
+		}
+		.navigation {
+			@include absolute("tl", 50%, 0);
+			@include flex(space-between, center);
+			width: 100%;
+			z-index: 10000;
+			i {
+				color: get(black);
+				font-size: 35px;
+				cursor: pointer;
+				&:hover {
+					color: get(main-color);
+				}
+			}
+		}
+		.pagination {
+			@include absolute(bl, 0, 0);
+			background-color: white;
+			width: 100%;
+			text-align: center;
+			span {
+				background-color: get(dark-bg);
+				color: white;
+				font-size: 14px;
+				padding: 0 5px;
+				margin: 0 1px;
+				border-radius: 50%;
+				cursor: pointer;
+				&:hover {
+					background-color: get(main-color);
+				}
+				&.active {
+					background-color: get(main-color);
+				}
+			}
+		}
+	}
+}
