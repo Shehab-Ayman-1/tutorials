@@ -1,0 +1,92 @@
+[
+	{
+		"_id": { "$oid": "63d6e4bfe115aea1246647be" },
+		"name": "sounds For Music",
+		"price": 600,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675027445680" } },
+		"__v": 0
+	},
+	{
+		"_id": { "$oid": "63d6ef3f8600e3e44c08220b" },
+		"name": "sounds",
+		"price": 300,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675030020284" } },
+		"__v": 0
+	},
+	{
+		"_id": { "$oid": "63d7039290b5b0d2dc6da796" },
+		"name": "labtop",
+		"price": 400,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675035500016" } },
+		"__v": 0
+	},
+	{
+		"_id": { "$oid": "63d7039a90b5b0d2dc6da798" },
+		"name": "speaker",
+		"price": 400,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675035500016" } },
+		"__v": 0
+	},
+	{
+		"_id": { "$oid": "63d703a190b5b0d2dc6da79a" },
+		"name": "handfree",
+		"price": 400,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675035500016" } },
+		"__v": 0
+	},
+	{
+		"_id": { "$oid": "63d703b290b5b0d2dc6da79c" },
+		"name": "Radio",
+		"price": 400,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675035500016" } },
+		"__v": 0
+	},
+	{
+		"_id": { "$oid": "63d703b790b5b0d2dc6da79e" },
+		"name": "Keyboard",
+		"price": 400,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675035500016" } },
+		"__v": 0
+	},
+	{
+		"_id": { "$oid": "63d703bd90b5b0d2dc6da7a0" },
+		"name": "Monitor",
+		"price": 400,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675035500016" } },
+		"__v": 0
+	},
+	{
+		"_id": { "$oid": "63d703c990b5b0d2dc6da7a2" },
+		"name": "Mouse",
+		"price": 400,
+		"isPublished": true,
+		"countries": { "egypt": "alex", "usa": "newyork" },
+		"tags": ["gaming", "programming"],
+		"date": { "$date": { "$numberLong": "1675035500016" } },
+		"__v": 0
+	}
+]

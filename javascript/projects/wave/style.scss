@@ -1,0 +1,59 @@
+@use "./scss" as *;
+
+.page {
+	@include flex(center, center);
+	width: 100vw;
+	height: 100vh;
+	&::before {
+		@include fixed(tl, 60%, 50%);
+		content: "";
+		background-color: get(main-color);
+		width: 300%;
+		height: 100%;
+		z-index: -1;
+		border-radius: 50%;
+		animation: waving 12s ease-in-out infinite alternate;
+	}
+	.card {
+		background-color: get(white);
+		width: 350px;
+		height: 500px;
+		padding: 20px;
+		z-index: 1;
+		border-radius: 20px;
+		.top-widget {
+			@include flex(center, center);
+			background-color: get(main-color);
+			padding: 10px;
+			height: 80%;
+			border-radius: 20px;
+			h1 {
+				color: get(white);
+				font-family: cursive;
+				font-size: 70px;
+				font-weight: bold;
+				text-transform: uppercase !important;
+			}
+		}
+		.bottom-widget {
+			text-align: center;
+			h4 {
+				color: get(black);
+				font-size: 25px;
+			}
+			p {
+				color: get(light-text);
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+@keyframes waving {
+	from {
+		transform: translateX(-50%) skew(0, 10deg);
+	}
+	to {
+		transform: translateX(-50%) skew(0, -10deg);
+	}
+}

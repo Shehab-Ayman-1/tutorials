@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Memory Game</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<!-- ========================================== Top Widget =========================================== -->
+		<section class="top-widget" id="top-widget">
+			<h3 class="player">Hello: <span></span></h3>
+			<h3 class="tries">Wrong Tries: <span>0</span></h3>
+		</section>
+
+		<!-- ========================================== Main Widget ========================================== -->
+		<main class="cards" id="cards">
+			<div class="box" data-name="vue" data-index="0">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic vue active" src="../images/vue.png" />
+			</div>
+			<div class="box" data-name="c++" data-index="1">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic c++ active" src="../images/c++.png" />
+			</div>
+			<div class="box" data-name="css" data-index="2">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic css active" src="../images/css.png" />
+			</div>
+			<div class="box" data-name="frontend" data-index="3">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic frontend active" src="../images/frontend.png" />
+			</div>
+			<div class="box" data-name="github" data-index="4">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic github active" src="../images/github.png" />
+			</div>
+			<div class="box" data-name="gulp" data-index="5">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic gulp active" src="../images/gulp.png" />
+			</div>
+			<div class="box" data-name="html" data-index="6">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic html active" src="../images/html.png" />
+			</div>
+			<div class="box" data-name="js" data-index="7">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic js active" src="../images/js.png" />
+			</div>
+			<div class="box" data-name="php" data-index="8">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic php active" src="../images/php.png" />
+			</div>
+			<div class="box" data-name="python" data-index="9">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic python active" src="../images/python.png" />
+			</div>
+			<div class="box" data-name="react" data-index="10">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic react active" src="../images/react.png" />
+			</div>
+			<div class="box" data-name="scss" data-index="11">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic scss active" src="../images/scss.png" />
+			</div>
+			<div class="box" data-name="sql" data-index="12">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic sql active" src="../images/sql.png" />
+			</div>
+			<div class="box" data-name="ts" data-index="13">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic ts active" src="../images/ts.png" />
+			</div>
+			<div class="box" data-name="vue" data-index="14">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic vue active" src="../images/vue.png" />
+			</div>
+			<div class="box" data-name="c++" data-index="15">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic c++ active" src="../images/c++.png" />
+			</div>
+			<div class="box" data-name="css" data-index="16">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic css active" src="../images/css.png" />
+			</div>
+			<div class="box" data-name="frontend" data-index="17">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic frontend active" src="../images/frontend.png" />
+			</div>
+			<div class="box" data-name="github" data-index="18">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic github active" src="../images/github.png" />
+			</div>
+			<div class="box" data-name="gulp" data-index="19">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic gulp active" src="../images/gulp.png" />
+			</div>
+			<div class="box" data-name="html" data-index="20">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic html active" src="../images/html.png" />
+			</div>
+			<div class="box" data-name="js" data-index="21">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic js active" src="../images/js.png" />
+			</div>
+			<div class="box" data-name="php" data-index="22">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic php active" src="../images/php.png" />
+			</div>
+			<div class="box" data-name="python" data-index="23">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic python active" src="../images/python.png" />
+			</div>
+			<div class="box" data-name="react" data-index="24">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic react active" src="../images/react.png" />
+			</div>
+			<div class="box" data-name="scss" data-index="25">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic scss active" src="../images/scss.png" />
+			</div>
+			<div class="box" data-name="sql" data-index="26">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic sql active" src="../images/sql.png" />
+			</div>
+			<div class="box" data-name="ts" data-index="27">
+				<img class="unknown" src="../images/unknown.png" />
+				<img class="pic ts active" src="../images/ts.png" />
+			</div>
+		</main>
+		<audio id="fail" src="../audio/fail.mp3" preload="auto"></audio>
+		<audio id="win" src="../audio/win.mp3" preload="auto"></audio>
+
+		<!-- ========================================== Javascript =========================================== -->
+		<script src="./script.js" type="module"></script>
+	</body>
+</html>

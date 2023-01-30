@@ -54,12 +54,16 @@ export const search = () => {
 
 export const sorting = () => {
 	let array = [10, 400, 20, 100, 500, 200, "rahma", "aya"];
+	let names = ["shehab", "hesham", "aya", "salma", "mahmoud"];
 
 	array.sort();
 	console.log(array); // [10, 100, 20, 200, 400, 500, 'aya', 'rahma']
 
 	array.sort((a, b) => a - b);
 	console.log(array); // [10, 20, 100, 200, 400, 500, 'aya', 'rahma']
+
+	names.sort((a, b) => a.localeCompare(b));
+	console.log(names);
 
 	array.reverse();
 	console.log(array);

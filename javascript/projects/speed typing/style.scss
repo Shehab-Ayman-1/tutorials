@@ -1,0 +1,109 @@
+@use "./scss" as *;
+
+.start-game {
+	@include absolute(tl, 0, 0);
+	@include flex(center, center);
+	background-color: #140801f1;
+	width: 100%;
+	height: 100vh;
+	flex-direction: column;
+	div {
+		display: flex;
+		h1 {
+			color: get(second-color);
+			font-size: 25px;
+		}
+		select {
+			background-color: get(main-color);
+			color: get(white);
+			width: 100px;
+			text-align: center;
+			margin-left: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	}
+	.mybtn {
+		font-size: 50px;
+	}
+}
+
+main {
+	width: 80%;
+	min-height: 95vh;
+	margin: auto;
+	.top-widget {
+		@include flex(space-between, center);
+		background-color: get(light-bg);
+		width: 100%;
+		padding: 5px 20px;
+		margin: 10px 0;
+		border-radius: 5px;
+		.player {
+			color: get(black);
+			font-size: 30px;
+			text-transform: uppercase !important;
+			span {
+				text-transform: uppercase !important;
+			}
+		}
+		.msg {
+			color: get(black);
+			font-size: 16px;
+		}
+	}
+	.mid-widget {
+		.heading {
+			background-color: get(light-bg);
+			color: get(black);
+			width: 80%;
+			text-align: center;
+			font-size: 16px;
+			padding: 10px;
+			margin: 0 auto 20px;
+		}
+		.word {
+			color: get(main-color);
+			margin-bottom: 30px;
+			font-size: 50px;
+			text-transform: initial !important;
+			text-align: center;
+		}
+		.next-words {
+			@include flex(flex-start, center);
+			overflow: hidden;
+			margin-bottom: 20px;
+			p {
+				background-color: get(main-color);
+				color: get(black);
+				font-size: 14px;
+				font-weight: bold;
+				padding: 5px 10px;
+				margin: 5px;
+				border-radius: 10px;
+			}
+		}
+		.input {
+			background-color: get(light-bg);
+			width: 100%;
+			font-size: 16px;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 10px;
+		}
+	}
+	.bottom-widget {
+		.row {
+			@include flex(space-between, center);
+			h3 {
+				font-size: 18px;
+			}
+		}
+		.red {
+			color: red;
+		}
+		.green {
+			color: green;
+		}
+	}
+}

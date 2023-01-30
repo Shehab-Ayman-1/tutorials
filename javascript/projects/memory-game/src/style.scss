@@ -1,0 +1,48 @@
+@use "./scss/" as *;
+
+* {
+	user-select: none;
+}
+
+section.top-widget {
+	@include flex(space-between, center);
+	h3 {
+		font-size: 25px;
+	}
+}
+
+main.cards {
+	// @include grid(150px);
+	@include flex(flex-start, center);
+	flex-wrap: wrap;
+	width: 80%;
+	max-width: 1000px;
+
+	margin: 0 auto;
+	gap: 25px;
+	.box {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		margin: 20px;
+		outline: 1px solid white;
+		outline-offset: 10px;
+		&.currect {
+			transform: scale(1) !important;
+		}
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform: scale(0);
+			cursor: pointer;
+			&.active {
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+audio {
+	display: none;
+}

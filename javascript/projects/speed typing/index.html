@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spead Typing</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			rel="shortcut icon"
+			href="https://imgs.search.brave.com/rfmJaor6LkDmPT6ROoka5xwdji7x2VtKd3DuJnT_hWc/rs:fit:512:512:1/g:ce/aHR0cHM6Ly93d3cu/Y29zbW90ZS1ldmFs/dWUuZ3Ivd3AtY29u/dGVudC91cGxvYWRz/LzIwMTkvMDYvY3Jv/cHBlZC1ldmFsdWVf/ZmF2aWNvbi5wbmc"
+			type="image/x-icon" />
+	</head>
+	<body>
+		<!-- =========================================== Top Widget =========================================== -->
+		<main>
+			<div class="top-widget" id="top-widget">
+				<h3 class="player">Hello: <span></span></h3>
+				<h3 class="msg">Welcome To Type Speed Game</h3>
+			</div>
+			<div class="mid-widget" id="mid-widget">
+				<h3 class="heading">
+					You Are Player On <span class="level">[Normal]</span> Level & Have <span class="time">[3 Seconds]</span> To Type Each
+					Word
+				</h3>
+
+				<h1 class="word"></h1>
+
+				<input type="text" class="input" placeholder="Word..." />
+				<div class="next-words"></div>
+			</div>
+			<div class="bottom-widget" id="down-widget">
+				<div class="row">
+					<h3>Time Left: <span class="timer red">0</span> Seconds</h3>
+					<h3>Score: <span class="currect green">0</span> From <span class="total-score green">0</span></h3>
+				</div>
+				<div class="row">
+					<h3 class="wronge-tries">Wronge Tries: <span class="red wronge">0</span></h3>
+					<h3 class="currect-tries">Currect Tries: <span class="green currect">0</span></h3>
+				</div>
+			</div>
+		</main>
+
+		<div class="start-game">
+			<div>
+				<h1>CHOOSE GAME LEVEL:</h1>
+				<select name="level" id="level">
+					<option value="easy">easy</option>
+					<option value="medium" selected>medium</option>
+					<option value="hard">hard</option>
+				</select>
+			</div>
+			<button class="start-btn mybtn" type="button">Start</button>
+		</div>
+
+		<audio id="failed" src="./audio/fail.mp3" preload="auto"></audio>
+		<audio id="success" src="./audio/Succes.mp3" preload="auto"></audio>
+		<audio id="win" src="./audio/win.mp3" preload="auto"></audio>
+		<!-- =========================================== Javascript =========================================== -->
+		<script src="./script.js" type="module"></script>
+	</body>
+</html>
