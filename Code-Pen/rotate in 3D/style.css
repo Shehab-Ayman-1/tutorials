@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: black;
+	color: white;
+	min-height: 400vh;
+	position: relative;
+}
+.box {
+	background-color: white;
+	width: 300px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	perspective: 1000px;
+	transform: translate(-50%, -50%);
+}
+.box .box-img {
+	width: 100%;
+	height: 100%;
+	transform-origin: 50% 0;
+}
+.box .box-img .img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
