@@ -1908,8 +1908,7 @@ $columns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 }
 */
 
-/* From 86 To 88 */
-// Assign 1 //
+/* From 86 To 88
 .flex {
 	display: flex;
 	justify-content: space-between;
@@ -1924,22 +1923,6 @@ $columns: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
 	left: 15px;
 	transform: translateY(-50%);
 }
-.center-position {
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translate(-50%, -50%);
-}
-$rounds: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
-@each $round in $rounds {
-	.circle-#{$round} {
-		background-color: var(--dark-gray);
-		width: #{$round}px;
-		height: #{$round}px;
-		border-radius: 50%;
-	}
-}
-
 .assign-1 {
 	padding: 20px;
 	gap: 20px;
@@ -1962,8 +1945,7 @@ $rounds: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
 		}
 	}
 }
-
-// Assign 2 //
+*/
 $widths: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 @each $width in $widths {
 	.arrow-#{$width} {
@@ -2011,5 +1993,58 @@ $widths: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100;
 		padding: 50px 20px;
 		margin: 50px 20px;
 		font-size: 40px;
+	}
+}
+
+/* Page Fold */
+.page-fold {
+	background-color: orange;
+	color: white;
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	font-size: 45px;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 20px;
+	box-shadow: 0 0 30px 10px black;
+	transform: translate(-50%, -50%);
+	transition: 0.3s ease-in-out;
+	&:hover {
+		text-shadow: 5px 5px 10px black;
+	}
+	&::after,
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		transition: 0.3s ease-in-out;
+	}
+	&:hover::after {
+		transition-duration: 1.5s;
+		border-bottom: 150px solid orangered;
+		border-right: 150px solid white;
+	}
+	&::before {
+		content: "fold";
+		top: 0;
+		right: 0;
+		opacity: 0;
+		z-index: 1;
+		font-size: 27px;
+		transform: rotate(45deg);
+	}
+	&:hover::before {
+		transition-duration: 1.5s;
+		opacity: 1;
+		top: 30px;
+		right: 25px;
 	}
 }

@@ -25,7 +25,7 @@ import { DefaultForm, FormikForm } from "./lessons/04 forms";
 import { GetUsers, GetUser, AddUser, DeleteUser, UpdateUser } from "./lessons/05 ajax-request";
 
 // Hooks
-import { ContextApi, UseEffect, UseState, UseRef, UseReducer, UseNavigate, CustomeHook } from "./lessons/06 react-hooks";
+import { ContextApi, UseEffect, UseState, UseRef, UseReducer, UseNavigate, UseLocation, CustomeHook } from "./lessons/06 hooks";
 
 // Redux
 import { ReduxOldCounter, ReduxNewCounter, ReduxSignin, ReduxToDoList, ReduxThunk, ReduxThunkComponent } from "./lessons/07 redux";
@@ -94,6 +94,7 @@ function App() {
 					<Route path="use-ref" element={<UseRef />} />
 					<Route path="use-reducer" element={<UseReducer />} />
 					<Route path="use-navigate" element={<UseNavigate />} />
+					<Route path="use-location" element={<UseLocation />} />
 					<Route path="custome-hook" element={<CustomeHook />} />
 				</Route>
 

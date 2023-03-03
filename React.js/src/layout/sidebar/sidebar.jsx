@@ -195,6 +195,11 @@ export function Sidebar() {
 						</NavLink>
 					</li>
 					<li className="nested-link">
+						<NavLink to={"hooks/use-location"} className="link" onClick={closeNavbar}>
+							Use Location
+						</NavLink>
+					</li>
+					<li className="nested-link">
 						<NavLink to={"hooks/use-reducer"} className="link" onClick={closeNavbar}>
 							Use Reducer
 						</NavLink>
