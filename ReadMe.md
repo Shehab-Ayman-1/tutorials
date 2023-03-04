@@ -1,4 +1,4 @@
-<img src="./cs50/Courses.ico" align="center" width="300px" height="300px" margin="auto" />
+<img src="./toturial.png" align="center" width="300px" height="300px" margin="auto" />
 
 #### <-- =================================== -->
 
