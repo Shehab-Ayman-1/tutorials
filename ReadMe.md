@@ -1,4 +1,6 @@
-<img src="./toturial.png" align="center" width="300px" height="300px" style="margin: auto; display: block;" />
+<div align="center">
+    <img src="./toturial.png" width="300px" height="300px" />
+</div>
 
 #### <-- =================================== -->
 
