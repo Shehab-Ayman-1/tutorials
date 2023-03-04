@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./toturial.png" width="300px" height="300px" />
+    <img src="./toturial.png" width="100%" />
 </div>
 
 #### <-- =================================== -->
