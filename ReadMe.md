@@ -1,4 +1,4 @@
-<img src="https://imgs.search.brave.com/xHJfdgsR6SbUyf_avyTYrxhNfqhEAth7DgedkJB_sAI/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9ncmFw/aGljc2ZhbWlseS5j/b20vd3AtY29udGVu/dC91cGxvYWRzL2Vk/ZC8yMDIwLzA0L0pQ/RUctMi0xLXNjYWxl/ZC5qcGc" align="center" width="300px" height="300px" />
+<img src="./cs50/Courses.ico" align="center" width="300px" height="300px" margin="auto" />
 
 #### <-- =================================== -->
 
