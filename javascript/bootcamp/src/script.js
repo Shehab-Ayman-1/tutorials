@@ -55,6 +55,9 @@ import { response } from "../lessons/index.js";
 // [18] Promise
 import { promise, promiseXHR, Fetch, methods, sync, Await, tryCatch } from "../lessons/index.js";
 
+// [19] Others
+import { imageURL } from "../lessons/index.js";
+
 // =================================================== Publics ===================================================
 (function () {
 	// typeOf();
@@ -193,6 +196,11 @@ import { promise, promiseXHR, Fetch, methods, sync, Await, tryCatch } from "../l
 	// sync();
 	// Await();
 	// tryCatch();
+})();
+
+// ================================================== Others =====================================================
+(function () {
+	imageURL();
 })();
 
 // ================================================= Assignments =================================================
