@@ -1,1 +1,0 @@
-export default function subMenu(e,l){let t=document.querySelectorAll(e);t.forEach(t=>{t.addEventListener("click",()=>{let e=t.nextElementSibling;e.classList.toggle("Hide"),e.classList.contains("Hide")?t.querySelector("i").style.transform=`rotate(${l}deg)`:t.querySelector("i").style.transform="rotate(0)"})})}

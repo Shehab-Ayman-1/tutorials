@@ -1,1 +1,0 @@
-export default function settings(){let e=document.querySelector("aside.setting-side"),t=document.querySelector("aside.setting-side .close-setting"),s=document.querySelector("header .right-icons .open-setting");t.addEventListener("click",()=>e.classList.remove("close")),s.addEventListener("click",()=>e.classList.add("close"))}

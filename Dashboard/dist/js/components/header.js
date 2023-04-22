@@ -1,1 +1,0 @@
-export default function header(){let e=document.querySelector("header"),t=document.querySelector("aside.sidebar#sidebar"),r=document.querySelector("#close-sidebar");r.addEventListener("click",()=>{t.classList.toggle("remove"),e.classList.toggle("full")})}

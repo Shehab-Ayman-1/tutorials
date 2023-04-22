@@ -1,1 +1,0 @@
-export default function fonts(){let t=document.querySelectorAll("aside.setting-side .nested-ul .font-option"),e=[];t.forEach(t=>{e.push(t.dataset.font),t.addEventListener("click",()=>{e.forEach(t=>document.body.classList.remove(t)),document.body.classList.add(t.dataset.font)})})}

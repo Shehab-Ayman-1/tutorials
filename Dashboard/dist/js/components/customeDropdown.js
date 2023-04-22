@@ -1,1 +1,0 @@
-export default function customeDropdown(e,o){let t=document.querySelectorAll(e);t.forEach(l=>{l.addEventListener("click",e=>{let t=l.nextElementSibling;t.classList.toggle("Hide"),t.classList.contains("Hide")?l.querySelector("i").style.transform=`rotate(${o}deg)`:l.querySelector("i").style.transform="rotate(0)"})})}

@@ -1,1 +1,0 @@
-export default function themes(e){let t=document.querySelectorAll("aside.setting-side .nested-ul "+e),d=[];t.forEach(e=>{d.push(e.dataset.theme),e.addEventListener("click",()=>{d.forEach(e=>document.body.classList.remove(e)),document.body.classList.add(e.dataset.theme)})})}
