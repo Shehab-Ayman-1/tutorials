@@ -1,9 +1,8 @@
 export const promise = () => {
-	/* 
-    promise(resolve, reject) -> Send The Result To Then().
-    - then(resolveValue, rejectValue) -> Recieve The Promise Result.
-    - catch(reason) -> Catch The Error If It's Defined
-    - finally() -> Do Something In Resolving And Rejected
+	/* promise(resolve, reject) -> Send The Result To Then().
+		- then(resolveValue, rejectValue) -> Recieve The Promise Result.
+		- catch(reason) -> Catch The Error If It's Defined
+		- finally() -> Do Something In Resolving And Rejected
     */
 
 	let promise = new Promise((resolve, reject) => {
@@ -62,10 +61,10 @@ export const Fetch = () => {
 };
 
 export const methods = () => {
-	/* 
-    - all() -> Return Response If All The Promises Are Resolved, If Any Of Them Rejected Then Doen't Work
-    - allSettled() -> Return All The Promises Whatever Resolved OR Rejected
-    - race() -> Return The First Promise That Arrived In The First
+	/* Promises Methods:
+		- all() -> Return Response If All The Promises Are Resolved, If Any Of Them Rejected Then Doen't Work
+		- allSettled() -> Return All The Promises Whatever Resolved OR Rejected
+		- race() -> Return The First Promise That Arrived In The First
     */
 	let promise1 = new Promise((resolve, reject) => {
 		setTimeout(() => resolve("From Promise 1"), 1000);
@@ -97,7 +96,7 @@ export const methods = () => {
 };
 
 export const sync = () => {
-	/* 
+	/* Asyncronouse Functions
     - resolve() -> Return Promise With The Resolved Data
     - reject() -> Return Promise With The Rejected Data
     - async -> Is Used Before The Function To Make The Function Return A Promise

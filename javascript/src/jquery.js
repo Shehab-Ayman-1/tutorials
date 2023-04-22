@@ -1,4 +1,4 @@
-/*! jQuery v3.6.1 | (c) OpenJS Foundation and other contributors | jquery.org/license */
+/*! jQuery v3.6.4 | (c) OpenJS Foundation and other contributors | jquery.org/license */
 !(function (e, t) {
 	"use strict";
 	"object" == typeof module && "object" == typeof module.exports
@@ -47,7 +47,7 @@
 	function w(e) {
 		return null == e ? e + "" : "object" == typeof e || "function" == typeof e ? n[o.call(e)] || "object" : typeof e;
 	}
-	var f = "3.6.1",
+	var f = "3.6.4",
 		S = function (e, t) {
 			return new S.fn.init(e, t);
 		};
@@ -481,6 +481,13 @@
 								"undefined" != typeof e.querySelectorAll && !e.querySelectorAll(":scope fieldset div").length
 							);
 						})),
+						(d.cssHas = ce(function () {
+							try {
+								return C.querySelector(":has(*,:jqfake)"), !1;
+							} catch (e) {
+								return !0;
+							}
+						})),
 						(d.attributes = ce(function (e) {
 							return (e.className = "i"), !e.getAttribute("className");
 						})),
@@ -589,13 +596,14 @@
 							ce(function (e) {
 								(d.disconnectedMatch = c.call(e, "*")), c.call(e, "[s!='']:x"), s.push("!=", F);
 							}),
+						d.cssHas || y.push(":has"),
 						(y = y.length && new RegExp(y.join("|"))),
 						(s = s.length && new RegExp(s.join("|"))),
 						(t = K.test(a.compareDocumentPosition)),
 						(v =
 							t || K.test(a.contains)
 								? function (e, t) {
-										var n = 9 === e.nodeType ? e.documentElement : e,
+										var n = (9 === e.nodeType && e.documentElement) || e,
 											r = t && t.parentNode;
 										return (
 											e === r ||
@@ -2713,7 +2721,7 @@
 		return (
 			(n = n || Me(e)) &&
 				((a = n.getPropertyValue(t) || n[t]),
-				s && (a = a.replace($e, "$1")),
+				s && a && (a = a.replace($e, "$1") || void 0),
 				"" !== a || ie(e) || (a = S.style(e, t)),
 				!v.pixelBoxStyles() &&
 					Pe.test(a) &&

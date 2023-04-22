@@ -1,6 +1,7 @@
 * {
-	transition: 0.2s ease-in-out;
 	color: white;
+	transition: 0.2s ease-in-out;
+	box-sizing: border-box;
 }
 ::-webkit-scrollbar {
 	width: 7px;
@@ -52,11 +53,13 @@ body {
 	color: orange;
 }
 .my-form {
-	width: 300px;
+	max-width: 350px;
+	padding: 10px;
 }
 .btns {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 .btn {
 	background-color: #255;
@@ -86,6 +89,7 @@ input {
 	width: 100%;
 	padding: 10px 5px;
 	margin: 5px;
+	display: block;
 	border-radius: 10px;
 }
 input:focus {
@@ -93,7 +97,7 @@ input:focus {
 }
 a {
 	text-decoration: none;
-	color: antiquewhite;
+	color: rgb(68, 103, 245);
 	display: block;
 	padding: 5px;
 }
@@ -112,4 +116,17 @@ a {
 .scroll-down {
 	left: initial;
 	right: 20px;
+}
+
+.indexed-db form input {
+	margin: 10px 0;
+}
+.checkbox {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+.checkbox input {
+	width: fit-content;
 }

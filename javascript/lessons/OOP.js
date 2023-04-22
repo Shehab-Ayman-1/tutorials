@@ -137,8 +137,7 @@ export const encapsulation = () => {
 };
 
 export const prototype = () => {
-	/* 
-	prototype:
+	/* prototype:
 	- Each Class Is Created Has A Prototype Inside It
 	- The Prototype Contain The [methods] Of The Class
 	- When Use Prototype As Line 159, We Create A New Method In The Class
@@ -165,12 +164,10 @@ export const prototype = () => {
 	// ====================================================
 	Object.prototype.zFill = function (len, char) {
 		if (typeof len !== "number") return console.error("zeros Attribute Has To Be A Number");
-		if (this.length > len) return this;
+		if (this.length > len) return this; // "1234"
 
 		let result = this.split("");
-		for (let i = 0; i < len - this.length; i++) {
-			result.unshift(char);
-		}
+		for (let i = 0; i < len - this.length; i++) result.unshift(char);
 
 		return result.join("");
 	};

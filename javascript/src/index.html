@@ -71,12 +71,69 @@
 		</div>
 		-->
 
-		<!-- ============================================ Other =========================================== -->
+		<!-- ============================================ Jquery ======================================== 
+		<div class="jquery">
+			<div id="show"></div>
+		</div>
+		-->
+
+		<!-- ============================================ Indexed-db ==================================== 
+		<div class="indexed-db">
+			<p>If you are familiar with document databases like MongoDB, you can think of an ObjectStore as a collection.</p>
+			<p>The Core Object and Interfaces are:</p>
+
+			<ul>
+				<li><code> window.indexedDB => </code> The database object holds Object Stores.</li>
+				<li><code> IDB ObjectStore => </code> An Object Store inside a database. ( A Collection of objects )</li>
+				<li><code> IDB Request => </code> A request object for add, put, delete, etc.</li>
+				<li><code> IDB Transaction => </code> A wrapper around requests.</li>
+				<li><code> IDB Index => </code> An index added to an Object Store</li>
+				<li><code> IDB Cursor => </code> To track current position inside the results of a request.</li>
+				<li><code> IDB KeyRange => </code> A range of values for matching a key.</li>
+			</ul>
+
+			<form class="my-form" id="Form" name="whiskeyForm">
+				<fieldset>
+					<div class="">
+						<label for="name">Whiskey: </label> <br />
+						<input type="text" id="name" placeholder="Enter Your Whiskey" />
+					</div>
+					<div class="">
+						<label for="country">Country of Origin: </label><br />
+						<input type="text" id="country" placeholder="Enter Your Country" />
+					</div>
+					<div class="">
+						<label for="age">Years Old: </label><br />
+						<input type="number" id="age" placeholder="Enter Your Age" />
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="isOwned" value="yes" />
+						<label for="isOwned">Is Owned: </label>
+					</div>
+					<div class="btns">
+						<button class="btn" id="clear-btn">Reset</button>
+						<button class="btn" id="add-btn">Add</button>
+						<button class="btn" id="update-btn">Update</button>
+						<button class="btn" id="delete-btn">Delete</button>
+					</div>
+				</fieldset>
+			</form>
+
+			<section>
+				<h3>List of Whiskeys</h3>
+				<ul class="list"></ul>
+			</section>
+		</div>
+		-->
+
+		<!-- ============================================ Other ========================================= 
 		<div class="others">
 			<input type="file" id="file" />
 			<div class="wrapper"></div>
 		</div>
+		-->
 		<!-- ========================================== Scripts ========================================= -->
+		<script src="./jquery.js"></script>
 		<script type="module" src="./script.js"></script>
 	</body>
 </html>
