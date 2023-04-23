@@ -15,5 +15,6 @@ export * from "./json.js";
 export * from "./ajax.js";
 export * from "./promise.js";
 export * from "./indexed-db.js";
+export * from "./canvas.js";
 export * from "./others.js";
 export * from "./assignments.js";
