@@ -1,0 +1,16 @@
+- let skills = ["html", "css", "js", "sass", "pug", "react"]
+
+ul#for-loop
+    - for(let i = 0; i < skills.length; i++)
+        li #{i} => #{skills[i]}
+
+ul#while-loop 
+    - let i = 0
+    - while(i < skills.length)
+        li #{i} => #{skills[i++]}
+
+ul#each-loop 
+    each value, index in skills
+        li #{index} => #{value}
+    else 
+        h2 No Items In The Array

@@ -1,0 +1,11 @@
+- let name = "interpolation"
+- let theme = "green"
+- let mode = "<b class='primary'>dark-mode</b>"
+
+div
+    h1 #{name.toUpperCase()} => Use Javascript Power
+    p Scaped Tags: [#{theme}]
+    p ! Scaped Tags: [!{mode}]
+    p Use Condition: [!{theme === "orange" ? "<b style='color: orange'>orange theme</b>" : "<b style='color: green'>green theme</b>"}]
+    p Scaped Interpolation #{"#{theme}"}
+    p Scaped Interpolation \#{theme}

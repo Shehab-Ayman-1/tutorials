@@ -1,0 +1,20 @@
+mixin card
+    .card
+        .card-header
+            h1 Card Header
+        .card-body
+            img(src="../../src/image.png", alt="alt")
+            p Card Body
+        .card-footer
+            p Card Footer
+
+mixin field(type, title)
+    input(type=type, placeholder=title)
+
+mixin default(type="text", title, icon)
+    i(class=icon)
+    input(type=type, placeholder=title)
+
++card
++field("number", placeholder="Enter Product Salary")
++default("email", placeholder="Enter Your Email", "fa fa-mail")
