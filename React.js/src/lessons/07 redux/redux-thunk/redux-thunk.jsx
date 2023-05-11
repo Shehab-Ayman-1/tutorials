@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchApiData, RESETDATA } from "../redux-helper/new-redux/thunk-slice";
+import styled from "styled-components";
 
 const CategoryCards = styled.div`
 	display: flex;
@@ -51,9 +51,7 @@ export function ReduxThunk() {
 			{state.error ? <h3 className="second-color">Oobs! Maybe You Have A Problem In The Api Request Method</h3> : null}
 
 			{state.loading ? (
-				<>
-					<h3>Loading....</h3>
-				</>
+				<h3>Loading....</h3>
 			) : !state.loading ? (
 				<>
 					{state.error === null ? (

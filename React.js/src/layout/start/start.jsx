@@ -5,7 +5,7 @@ export function Start() {
 	return (
 		<div className="App">
 			<main className="App-header">
-				<img src="./logo192.png" className="App-logo" alt="logo" />
+				<img src="/assets/logo.png" className="App-logo" alt="logo" />
 				<p>
 					Edit <code className="second-color">src/App.js</code> and save to reload.
 				</p>

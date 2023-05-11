@@ -9,14 +9,18 @@ import theme from "./lessons/08 material-ui/theme/theme";
 
 // Redux
 import { Provider } from "react-redux";
+
 // eslint-disable-next-line
 import { newStore, oldStore } from "./lessons/07 redux/redux-helper/store/store";
+
+// Use Multible Languages
+import "./i18n";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		{/* <Provider store={oldStore}> */}
 		<ThemeProvider theme={theme}>
+		{/* <Provider store={oldStore}> */}
 			<Provider store={newStore}>
 				<App />
 			</Provider>

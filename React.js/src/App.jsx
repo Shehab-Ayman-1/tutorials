@@ -1,12 +1,8 @@
 /* React */
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-/* Scss Style */
-import "./scss/style.scss";
-
-/* Layout */
 import { Start, Header, Sidebar, NotFound } from "./layout";
+import "./scss/style.scss";
 
 /* Lessons */
 // Basics
@@ -33,17 +29,20 @@ import { ReduxOldCounter, ReduxNewCounter, ReduxSignin, ReduxToDoList, ReduxThun
 // Material Ui
 import { MaterialUi } from "./lessons/08 material-ui";
 
+// Material Ui
+import { Lang } from "./lessons/09 i18next";
+
 function App() {
 	return (
 		<BrowserRouter>
 			<Header />
 			<Sidebar />
 			<Routes>
-				{/* 404 Page Now Found */}
-				<Route path="*" element={<NotFound />} />
-
-				{/* Home Page */}
-				<Route path="/" element={<Start />} />
+				{/* Root */}
+				<Route path="/">
+					<Route path="/" element={<Start />} />
+					<Route path="*" element={<NotFound />} />
+				</Route>
 
 				{/* Basics */}
 				<Route path="/basics">
@@ -112,7 +111,12 @@ function App() {
 
 				{/* Material Ui */}
 				<Route path="/material-ui">
-					<Route index element={<MaterialUi />} />
+					<Route path="mui" element={<MaterialUi />} />
+				</Route>
+
+				{/* Multible Languages */}
+				<Route path="/multible-langs">
+					<Route path="lang" element={<Lang />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

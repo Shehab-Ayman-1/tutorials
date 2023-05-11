@@ -58,7 +58,7 @@ export function StyledComponents() {
 		return (
 			<Box key={i}>
 				<BoxImage>
-					<img src="../../logo192.png" alt="box-img" className="fa-spin" />
+					<img src="/assets/logo.png" alt="box-img" className="fa-spin" />
 				</BoxImage>
 				<BoxContent>
 					<Title>

@@ -19,7 +19,7 @@ export function Header() {
 			<div className="logo">
 				<i className="fa fa-bars" data-empty onClick={openNavbar}></i>
 				<Link to="/" className="logo-title">
-					<img src="/logo192.png" alt="logo" className="logo-img fa-spin" />
+					<img src="/assets/logo.png" alt="logo" className="logo-img fa-spin" />
 					React Tutorial
 				</Link>
 			</div>
