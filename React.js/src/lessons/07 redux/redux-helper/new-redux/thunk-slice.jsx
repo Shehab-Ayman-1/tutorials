@@ -58,5 +58,4 @@ const thunkSlice = createSlice({
 });
 
 export const { RESETDATA } = thunkSlice.actions;
-
 export default thunkSlice.reducer;

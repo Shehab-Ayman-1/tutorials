@@ -33,6 +33,6 @@ export const NavLinks = [
 	},
 	{
 		title: "multible-langs",
-		routes: ["lang"],
+		routes: ["i18next", "custome"],
 	},
 ];

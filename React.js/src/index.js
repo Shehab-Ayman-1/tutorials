@@ -13,14 +13,14 @@ import { Provider } from "react-redux";
 // eslint-disable-next-line
 import { newStore, oldStore } from "./lessons/07 redux/redux-helper/store/store";
 
-// Use Multible Languages
-import "./i18n";
+// Use i18next
+import "./constants/i18n";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
 		<ThemeProvider theme={theme}>
-		{/* <Provider store={oldStore}> */}
+			{/* <Provider store={oldStore}> */}
 			<Provider store={newStore}>
 				<App />
 			</Provider>

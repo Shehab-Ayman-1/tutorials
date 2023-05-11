@@ -30,7 +30,7 @@ import { ReduxOldCounter, ReduxNewCounter, ReduxSignin, ReduxToDoList, ReduxThun
 import { MaterialUi } from "./lessons/08 material-ui";
 
 // Material Ui
-import { Lang } from "./lessons/09 i18next";
+import { I18next, CustomeWay } from "./lessons/09 multi langs";
 
 function App() {
 	return (
@@ -116,7 +116,8 @@ function App() {
 
 				{/* Multible Languages */}
 				<Route path="/multible-langs">
-					<Route path="lang" element={<Lang />} />
+					<Route path="i18next" element={<I18next />} />
+					<Route path="custome" element={<CustomeWay />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export function Lang() {
+export function I18next() {
 	const [text, i18next] = useTranslation();
 	const [lang, setLang] = useState("en");
 	const [countries, setCountries] = useState([]);
@@ -14,7 +14,7 @@ export function Lang() {
 
 		if (i18next.language === "ar") setCountries((c) => (c = ["مصر", "السعودية", "العراق", "سوريا"]));
 		if (i18next.language === "en") setCountries((c) => (c = ["Egypt", "Saudia", "Iraq", "Seria"]));
-	}, [lang]);
+	}, [lang, i18next]);
 
 	return (
 		<div className="f-20">
@@ -25,16 +25,7 @@ export function Lang() {
 			<div style={{ marginInline: "20px" }}>
 				<p>Title: {text("title")}</p>
 				<p>Description: {text("description")}</p>
-				<div>
-					Countries: [{" "}
-					{countries.map((country, i) => (
-						<span key={i}>
-							{country}
-							{i !== countries.length - 1 ? " , " : ""}
-						</span>
-					))}
-					]
-				</div>
+				<div>Countries: [ {countries.join(", ")} ] </div>
 			</div>
 		</div>
 	);

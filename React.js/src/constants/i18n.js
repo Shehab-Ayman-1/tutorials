@@ -1,7 +1,7 @@
 import i18n from "i18next";
 import Detector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
-import { english, arabic } from "./constants";
+import { english, arabic } from ".";
 
 // the translations
 // (tip move them in a JSON file and import them,
