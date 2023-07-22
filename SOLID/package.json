@@ -1,0 +1,9 @@
+{
+	"type": "module",
+	"scripts": {
+		"dev": "nodemon src/script.js"
+	},
+	"dependencies": {
+		"nodemon": "^3.0.1"
+	}
+}

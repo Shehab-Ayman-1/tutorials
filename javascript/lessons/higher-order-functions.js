@@ -1,8 +1,8 @@
 export const map = () => {
 	/* Map(element, index, array) => Return Each Element After Update In New Array
-	- element => The current element being processed in the array
-	- index => the index of the current element being processed in the array
-	- array => Return The main array 
+		- element => The current element being processed in the array
+		- index => the index of the current element being processed in the array
+		- array => Return The main array 
     */
 
 	// Addition
@@ -62,11 +62,11 @@ export const filter = () => {
 
 export const reduce = () => {
 	/* reduce((accumelator, element, index, array) => {}, initial Value) => Return The Resulting in A Single Output Value
-    - accumelator => The Previous Value Of The Last Stage
-    - element => The Current Element Being Process In The Array
-    - index => Starts From 1, But If The Initial Value Is Provided Then The Index Will Start From 0
-    - array => The Main Array
-    - initial value => It Is A Hidden Value Is Provided In The First Of The Main Array
+		- accumelator => The Previous Value Of The Last Stage
+		- element => The Current Element Being Process In The Array
+		- index => Starts From 1, But If The Initial Value Is Provided Then The Index Will Start From 0
+		- array => The Main Array
+		- initial value => It Is A Hidden Value Is Provided In The First Of The Main Array
     */
 
 	// Return The Result Of The Array Numbers
@@ -93,8 +93,8 @@ export const reduce = () => {
 
 export const forEach = () => {
 	/* forEach(element, index, array) => Isn't Return A New Array
-        - Dosn't Return Anything
-        - Can't Use Break In ForEach
+		- Dosn't Return Anything
+		- Can't Use Break In ForEach
     */
 
 	let fruits = ["apple", "panana", "mango", "Papaz"];
