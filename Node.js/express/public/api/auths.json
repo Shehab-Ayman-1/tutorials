@@ -1,0 +1,55 @@
+[
+   {
+      "id": "lksl5o41",
+      "username": "aya-mahmoud",
+      "password": "$2b$10$Yxsbdr1O/I96IsHFoeCDXuqvF72A.3EYRxB7ewtwI01PtaKUrZJLi",
+      "roles": {
+         "user": 2001
+      },
+      "fName": "aya",
+      "lName": "mahmoud",
+      "country": "egypt",
+      "phone": "012"
+   },
+   {
+      "id": "lksrdoti",
+      "username": "mahmoud-ayman",
+      "password": "$2b$10$slZ6V7LPLh4sJ1pJXIumUefP9c.UrTanKZUjj6OS2sCM1Lk52v41O",
+      "roles": {
+         "user": 2001
+      },
+      "fName": "mahmoud",
+      "lName": "ayman",
+      "country": "egypt",
+      "phone": "012"
+   },
+   {
+      "id": "lksl50a7",
+      "username": "hesham-mohamed",
+      "password": "$2b$10$6MyIX7ZvIWtSk7TMB3F.bO8qJI3B0eTaFTYdR0W/bcIHFrSx6MtgG",
+      "roles": {
+         "user": 2001,
+         "editor": 1984
+      },
+      "fName": "hesham",
+      "lName": "mohamed",
+      "country": "egypt",
+      "phone": "012",
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imxrc2w1MGE3IiwidXNlcm5hbWUiOiJoZXNoYW0tbW9oYW1lZCIsInJvbGVzIjpbMjAwMSwxOTg0XSwiaWF0IjoxNjkwOTI0NDkwLCJleHAiOjE2OTEwMTA4OTB9.Gsf4eJZMuDkqA7ipfka4GZ7JU8zimfIg_Ryflg1tTuA"
+   },
+   {
+      "id": "lksl40p7",
+      "username": "shehab-ayman",
+      "password": "$2b$10$eA7mRmMQZ4mEq2uU5/dXgObpMqM.c2w0M4487xduPmvl/kxHl01IG",
+      "roles": {
+         "admin": 5150,
+         "user": 2001,
+         "editor": 1984
+      },
+      "fName": "shehab",
+      "lName": "ayman",
+      "country": "egypt",
+      "phone": "012",
+      "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Imxrc2w0MHA3IiwidXNlcm5hbWUiOiJzaGVoYWItYXltYW4iLCJyb2xlcyI6WzUxNTAsMjAwMSwxOTg0XSwiaWF0IjoxNjkwOTI0NTY5LCJleHAiOjE2OTEwMTA5Njl9.s9tpTp4mVcAkYLUlZql8ym7HFk02FN4ro_A447E79gs"
+   }
+]

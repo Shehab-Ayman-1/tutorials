@@ -1,6 +1,6 @@
 import http from "http";
 import { existsSync, promises } from "fs";
-import { extname, join, parse } from "path";
+import { extname, join } from "path";
 
 export const httpServers = () => {
 	let server = http.createServer((req, res) => {
@@ -20,7 +20,9 @@ export const httpServers = () => {
 
 export const nextServer = () => {
 	const PORT = 3000;
-	const __dirname = "./";
+	const url = import.meta.url.split("///")[1].replace("%20", " ");
+	const __dirname = url.slice(0, url.indexOf("/lessons/"));
+	console.log(__dirname);
 
 	const serveFile = async (filePath, contentType, response) => {
 		try {
@@ -87,7 +89,7 @@ export const nextServer = () => {
 		// Makes .html Not Required In The Browser
 		if (!extension && req.url.slice(-1) !== "/") filePath += ".html";
 
-		// Is Exist
+		// Is The Path Exist
 		const isFileExist = existsSync(filePath);
 		if (isFileExist) return serveFile(filePath, contentType, res);
 		else serveFile(join(__dirname, "views", "404.html"), "text/html", res);

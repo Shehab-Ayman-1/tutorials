@@ -1,30 +1,39 @@
 import express from "express";
-import dotenv from "dotenv";
-import cors from "cors";
-import cookieParser from "cookie-parser";
-import usersRoute from "./routes/users.routes.js";
+import { structor, all, chain, configs, cors, intro, publics, router } from "./lessons/index.js";
 
-let app = express();
+// ============================================== Structor =============================================
+// structor();
 
-// Read JSON, Encode, And Cookies
-app.use(express.json()); // Let Express Recieve Json Data
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+// ============================================== Configs ==============================================
+const app = express();
+configs(app);
 
-// Read Files Inside static File
-app.use("/static", express.static("./static"));
-app.use("/static", express.static("./node_modules/bootstrap/dist"));
+// ============================================== Intro ================================================
+// intro(app);
+// chain(app);
 
-app.use(cors());
-dotenv.config();
+// ============================================ Middlewares ============================================
+// publics(app);
+// cors(app);
+// all(app);
 
-// Pug
-app.set("view engine", "pug"); // Set View Engine With Express
-app.get("/", (req, res) => res.render("index", { title: "Express Server" }));
+// ================================= Routes, MVC, Authentications, JWT =================================
+/*
+   MVC:
+   - Model View Controllers
+   - Its Just To Create The Controllers Folders And Its Functions To Use It In The Route
+   Authentications:
+   - Use bcrypt.js To Encrypt The User Password
+   - Use JWT To Send The User Info To The Client In The Cookies
+   Access_Token
+   - For Short Time
+   - Sent As JSON To The Client
+   - Store In The Memory Not In The Localstorage OR The Cookies
+   Refresh_Token
+   - For Long Time
+   - Sent As httpOnly Cookie
+   - Not Accessible Via Javascript
+   - Must Have Expiry Time At Some Point
+*/
 
-// Routing
-app.use("/api/users", usersRoute);
-
-// Open The Server
-let PORT = process.env.port || 3000;
-app.listen(PORT, () => console.log(`Server Is Connected [http://localhost:${PORT}]`));
+app.use("/", router);
