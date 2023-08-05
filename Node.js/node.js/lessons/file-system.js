@@ -1,31 +1,28 @@
-import fs from "fs";
+import { readFileSync, writeFileSync, appendFileSync, readdirSync } from "fs";
 
-export const readFile = () => {
-	// readFileSync -> Read File From The System
+export const fileSystem = () => {
+	/* Read, Write, Append
+		- readFileSync(path, options?) -> Read Any File On The Directory
+		- writeFileSync(path, payload, options?) -> Remove The Current Content, Then Write The New Payload
+		- appendFileSync(path, payload, options?) -> Append New Data To The File
+		- readdirSync(path, options?) -> Read All Directory Files
+	*/
 
-	let readFile = fs.readFileSync(`./logs/read.txt`, "utf-8");
-	console.log(readFile);
-};
+	// Read
+	let readFile = readFileSync(`./public/logs/read.txt`, "utf-8");
 
-export const writeFile = () => {
-	// writeFileSync -> Delete The Data Then Write The New One OR Create A New File Then Write The New Data On It
+	// Write
+	writeFileSync("./public/logs/write.txt", "Write Files.");
+	let writeFile = readFileSync("./public/logs/write.txt", "utf-8");
 
-	fs.writeFileSync("./logs/write.txt", "Write Files.");
-	let writeFile = fs.readFileSync(`./logs/write.txt`, "utf-8");
-	console.log(writeFile);
-};
+	// Append
+	appendFileSync("./public/logs/append.txt", "- new Message 😎 \n");
+	let appendFile = readFileSync("./public/logs/append.txt", "utf-8");
 
-export const allDirectoryFiles = () => {
-	// readdirSync -> Read All The Directory Files Names
-
-	let directoryFiles = fs.readdirSync("./");
-	console.log(directoryFiles);
-};
-
-export const appendFiles = () => {
-	// appendFileSync -> Append New Message To The File
-
-	fs.appendFileSync("./logs/append.txt", "- new Message \n");
-	let appendFile = fs.readFileSync(`./logs/append.txt`, "utf-8");
-	console.log(appendFile);
+	// Directory Files
+	let directoryFiles = readdirSync("./public");
+	console.log(`readFile -> ${readFile}`);
+	console.log(`writeFile -> ${writeFile}`);
+	console.log(`appendFile -> ${appendFile}`);
+	console.log(`directoryFiles -> ${directoryFiles}`);
 };

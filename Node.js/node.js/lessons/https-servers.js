@@ -4,25 +4,19 @@ import { extname, join } from "path";
 
 export const httpServers = () => {
 	let server = http.createServer((req, res) => {
-		console.log(`${req.method}`);
-		if (req.url === "/") {
-			res.write("You Create A Manual Server, Enjoy!");
-			res.end();
-		} else {
-			res.write(`Your Address Now Is: ${res.url}`);
-			res.end();
-		}
+		console.log(`${req.method} ${req.url}`);
+		if (req.url === "/") res.write("You Create A Manual Server, Enjoy!");
+		else res.write(`Your Address Now Is: ${res.url}`);
+		console.log("server");
+		res.end();
 	});
-	let PORT = 3000;
-	server.on("connection", () => console.log(`http://localhost:${PORT}`));
-	server.listen(PORT);
+	server.on("connection", () => console.log(`Server Running On [http://localhost:${3000}] 🚀`));
+	server.listen(3000);
 };
 
 export const nextServer = () => {
 	const PORT = 3000;
-	const url = import.meta.url.split("///")[1].replace("%20", " ");
-	const __dirname = url.slice(0, url.indexOf("/lessons/"));
-	console.log(__dirname);
+	const __dirname = process.cwd();
 
 	const serveFile = async (filePath, contentType, response) => {
 		try {
@@ -42,7 +36,7 @@ export const nextServer = () => {
 	};
 
 	const server = http.createServer((req, res) => {
-		console.log(req.method, req.url);
+		console.log(`${req.method} ${req.url}`);
 		let extension = extname(req.url);
 		let contentType = "";
 

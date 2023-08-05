@@ -1,0 +1,38 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	border: 0;
+	box-sizing: border-box;
+	transition: all 0.2s;
+}
+
+body {
+	background-color: black;
+	color: white;
+	min-height: 100vh;
+	font-family: cursive;
+	padding: 20px;
+}
+
+.title {
+	padding-bottom: 20px;
+}
+
+.success {
+	color: green;
+	font-size: 25px;
+}
+
+.error {
+	color: red;
+	font-size: 25px;
+}
+
+.submit-btn {
+	background: orange;
+	color: black;
+	padding: 8px 13px;
+	border-radius: 3px;
+	font-weight: bold;
+}
