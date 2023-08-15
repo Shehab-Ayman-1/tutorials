@@ -25,6 +25,7 @@ export const verifyLogin = (req, res, next) => {
 			if (error) return res.status(401).json({ status: 401, message: "JWT Verity Error", error });
 			req.user = info;
 		});
+
 		next();
 	} catch (error) {
 		console.log(error);
@@ -32,21 +33,19 @@ export const verifyLogin = (req, res, next) => {
 	}
 };
 
-export const verifyRefresh = (req, res, next) => {
+export const verifyRefresh = (req, res) => {
 	try {
-		const { my_access_token } = req.cookies;
+		const { my_access_token } = req.cookies; // refresh token
 		if (!my_access_token) res.status(401).json({ status: 401, message: "Not Registered.", cookies: req.cookies });
 
 		const auth = auths.find((auth) => auth.refreshToken === my_access_token);
-		if (!auth) return res.status(403).json({ status: 403, message: "Auth Token Not Defined In The Database." });
+		if (!auth) return res.status(403).json({ status: 403, message: "RefreshToken Not Defined In The Database." });
 
 		jwt.verify(my_access_token, process.env.REFRESH_TOKEN, (err, { username, roles }) => {
 			if (err || username !== auth.username) return res.status(403).json({ status: 403, message: "JWT Verify Error.", info });
 			const accessToken = jwt.sign({ username, roles }, process.env.ACCESS_TOKEN, { expiresIn: "30s" });
-			res.status(200).json({ accessToken });
+			return res.status(200).json({ accessToken });
 		});
-
-		next();
 	} catch (error) {
 		console.log(error);
 		res.status(404).json(error);
@@ -57,8 +56,8 @@ export const verifyLogout = (req, res) => {
 	try {
 		const { my_access_token } = req.cookies;
 		if (!my_access_token) return res.status(204).json({ status: 204, message: "Not Defined The Cookie." });
-		const auth = auths.find((auth) => auth.refreshToken === my_access_token);
 
+		const auth = auths.find((auth) => auth.refreshToken === my_access_token);
 		if (!auth) {
 			const day = 24 * 60 * 60 * 1000;
 			res.clearCookie("my_access_token", { httpOnly: true, maxAge: day, sameSite: "None", secure: true });
@@ -70,7 +69,7 @@ export const verifyLogout = (req, res) => {
 
 		writeFileSync(join(__dirname, "public", "api", "auths.json"), JSON.stringify(auths, null, 3), "utf8");
 
-		res.status(200).json(auths);
+		return res.status(200).json(auths);
 	} catch (error) {
 		res.status(404).json(error);
 	}

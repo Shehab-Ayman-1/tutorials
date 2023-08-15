@@ -20,7 +20,7 @@ app.post("/api/upload-files", fileUpload({ createParentPath: true }), checkExist
 	const filesLength = Object.keys(files).length;
 
 	Object.keys(files).forEach((key) => {
-		files[key].mv(join(__dirname, "files", files[key].name), (error) => {
+		files[key].mv(join(__dirname, "uploaded-files", files[key].name), (error) => {
 			if (error) return res.status(500).json({ status: 400, message: error });
 		});
 	});

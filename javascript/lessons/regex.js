@@ -1,9 +1,8 @@
 export const pattern = () => {
-	/* 
-    Flags:
-    - i -> Case Insensitive [Ignore If The Letters Are [Upper || Lower] Case]
-    - g -> Global
-    - m -> Multilines
+	/* Flags:
+		- i -> Case Insensitive [Ignore If The Letters Are [Upper || Lower] Case]
+		- g -> Global
+		- m -> Multilines
     */
 
 	let paragraph = `Elzero Web School elzero web school`;
@@ -18,19 +17,19 @@ export const pattern = () => {
 };
 
 export const ranges = () => {
-	/* 
-    (x|y)        -> X OR Y
-    [0-9]        -> 0 TO 9
-    [^0-9]       -> Not 0 To 9
-    [a-z]        -> lower Case
-    [A-Z]        -> Upper Case
-    [^a-z]       -> Ignore Lower Case
-    [^A-Z]       -> Ignore Upper Case
-    [^0-9a-zA-Z] -> Ignore 0-9 & a-z & A-Z
-    [^any, ]     -> Ignore Empty Space
-    [any,]       -> Ignore Empty Space
-    [abc]        -> Accept [a, b, c] Letters
-    [^abc]       -> Reject [a, b, c] Letters
+	/* Ranges:
+		(x|y)        -> X OR Y
+		[0-9]        -> 0 TO 9
+		[^0-9]       -> Not 0 To 9
+		[a-z]        -> lower Case
+		[A-Z]        -> Upper Case
+		[^a-z]       -> Ignore Lower Case
+		[^A-Z]       -> Ignore Upper Case
+		[^0-9a-zA-Z] -> Ignore 0-9 & a-z & A-Z
+		[^any, ]     -> Ignore Empty Space
+		[any,]       -> Ignore Empty Space
+		[abc]        -> Accept [a, b, c] Letters
+		[^abc]       -> Reject [a, b, c] Letters
     */
 
 	const regex = "123 Com Org 456 Info Io 789";
@@ -78,16 +77,16 @@ export const ranges = () => {
 };
 
 export const characters = () => {
-	/* 
-    .  -> Any Character, Ignore New Lines
-    \w -> Any Characters [a-z, A-Z, 0-9, _]
-    \W -> Any Special Characters
-    \d -> Any Number
-    \D -> None Numbers
-    \s -> Whitespace
-    \S -> None Whitespace
-    \b -> Start With OR End With
-    \B -> None Start With OR End With
+	/* Characters:
+		.  -> Any Character, Ignore New Lines
+		\w -> Any Characters [a-z, A-Z, 0-9, _]
+		\W -> Any Special Characters
+		\d -> Any Number
+		\D -> None Numbers
+		\s -> Whitespace
+		\S -> None Whitespace
+		\b -> Start With OR End With
+		\B -> None Start With OR End With
     */
 
 	let regex = "a!b@c#d$ e%f^gk_l+ 1!2@3#4$ 5%6^7&8 *9(0)";
@@ -138,7 +137,7 @@ export const characters = () => {
 };
 
 export const quantifiers = () => {
-	/* 
+	/* Quantifiers:
 	- n+ -> [+] One OR More  [1-9]
 	- n* -> [*] Zero OR More [0-9]
 	- n? -> [?] Zero OR one  [optional]

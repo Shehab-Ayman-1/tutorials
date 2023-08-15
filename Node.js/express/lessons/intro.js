@@ -1,4 +1,3 @@
-import express from "express";
 import { join } from "path";
 
 export const intro = (app) => {
