@@ -6,7 +6,7 @@ export const Header = () => {
 		<header className="bg-slate-800 flex-between w-full p-4">
 			<div className="logo">
 				<Link href="/">
-					<Image className="relative dark:invert block" src="/next.svg" alt="Next.js Logo" width={120} height={120} priority />
+					<Image className="relative dark:invert block" src="/next.svg" alt="Next.js Logo" width={120} height={120} />
 				</Link>
 			</div>
 			<div className="gap-2 flex-between">

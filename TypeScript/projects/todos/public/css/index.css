@@ -1,0 +1,100 @@
+* {
+	box-sizing: border-box;
+}
+
+#canvas {
+	display: block;
+	margin: 2rem auto;
+	width: 540px;
+	height: 540px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+section {
+	width: fit-content;
+	height: fit-content;
+	padding: 20px;
+	border: 1px solid black;
+	margin: auto;
+}
+
+input[type="text"] {
+	min-width: 500px;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+button {
+	font-size: 20px;
+	padding: 10px 40px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+button:hover {
+	background-color: orange;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	background-color: #edc;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-size: 30px;
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+i.delete-btn {
+	color: orangered;
+	font-size: 22px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+i.update-btn {
+	color: darkblue;
+	font-size: 22px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+i:hover {
+	filter: brightness(2);
+}
+
+label {
+	cursor: pointer;
+	user-select: none;
+}
+
+label.done {
+	color: green;
+	text-decoration: line-through;
+}
+
+.date {
+	flex-grow: 1;
+	text-align: end;
+	font-size: 22px;
+	font-family: cursive;
+}
+
+input[type="checkbox"] {
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	vertical-align: middle;
+	display: none;
+}
