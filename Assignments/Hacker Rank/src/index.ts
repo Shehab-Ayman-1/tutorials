@@ -1,6 +1,6 @@
 import { congrats } from "./congrats";
 import { plusMinus, matchingStrings, divisibleSumPairs, camelCase4, breakingRecords, miniMaxSum, timeConversion } from "./weeks";
-import {} from "./weeks";
+import { mockTest2 } from "./weeks";
 import {} from "./weeks";
 
 congrats();
@@ -15,6 +15,7 @@ congrats();
 // timeConversion();
 
 // ================================================= Weeks-2 =================================================
+mockTest2();
 
 // ================================================= Weeks-3 =================================================
 
