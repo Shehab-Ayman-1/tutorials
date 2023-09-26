@@ -5,11 +5,11 @@ export const NavLinks = [
 	},
 	{
 		title: "style",
-		routes: ["simple-style", "multiple-style", "styled-components-library"],
+		routes: ["simple-style", "multiple-style", "styled-components-lib"],
 	},
 	{
 		title: "forms",
-		routes: ["default-form", "formik"],
+		routes: ["default-form", "formik", "react-hook-form"],
 	},
 	{
 		title: "life-cicle",
@@ -25,11 +25,7 @@ export const NavLinks = [
 	},
 	{
 		title: "redux",
-		routes: ["old-counter", "new-counter", "sign-in", "to-do-list", "redux-thunk/view-posts"],
-	},
-	{
-		title: "material-ui",
-		routes: ["mui"],
+		routes: ["counter", "sign", "todos", "redux-thunk"],
 	},
 	{
 		title: "multible-langs",

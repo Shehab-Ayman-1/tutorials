@@ -1,5 +1,3 @@
-import React from "react";
-
 export function Keydown() {
 	const handleKey = (event) => {
 		console.log(event.key);

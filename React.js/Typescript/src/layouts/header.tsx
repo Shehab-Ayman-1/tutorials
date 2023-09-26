@@ -1,30 +1,29 @@
-import Image from "next/image";
+"use client";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-export const Header = () => {
+type NavLink = {
+	path: string;
+	name: string;
+	main?: boolean;
+};
+
+export const Header = ({ navLinks }: { navLinks: NavLink[] }) => {
+	const pathname = usePathname();
+
 	return (
 		<header className="bg-slate-800 flex-between w-full p-4">
 			<div className="logo">
 				<Link href="/">
-					<Image className="relative dark:invert block" src="/next.svg" alt="Next.js Logo" width={120} height={120} />
+					<img className="relative dark:invert block w-[120px]" src="/next.svg" alt="Next.js" />
 				</Link>
 			</div>
 			<div className="gap-2 flex-between">
-				<Link className="hover:text-gray-300 transition font-semibold block" href="/">
-					Home
-				</Link>
-				<Link className="hover:text-gray-300 transition font-semibold block" href="/about">
-					About
-				</Link>
-				<Link className="hover:text-gray-300 transition font-semibold block" href="/products">
-					Products
-				</Link>
-				<Link className="hover:text-gray-300 transition font-semibold block" href="/login">
-					Login
-				</Link>
-				<Link className="hover:text-gray-300 transition font-semibold block" href="/register">
-					Register
-				</Link>
+				{navLinks.map(({ path, name }: NavLink) => (
+					<Link key={name} className={`transition font-semibold block ${pathname === path ? "text-blue-500" : "text-white"} hover:text-blue-300`} href={path}>
+						{name}
+					</Link>
+				))}
 			</div>
 		</header>
 	);

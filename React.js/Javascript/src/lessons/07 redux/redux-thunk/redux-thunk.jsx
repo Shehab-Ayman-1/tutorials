@@ -1,7 +1,7 @@
-import React from "react";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchApiData, RESETDATA } from "../redux-helper/new-redux/thunk-slice";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchApiData, RESETDATA } from "./slices";
 import styled from "styled-components";
 
 const CategoryCards = styled.div`
@@ -42,32 +42,38 @@ const CardParagraph = styled.p`
 `;
 
 const CardLink = { width: "fit-content", color: "black", margin: "20px", display: "block", whiteSpace: "nowrap", fontSize: "1.6rem" };
-
 export function ReduxThunk() {
-	const state = useSelector((state) => state.myThunk);
+	const { data, loading, error } = useSelector(({ thunk }) => thunk);
 	const dispatch = useDispatch();
+
+	const handleFetch = () => dispatch(fetchApiData());
+
+	const handleReset = () => dispatch(RESETDATA());
+
 	return (
 		<div className="f-20">
-			{state.error ? <h3 className="second-color">Oobs! Maybe You Have A Problem In The Api Request Method</h3> : null}
+			{error && <h3 className="second-color">Oobs! Maybe You Have A Problem In The Api Request Method</h3>}
+			{loading && <h3>Loading....</h3>}
 
-			{state.loading ? (
-				<h3>Loading....</h3>
-			) : !state.loading ? (
-				<>
-					{state.error === null ? (
-						<button className="mybtn" onClick={() => dispatch(fetchApiData())}>
+			{!loading && (
+				<Fragment>
+					{!error && (
+						<button className="mybtn" onClick={handleFetch}>
 							Fetch
 						</button>
-					) : state.loading === false ? (
-						<button className="mybtn" onClick={() => dispatch(RESETDATA())}>
+					)}
+
+					{!data.length && (
+						<button className="mybtn" onClick={handleReset}>
 							Reset
 						</button>
-					) : null}
+					)}
+
 					<CategoryCards>
-						{state.data.map((card, i) => {
+						{data.map((card, i) => {
 							return (
 								<Card key={i}>
-									<CardImage src={card.img} alt="img-logo" />
+									<CardImage src={card.img} alt="logo" />
 									<CardTitle className="main-color">{card.title}</CardTitle>
 									<CardParagraph>{card.body}</CardParagraph>
 									<Link className="mybtn" to={`../post/${card.id}`} style={CardLink}>
@@ -77,8 +83,8 @@ export function ReduxThunk() {
 							);
 						})}
 					</CategoryCards>
-				</>
-			) : null}
+				</Fragment>
+			)}
 		</div>
 	);
 }

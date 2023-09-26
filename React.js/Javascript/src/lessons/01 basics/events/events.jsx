@@ -1,4 +1,3 @@
-import React from "react";
 import { Click, Change, Keydown } from "./";
 
 export function Events() {

@@ -1,4 +1,3 @@
-import React from "react";
 import Count from "./count";
 import Products from "./products";
 import User from "./user";

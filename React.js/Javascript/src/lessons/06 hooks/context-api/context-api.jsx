@@ -8,7 +8,7 @@
 		-- className.contextType = contextName
 */
 
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { AuthContext, AuthProvider } from "./context/create-context";
 import Component1 from "./components/one";
 import Component2 from "./components/two";

@@ -1,8 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import Title from "./components/Title";
 import Category from "./components/category";
 import Icon from "./components/icons";
+import { logo } from "@/assets";
 
 const Flex = styled.div`
 	display: flex;
@@ -54,30 +54,6 @@ export function StyledComponents() {
 	// let iteration = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 	let iteration = [1, 2, 3, 4, 5];
 
-	let render = (i) => {
-		return (
-			<Box key={i}>
-				<BoxImage>
-					<img src="/assets/logo.png" alt="box-img" className="fa-spin" />
-				</BoxImage>
-				<BoxContent>
-					<Title>
-						Latest <span>Product</span>
-					</Title>
-					<BoxPrice>
-						$19.99 <span className="second-color">$35.99</span>
-					</BoxPrice>
-				</BoxContent>
-				<Flex>
-					<Icon href="https://www.google.com/" className="fab fa-facebook-f"></Icon>
-					<Icon href="https://www.google.com/" className="fab fa-twitter"></Icon>
-					<Icon href="https://www.google.com/" className="fab fa-instagram"></Icon>
-					<Icon href="https://www.google.com/" className="fab fa-google"></Icon>
-				</Flex>
-			</Box>
-		);
-	};
-
 	return (
 		<main className="styled-components-container">
 			<Title>
@@ -86,7 +62,29 @@ export function StyledComponents() {
 				</h1>
 			</Title>
 			<section className="Arrivals-section" id="Arrivals-section">
-				<Category>{iteration.map((item, i) => render(i))}</Category>
+				<Category>
+					{iteration.map((item, i) => (
+						<Box key={i}>
+							<BoxImage>
+								<img src={logo} alt="box-img" className="fa-spin" />
+							</BoxImage>
+							<BoxContent>
+								<Title>
+									Latest <span>Product</span>
+								</Title>
+								<BoxPrice>
+									$19.99 <span className="second-color">$35.99</span>
+								</BoxPrice>
+							</BoxContent>
+							<Flex>
+								<Icon href="https://www.google.com/" className="fab fa-facebook-f"></Icon>
+								<Icon href="https://www.google.com/" className="fab fa-twitter"></Icon>
+								<Icon href="https://www.google.com/" className="fab fa-instagram"></Icon>
+								<Icon href="https://www.google.com/" className="fab fa-google"></Icon>
+							</Flex>
+						</Box>
+					))}
+				</Category>
 			</section>
 		</main>
 	);

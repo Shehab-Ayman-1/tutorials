@@ -1,4 +1,3 @@
-import React from "react";
 import { UseCount } from "./hooks/counter";
 import { useRandomBg, randColor } from "./hooks/randomBg";
 

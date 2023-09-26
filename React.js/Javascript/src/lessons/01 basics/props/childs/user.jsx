@@ -1,5 +1,3 @@
-import React from "react";
-
 export function User(props) {
 	return (
 		<div className="f-20" style={{ paddingLeft: "50px" }}>

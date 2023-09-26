@@ -6,7 +6,7 @@
 	[5] Look To The To-Do-List Script Below Now 
 */
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getTodos, addNewTask, deleteNewTask, updateNewTask, updateIsFinished } from "./orders";
 
 export function JsonLocalServer() {

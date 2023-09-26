@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
 class MulipleForm extends Component {
 	state = {
@@ -52,56 +52,26 @@ class MulipleForm extends Component {
 				</div>
 
 				<div className="check-box">
-					<input
-						type="checkbox"
-						name="checked"
-						id="checked"
-						defaultChecked={this.state.checked}
-						onChange={(event) => this.handleMultipleStates(event)}
-					/>
+					<input type="checkbox" name="checked" id="checked" defaultChecked={this.state.checked} onChange={(event) => this.handleMultipleStates(event)} />
 					<label htmlFor="checked">Remember Me</label>
 				</div>
 
 				<div className="radio-btns">
 					<div className="btn">
 						<label htmlFor="JavaScript.js">JavaScript</label>
-						<input
-							type="radio"
-							name="radio"
-							id="JavaScript.js"
-							checked={this.state.radio === "JavaScript.js"}
-							onChange={(event) => this.handleMultipleStates(event)}
-						/>
+						<input type="radio" name="radio" id="JavaScript.js" checked={this.state.radio === "JavaScript.js"} onChange={(event) => this.handleMultipleStates(event)} />
 					</div>
 					<div className="btn">
 						<label htmlFor="Vue.js">Vue.js</label>
-						<input
-							type="radio"
-							name="radio"
-							id="Vue.js"
-							checked={this.state.radio === "Vue.js"}
-							onChange={(event) => this.handleMultipleStates(event)}
-						/>
+						<input type="radio" name="radio" id="Vue.js" checked={this.state.radio === "Vue.js"} onChange={(event) => this.handleMultipleStates(event)} />
 					</div>
 					<div className="btn">
 						<label htmlFor="React.js">React.js</label>
-						<input
-							type="radio"
-							name="radio"
-							id="React.js"
-							checked={this.state.radio === "React.js"}
-							onChange={(event) => this.handleMultipleStates(event)}
-						/>
+						<input type="radio" name="radio" id="React.js" checked={this.state.radio === "React.js"} onChange={(event) => this.handleMultipleStates(event)} />
 					</div>
 					<div className="btn">
 						<label htmlFor="Angular.js">Angular.js</label>
-						<input
-							type="radio"
-							name="radio"
-							id="Angular.js"
-							checked={this.state.radio === "Angular.js"}
-							onChange={(event) => this.handleMultipleStates(event)}
-						/>
+						<input type="radio" name="radio" id="Angular.js" checked={this.state.radio === "Angular.js"} onChange={(event) => this.handleMultipleStates(event)} />
 					</div>
 				</div>
 			</form>

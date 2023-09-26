@@ -1,38 +1,32 @@
-/* React */
-import React from "react";
+// React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Start, Header, Sidebar, NotFound } from "./layout";
-import "./scss/style.scss";
+import { Start, Header, Sidebar, NotFound } from "@/layout";
 
-/* Lessons */
 // Basics
-import { Components, Conditions, States, Props, Loop, Events, JsonLocalServer } from "./lessons/01 basics";
+import { Components, Conditions, States, Props, Loop, Events, JsonLocalServer } from "@/lessons/01 basics";
 
 // Style
-import { NormalStyle, MultipleStyle, StyledComponents } from "./lessons/02 style";
+import { NormalStyle, MultipleStyle, StyledComponents } from "@/lessons/02 style";
 
 // Life Cicle
-import { ComponentWillMount, ComponentDidMount, ComponentDidUnmount, ComponentDidUpdate } from "./lessons/03 lifeCicle";
+import { ComponentWillMount, ComponentDidMount, ComponentDidUnmount, ComponentDidUpdate } from "@/lessons/03 lifeCicle";
 
 // Forms
-import { DefaultForm, FormikForm } from "./lessons/04 forms";
+import { DefaultForm, FormikForm, ReactHookForm } from "@/lessons/04 forms";
 
 // Ajax Request
-import { GetUsers, GetUser, AddUser, DeleteUser, UpdateUser } from "./lessons/05 ajax-request";
+import { GetUsers, GetUser, AddUser, DeleteUser, UpdateUser } from "@/lessons/05 ajax-request";
 
 // Hooks
-import { ContextApi, UseEffect, UseState, UseRef, UseReducer, UseNavigate, UseLocation, CustomeHook } from "./lessons/06 hooks";
+import { ContextApi, UseEffect, UseState, UseRef, UseReducer, UseNavigate, UseLocation, CustomeHook } from "@/lessons/06 hooks";
 
 // Redux
-import { ReduxOldCounter, ReduxNewCounter, ReduxSignin, ReduxToDoList, ReduxThunk, ReduxThunkComponent } from "./lessons/07 redux";
+import { ReduxCounter, ReduxSign, ReduxTodos, ReduxThunk } from "@/lessons/07 redux";
 
-// Material Ui
-import { MaterialUi } from "./lessons/08 material-ui";
+// Multi Languages
+import { I18next, CustomeWay } from "@/lessons/08 multi langs";
 
-// Material Ui
-import { I18next, CustomeWay } from "./lessons/09 multi langs";
-
-function App() {
+export const App = () => {
 	return (
 		<BrowserRouter>
 			<Header />
@@ -74,6 +68,7 @@ function App() {
 				<Route path="/forms">
 					<Route path="default-form" element={<DefaultForm />} />
 					<Route path="formik" element={<FormikForm />} />
+					<Route path="react-hook-form" element={<ReactHookForm />} />
 				</Route>
 
 				{/* Ajax Request */}
@@ -99,19 +94,10 @@ function App() {
 
 				{/* Redux */}
 				<Route path="/redux">
-					<Route path="old-counter" element={<ReduxOldCounter />} />
-					<Route path="new-counter" element={<ReduxNewCounter />} />
-					<Route path="sign-in" element={<ReduxSignin />} />
-					<Route path="to-do-list" element={<ReduxToDoList />} />
-					<Route path="redux-thunk">
-						<Route path="view-posts" element={<ReduxThunk />} />
-						<Route path="post/:thunkID" element={<ReduxThunkComponent />} />
-					</Route>
-				</Route>
-
-				{/* Material Ui */}
-				<Route path="/material-ui">
-					<Route path="mui" element={<MaterialUi />} />
+					<Route path="counter" element={<ReduxCounter />} />
+					<Route path="sign" element={<ReduxSign />} />
+					<Route path="todos" element={<ReduxTodos />} />
+					<Route path="redux-thunk" element={<ReduxThunk />} />
 				</Route>
 
 				{/* Multible Languages */}
@@ -122,6 +108,4 @@ function App() {
 			</Routes>
 		</BrowserRouter>
 	);
-}
-
-export default App;
+};

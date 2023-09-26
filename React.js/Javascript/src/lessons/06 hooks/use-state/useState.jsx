@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export function UseState() {
 	const [username, setUsername] = useState();
@@ -37,13 +37,9 @@ export function UseState() {
 	return (
 		<div className="f-20">
 			<h3 className="main-color">
-				<p style={{ color: "white", fontSize: "18px" }}>
-					When We Use The [Normal Increament] After The [Good Async Increament] Its Add Number On The Last Number Is Stored In The
-					Counter State
-				</p>
+				<p style={{ color: "white", fontSize: "18px" }}>When We Use The [Normal Increament] After The [Good Async Increament] Its Add Number On The Last Number Is Stored In The Counter State</p>
 				<p style={{ color: "white", fontSize: "18px", marginBottom: "15px" }}>
-					But, If We Use The [Normal Increament] After The [Bad Async Increament] Its Add Number On The Last Number Is Stored In
-					The Memory
+					But, If We Use The [Normal Increament] After The [Bad Async Increament] Its Add Number On The Last Number Is Stored In The Memory
 				</p>
 				My Counter Is: <span className="second-color">{counter}</span> <br />
 				<button className="mybtn" id="normal-increament" onClick={handleChange}>

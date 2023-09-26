@@ -1,6 +1,5 @@
-import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { NavLinks } from "../../constants";
+import { NavLinks } from "@/constants";
 import "./style.scss";
 
 export function Sidebar() {
@@ -21,10 +20,10 @@ export function Sidebar() {
 	return (
 		<nav className="nav-bar hide-left-clip">
 			<div className="navbar-head">
-				<i className="fas fa-times cross" onClick={closeNavbar}></i>
 				<Link to="/" className="head-title" onClick={closeNavbar}>
 					React Tutorial
 				</Link>
+				<i className="fas fa-times cross" onClick={closeNavbar}></i>
 			</div>
 
 			{NavLinks.map(({ title, routes }, i) => (
@@ -37,7 +36,7 @@ export function Sidebar() {
 						{routes.map((route, i) => (
 							<li className="nested-link" key={i}>
 								<NavLink to={`${title}/${route}`} className="link" onClick={closeNavbar}>
-									{route}
+									{route.replaceAll("-", " ")}
 								</NavLink>
 							</li>
 						))}

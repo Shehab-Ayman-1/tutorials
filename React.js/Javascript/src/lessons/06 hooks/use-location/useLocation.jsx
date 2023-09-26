@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export function UseLocation() {

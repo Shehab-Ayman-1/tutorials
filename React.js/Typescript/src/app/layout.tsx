@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Header, Footer } from "@/layouts";
 import "@/assets/css/globals.css";
 
 export const metadata: Metadata = {
@@ -14,11 +13,7 @@ type children = {
 function Layout({ children }: children) {
 	return (
 		<html lang="en">
-			<body>
-				<Header />
-				{children}
-				<Footer />
-			</body>
+			<body>{children}</body>
 		</html>
 	);
 }

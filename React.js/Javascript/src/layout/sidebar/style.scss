@@ -1,4 +1,4 @@
-@use "scss/mixins" as *;
+@use "@/assets/scss/mixins" as *;
 
 .nav-bar {
 	@include Fixed(tl, 0, 0);
@@ -11,7 +11,7 @@
 	overflow-y: auto;
 	transition: all 0.2s linear;
 	z-index: 1000;
-	clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0);
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 	&::-webkit-scrollbar-track {
 		background-color: #08071b;
 	}
@@ -22,14 +22,12 @@
 		background-color: #fff;
 	}
 	.navbar-head {
-		@include Flex(flex-start, center);
-		padding-left: 5px;
+		@include Flex(space-between, center);
 		.cross {
 			color: get(white);
 		}
 		.head-title {
 			color: get(main-color);
-			padding-left: get(p2);
 			text-align: center;
 			font-size: 2.5rem;
 			font-weight: bold;

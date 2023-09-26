@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 import { INITIAL_STATES, Reducer } from "./actions/user";
 
 export default function User() {

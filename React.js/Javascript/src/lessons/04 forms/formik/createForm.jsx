@@ -1,4 +1,3 @@
-import React from "react";
 import { Field, ErrorMessage, FieldArray } from "formik";
 
 function FirstForm(props) {
@@ -109,11 +108,7 @@ function SecondForm(props) {
 									<label>Friend {i + 1}: </label>
 									<div className="friend-input">
 										<Field type="text" name={`friends.${i}`} placeholder="Add New Friend..." value={friend} />
-										<button
-											type="button"
-											className="mybtn"
-											style={btnStyle}
-											onClick={() => deleteFriend(arrayHelper, i)}>
+										<button type="button" className="mybtn" style={btnStyle} onClick={() => deleteFriend(arrayHelper, i)}>
 											-
 										</button>
 									</div>

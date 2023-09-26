@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-
 export function Conditions() {
-	const [age] = useState(21);
+	const age = 21;
 
 	let compare = () => {
 		if (age <= 18) return `Sorry, But You Are Smaller Than 18 Years Old`;

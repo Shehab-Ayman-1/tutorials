@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export function UseRef() {
 	const [email, setEmail] = useState("");
@@ -33,25 +33,11 @@ export function UseRef() {
 			<div className="value"></div>
 			<div className="email">
 				<label htmlFor="email">email: </label> <br />
-				<input
-					type="text"
-					id="email"
-					ref={emailRef}
-					onKeyDown={switchInput}
-					placeholder="Enter Your Email..."
-					onChange={(event) => setEmail(event.target.value)}
-				/>
+				<input type="text" id="email" ref={emailRef} onKeyDown={switchInput} placeholder="Enter Your Email..." onChange={(event) => setEmail(event.target.value)} />
 			</div>
 			<div className="password">
 				<label htmlFor="password">password: </label> <br />
-				<input
-					type="text"
-					id="password"
-					ref={passwordRef}
-					onKeyDown={getValues}
-					placeholder="Enter Your Password..."
-					onChange={(event) => setPassword(event.target.value)}
-				/>
+				<input type="text" id="password" ref={passwordRef} onKeyDown={getValues} placeholder="Enter Your Password..." onChange={(event) => setPassword(event.target.value)} />
 			</div>
 		</div>
 	);

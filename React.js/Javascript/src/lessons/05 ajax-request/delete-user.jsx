@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GetUsersRequest, DeleteRequest } from "./orders";
 
 export function DeleteUser() {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function NormalForm() {
 	let [text, setText] = useState("Enter Your UserName: ");

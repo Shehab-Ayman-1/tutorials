@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { AuthContext } from "../context/create-context";
 
 export default class cosumerWithComponent extends Component {

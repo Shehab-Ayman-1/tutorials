@@ -1,4 +1,3 @@
-import React from "react";
 import { User, Hello, SendChildren } from "./childs";
 
 export function Props() {

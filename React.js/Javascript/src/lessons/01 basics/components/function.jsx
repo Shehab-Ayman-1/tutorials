@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Functions() {
 	return (
 		<h3 className="f-30">

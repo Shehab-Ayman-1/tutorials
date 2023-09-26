@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import { AuthContext } from "../context/create-context";
 
 class contextTypeWithComponent extends Component {
@@ -6,8 +6,7 @@ class contextTypeWithComponent extends Component {
 		return (
 			<div className="f-20">
 				<h3 className="dark-color">Second Component .js</h3>
-				<span className="main-color">Theme Color: </span> <span className="second-color">{this.context.theme}</span>{" "}
-				<br />
+				<span className="main-color">Theme Color: </span> <span className="second-color">{this.context.theme}</span> <br />
 				<span className="main-color">user data: </span>
 				<span className="second-color">
 					{this.context.data.name} | {this.context.data.age} | {this.context.data.country}
