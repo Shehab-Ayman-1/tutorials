@@ -1,36 +1,32 @@
-import { Component } from "react";
+import { useState } from "react";
 
-export class Change extends Component {
-	state = {
-		fName: "Shehab",
-		lName: "Ayman",
-		count: 0,
+export const Change = () => {
+	const [string, setString] = useState("");
+	const [count, setCount] = useState(0);
+
+	const updateString = (event) => {
+		setString(event.target.value);
 	};
 
-	// We Have 2 Ways To Create The Function
-	// [1] Event As An Argument
-	updateFirstName(event) {
-		return this.setState({ fName: event.target.value });
-	}
+	const updateStringCount = (event) => {
+		setCount(event.target.value.length);
+	};
 
-	// [2] Bind Event
-	updateLastName(event) {
-		return this.setState({ lName: event.target.value });
-	}
-
-	render() {
-		return (
-			<div className="f-20">
+	return (
+		<div className="f-20">
+			<div className="">
 				<h3 className="main-color">
-					My First Name Is: <span className="second-color">{this.state.fName}</span>
+					My String Is: <span className="second-color">{string}</span>
 				</h3>
-				<input placeholder="Enter Your New First Name..." onChange={(event) => this.updateFirstName(event)} />
-
-				<h3 className="main-color">
-					My Last Name Is: <span className="second-color">{this.state.lName}</span>
-				</h3>
-				<input placeholder="Enter Your New Last Name..." onChange={this.updateLastName.bind(this)} />
+				<input placeholder="String Letters..." onChange={updateString} />
 			</div>
-		);
-	}
-}
+
+			<div className="">
+				<h3 className="main-color">
+					String Count Is: <span className="second-color">{count}</span>
+				</h3>
+				<input placeholder="String Count..." onChange={updateStringCount} />
+			</div>
+		</div>
+	);
+};

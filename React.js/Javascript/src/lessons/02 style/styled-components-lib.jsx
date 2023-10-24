@@ -1,27 +1,17 @@
 import styled from "styled-components";
-import Title from "./components/Title";
-import Category from "./components/category";
-import Icon from "./components/icons";
 import { logo } from "@/assets";
 
 const Flex = styled.div`
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
 `;
 
 const Box = styled.div`
-	width: calc(100% / 8);
-	@media (max-width: 1000px) {
-		width: calc(100% / 4);
-	}
-	@media (max-width: 800px) {
-		width: calc(100% / 3);
-	}
-	@media (max-width: 600px) {
-		width: calc(100% / 3);
-	}
-	@media (max-width: 400px) {
-		width: calc(100% / 1);
-	}
+	background: #222;
+	width: 300px;
+	padding: 15px;
 `;
 
 const BoxImage = styled.div`
@@ -50,20 +40,52 @@ const BoxPrice = styled.span`
 	}
 `;
 
+const Title = styled.h1`
+	text-align: center;
+	font-size: 25px;
+	font-weight: 500;
+	margin-bottom: 25px;
+	white-space: nowrap;
+	span {
+		color: crimson;
+	}
+`;
+
+const Icon = styled.a.attrs(() => ({ target: "_blank" }))`
+	color: white;
+	font-size: 18px;
+	margin-right: 10px;
+	cursor: pointer;
+	line-height: 60px;
+	&:hover {
+		color: crimson;
+	}
+`;
+
+const SCategory = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 50px;
+`;
+
+function Category({ children }) {
+	return <SCategory>{children}</SCategory>;
+}
+
 export function StyledComponents() {
-	// let iteration = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 	let iteration = [1, 2, 3, 4, 5];
 
 	return (
 		<main className="styled-components-container">
 			<Title>
-				<h1>
-					New <span>Arrivals</span>
-				</h1>
+				New <span>Arrivals</span>
 			</Title>
 			<section className="Arrivals-section" id="Arrivals-section">
 				<Category>
-					{iteration.map((item, i) => (
+					{iteration.map((_, i) => (
 						<Box key={i}>
 							<BoxImage>
 								<img src={logo} alt="box-img" className="fa-spin" />
@@ -77,10 +99,10 @@ export function StyledComponents() {
 								</BoxPrice>
 							</BoxContent>
 							<Flex>
-								<Icon href="https://www.google.com/" className="fab fa-facebook-f"></Icon>
-								<Icon href="https://www.google.com/" className="fab fa-twitter"></Icon>
-								<Icon href="https://www.google.com/" className="fab fa-instagram"></Icon>
-								<Icon href="https://www.google.com/" className="fab fa-google"></Icon>
+								<Icon href="https://www.google.com" className="fab fa-facebook-f"></Icon>
+								<Icon href="https://www.google.com" className="fab fa-twitter"></Icon>
+								<Icon href="https://www.google.com" className="fab fa-instagram"></Icon>
+								<Icon href="https://www.google.com" className="fab fa-google"></Icon>
 							</Flex>
 						</Box>
 					))}

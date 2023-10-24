@@ -1,40 +1,44 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { GetUsersRequest } from "./orders";
+import { GET_USERS } from "./utils";
 import "./style.scss";
 
 export function GetUsers() {
-	const [data, setData] = useState();
+	const [data, setData] = useState([]);
+	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState(false);
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		GetUsersRequest().then((item) => setData(item.data));
+		(async () => {
+			setLoading(true);
+			const response = await GET_USERS();
+			if (response.message) setError(true);
+			else setData(response);
+			setLoading(false);
+		})();
 	}, []);
 
-	let findUser = async (event) => {
-		if (!data) return <span>Looding...</span>;
-
-		const ID = event.target.previousElementSibling.id - 1;
-		navigate(`/ajax-request/user/${data[ID].id}`);
+	let handleNavigate = async ({ target: { id } }) => {
+		if (!data.length) return;
+		navigate(`../get-user/${id}`);
 	};
 
-	let renderUsers = () => {
-		if (!data) return <span>Looding...</span>;
-
-		return data.map((user) => (
-			<div className="user" key={user.id}>
-				<p id={user.id}>{`${user.id} => ${user.name}`}</p>
-				<button className="mybtn" onClick={findUser}>
-					view
-				</button>
-			</div>
-		));
-	};
-
+	if (loading) return <h3 className="main-color f-40">Loading...</h3>;
+	if (error) return <h3 className="main-color f-40">Error.</h3>;
 	return (
 		<div className="ajax-request f-20">
 			<h3 className="main-color">All Users: </h3>
-			<div className="users-list f-20">{renderUsers()}</div>
+			<div className="users-list f-20">
+				{data?.map((user, i) => (
+					<div className="user" key={user.id}>
+						<p>{`${i + 1 > 9 ? i + 1 : `0${i + 1}`} - ${user.name}`}</p>
+						<button className="mybtn" id={user.id} onClick={handleNavigate}>
+							view
+						</button>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 }

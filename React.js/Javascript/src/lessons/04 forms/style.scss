@@ -1,66 +1,65 @@
 @use "@/assets/scss/mixins" as *;
 
-.parent-form {
-	@include Flex(space-between, center);
-	flex-wrap: wrap;
-	.form {
-		background-color: #112;
-		width: 500px;
-		padding: get(p2);
-		margin: get(m3) auto get(p0);
-		border: get(border);
-		input,
-		select {
-			width: 100% !important;
-			margin: 0;
-			padding: get(p1);
+.form {
+	background-color: #112;
+	max-width: 800px;
+	padding: get(p2);
+	margin: get(m3) auto get(p0);
+	border: get(border);
+	input,
+	select {
+		width: 100% !important;
+		margin: 0;
+		padding: get(p1);
+	}
+	textarea {
+		@extend input;
+		height: 160px;
+		resize: none;
+	}
+	div {
+		padding: gutter(p1, p0);
+	}
+	label {
+		color: get(main-color);
+		cursor: pointer;
+	}
+	button {
+		display: block;
+		width: 100%;
+	}
+	.check-box {
+		@include Flex(flex-start, center);
+		gap: 1rem;
+		padding-bottom: 0;
+		input {
+			width: 15px !important;
+			height: 15px !important;
 		}
-		textarea {
-			@extend input;
-			height: 160px;
-			resize: none;
-		}
-		div {
-			padding: gutter(p1, p0);
+	}
+	.radio-btns {
+		@extend .check-box;
+		input {
+			width: 13px !important;
+			margin-right: get(m2);
 		}
 		label {
-			color: get(main-color);
-			cursor: pointer;
+			font-size: 1.7rem;
 		}
-		button {
-			display: block;
-			width: 100%;
+		.btn {
+			display: flex;
+			flex-direction: row-reverse;
+			padding: 0;
+			margin-right: get(m4);
 		}
-		.check-box {
-			@include Flex(flex-start, center);
-			gap: 1rem;
-			padding-bottom: 0;
-			input {
-				width: 15px !important;
-				height: 15px !important;
-			}
-		}
-		.radio-btns {
-			@extend .check-box;
-			input {
-				width: 13px !important;
-				margin: gutter(m0, m2);
-			}
-			label {
-				font-size: 1.7rem;
-			}
-			.btn {
-				padding: 0;
-			}
-		}
-		.add-friend {
-			.friend-input {
-				@include Flex(space-between, center);
-				button {
-					background-color: crimson;
-					&:hover {
-						opacity: 0.8;
-					}
+	}
+	.add-friend {
+		.friend-input {
+			@include Flex(space-between, center);
+			button {
+				background-color: crimson;
+				&:hover {
+					opacity: 0.8;
 				}
 			}
 		}

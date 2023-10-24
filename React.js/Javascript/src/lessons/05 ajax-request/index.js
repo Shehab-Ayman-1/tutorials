@@ -1,5 +1,5 @@
-export { GetUsers } from "./get-users";
-export { GetUser } from "./get-user";
-export { AddUser } from "./add-user";
-export { DeleteUser } from "./delete-user";
-export { UpdateUser } from "./update-user";
+export * from "./get-users";
+export * from "./get-user";
+export * from "./add-user";
+export * from "./delete-user";
+export * from "./update-user";

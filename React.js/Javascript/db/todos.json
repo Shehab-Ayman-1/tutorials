@@ -2,48 +2,52 @@
   "toDos": [
     {
       "id": "L4FS5STJ-01FY5P89QA17",
-      "isFinished": true,
+      "complited": true,
       "task": "New Task 1"
     },
     {
       "id": "L4FS5VSF-001PKPVD12X3",
-      "isFinished": false,
+      "complited": false,
       "task": "New Task 2"
     },
     {
       "id": "L4FS5ZSM-01XRFT8A2EI5",
       "isFinished": true,
-      "task": "new Task 3"
+      "task": "new Task 3",
+      "complited": true
     },
     {
       "id": "L4FS62UY-00P7VII8K0KZ",
-      "isFinished": false,
+      "complited": false,
       "task": "new Task 4"
     },
     {
       "id": "L4FS65QW-01C3R86CSKT7",
       "isFinished": true,
-      "task": "New Task 5"
+      "task": "New Task 5",
+      "complited": true
     },
     {
       "id": "L4FS68RG-010IVI58PF4N",
-      "isFinished": false,
+      "complited": false,
       "task": "New Task 6"
     },
     {
       "id": "L4FS6BB1-00N9FLLCEZJJ",
       "isFinished": true,
-      "task": "New Task 7"
+      "task": "New Task 7",
+      "complited": true
     },
     {
       "id": "L4FS6DYQ-01TREOKHJP1D",
-      "isFinished": false,
+      "complited": false,
       "task": "New Task 8"
     },
     {
-      "id": "L4FS6G20-01YHKP1FW3WZ",
+      "id": "LMZYNRWX-004SCR9I4O13",
       "isFinished": true,
-      "task": "New Task 9"
+      "task": "New Task 9",
+      "complited": true
     }
   ]
 }

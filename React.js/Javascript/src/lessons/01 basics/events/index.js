@@ -1,4 +1,4 @@
-export { Click } from "./click";
-export { Change } from "./change";
-export { Keydown } from "./keydown";
-export { Events } from "./events";
+export * from "./click";
+export * from "./change";
+export * from "./keydown";
+export * from "./events";

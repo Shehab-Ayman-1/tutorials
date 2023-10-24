@@ -29,7 +29,7 @@ export function Sidebar() {
 			{NavLinks.map(({ title, routes }, i) => (
 				<div className={`phrase ${title}`} key={i}>
 					<li className="main-link" onClick={toggleList}>
-						<h3 className="link">{title}</h3>
+						<h3 className="link">{title.replaceAll("-", " ")}</h3>
 						<i className="fas fa-angle-right" />
 					</li>
 					<ul className="main-list hide-height">

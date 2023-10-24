@@ -3,11 +3,27 @@ import { Click, Change, Keydown } from "./";
 export function Events() {
 	return (
 		<div className="f-30">
-			<Click />
+			<div className="">
+				<h3 className="main-color">Click Event</h3>
+				<hr />
+				<Click />
+			</div>
+
 			<hr />
-			<Keydown />
+
+			<div className="">
+				<h3 className="main-color">Keys Event</h3>
+				<hr />
+				<Keydown />
+			</div>
+
 			<hr />
-			<Change />
+
+			<div className="">
+				<h3 className="main-color">Change Event</h3>
+				<hr />
+				<Change />
+			</div>
 		</div>
 	);
 }

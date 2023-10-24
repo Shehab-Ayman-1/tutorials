@@ -3,10 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Start, Header, Sidebar, NotFound } from "@/layout";
 
 // Basics
-import { Components, Conditions, States, Props, Loop, Events, JsonLocalServer } from "@/lessons/01 basics";
+import { Components, Conditions, Props, Loop, Events, JsonLocalServer } from "@/lessons/01 basics";
 
 // Style
-import { NormalStyle, MultipleStyle, StyledComponents } from "@/lessons/02 style";
+import { Style, StyledComponents } from "@/lessons/02 style";
 
 // Life Cicle
 import { ComponentWillMount, ComponentDidMount, ComponentDidUnmount, ComponentDidUpdate } from "@/lessons/03 lifeCicle";
@@ -42,7 +42,6 @@ export const App = () => {
 				<Route path="/basics">
 					<Route path="components" element={<Components />} />
 					<Route path="props" element={<Props />} />
-					<Route path="state" element={<States />} />
 					<Route path="events" element={<Events />} />
 					<Route path="loops" element={<Loop />} />
 					<Route path="conditions" element={<Conditions />} />
@@ -51,9 +50,8 @@ export const App = () => {
 
 				{/* Style */}
 				<Route path="/style">
-					<Route path="simple-style" element={<NormalStyle />} />
-					<Route path="multiple-style" element={<MultipleStyle />} />
-					<Route path="styled-components-library" element={<StyledComponents />} />
+					<Route path="simple-style" element={<Style />} />
+					<Route path="styled-components-lib" element={<StyledComponents />} />
 				</Route>
 
 				{/* Life Cicle */}
@@ -67,17 +65,17 @@ export const App = () => {
 				{/* Forms */}
 				<Route path="/forms">
 					<Route path="default-form" element={<DefaultForm />} />
-					<Route path="formik" element={<FormikForm />} />
+					<Route path="formik-form" element={<FormikForm />} />
 					<Route path="react-hook-form" element={<ReactHookForm />} />
 				</Route>
 
 				{/* Ajax Request */}
 				<Route path="/ajax-request">
-					<Route path="get-all-users" element={<GetUsers />} />
-					<Route path="user/:userID" element={<GetUser />} />
+					<Route path="get-users" element={<GetUsers />} />
+					<Route path="get-user/:userId" element={<GetUser />} />
 					<Route path="add-user" element={<AddUser />} />
-					<Route path="delete-user" element={<DeleteUser />} />
 					<Route path="update-user" element={<UpdateUser />} />
+					<Route path="delete-user" element={<DeleteUser />} />
 				</Route>
 
 				{/* Hooks */}

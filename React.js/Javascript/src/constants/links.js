@@ -1,15 +1,15 @@
 export const NavLinks = [
 	{
 		title: "basics",
-		routes: ["components", "props", "state", "events", "loops", "conditions", "json-local-server"],
+		routes: ["components", "props", "events", "loops", "conditions", "json-local-server"],
 	},
 	{
 		title: "style",
-		routes: ["simple-style", "multiple-style", "styled-components-lib"],
+		routes: ["simple-style", "styled-components-lib"],
 	},
 	{
 		title: "forms",
-		routes: ["default-form", "formik", "react-hook-form"],
+		routes: ["default-form", "formik-form", "react-hook-form"],
 	},
 	{
 		title: "life-cicle",
@@ -17,7 +17,7 @@ export const NavLinks = [
 	},
 	{
 		title: "ajax-request",
-		routes: ["get-all-users", "add-user", "delete-user", "update-user"],
+		routes: ["get-users", "add-user", "update-user", "delete-user"],
 	},
 	{
 		title: "hooks",

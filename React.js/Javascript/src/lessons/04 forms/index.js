@@ -1,3 +1,3 @@
-export { DefaultForm } from "./defaultForm";
-export { FormikForm } from "./formik";
-export { ReactHookForm } from "./react-hook-form";
+export * from "./default-form";
+export * from "./formik-form";
+export * from "./react-hook-form";

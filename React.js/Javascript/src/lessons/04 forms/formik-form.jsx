@@ -1,15 +1,63 @@
-import { Field, ErrorMessage, FieldArray } from "formik";
+// hint: => Formik Is Using To Handling The States Easly, While I Want to Use States With Input Fields
+import { Formik, Field, FieldArray, ErrorMessage } from "formik";
+import { Fragment } from "react";
+import * as Yup from "yup";
 
-function FirstForm(props) {
+export function FormikForm() {
+	let submitForm = (initialValues) => {
+		console.log(initialValues); // => { username: "", email: "", selected: "", checkbox: false, message: "", radio: "" }
+	};
+
+	let schema = Yup.object().shape({
+		username: Yup.string().required(),
+		email: Yup.string().required(),
+		selected: Yup.string().required(),
+		checkbox: Yup.string().required(),
+		message: Yup.string().required(),
+		radio: Yup.string().required(),
+		social: Yup.object().shape({
+			facebook: Yup.string().required("facebook Account Is Required ☺"),
+			twitter: Yup.string().required("Twitter Account Is Required ☺"),
+		}),
+		friends: Yup.array().of(Yup.string().required("Enter Your New Friend")),
+	});
+
+	let initialValues = {
+		username: "",
+		email: "",
+		selected: "",
+		checkbox: false,
+		message: "",
+		radio: "",
+		social: { facebook: "", twitter: "" },
+		friends: [""],
+	};
+
+	// initialValues() => To Create The Default Value Of The Props
+	// onSubmit) => To Do Any Functionality While Submit The Form
+	// render() => To Fetch The Elements In The Page [Can To Render createForm In The Formit Directly Like Now]
+	return <Formik component={Form} initialValues={initialValues} validationSchema={schema} onSubmit={submitForm} />;
+}
+
+function Form({ values }) {
+	let btnStyle = { width: "fit-content ", margin: "initial" };
+	let addFriend = (helper) => {
+		return helper.push("");
+	};
+
+	let deleteFriend = (helper, index) => {
+		return helper.remove(index);
+	};
+
 	return (
 		// hint: handleSubmit => Imported From Formik
-		<form className="f-20 form" onSubmit={props.values.handleSubmit}>
+		<form className="f-20 form">
 			<h4 className="main-color" style={{ textAlign: "center" }}>
-				☺ Formik ☺
+				☺ Formik Form ☺
 			</h4>
 
 			<div className="text-input">
-				<label htmlFor="text">UserName: </label>
+				<label htmlFor="text">Username: </label>
 				<Field type="text" id="text" name="username" placeholder="Enter Your UserName" />
 				<ErrorMessage name="username" />
 			</div>
@@ -26,6 +74,8 @@ function FirstForm(props) {
 				<ErrorMessage name="message" />
 			</div>
 
+			<hr />
+
 			<div className="select-box">
 				<label htmlFor="select">Skills: </label>
 				<Field component="select" id="select" name="selected">
@@ -40,6 +90,8 @@ function FirstForm(props) {
 				</Field>
 				<ErrorMessage name="selected" />
 			</div>
+
+			<hr />
 
 			<div className="check-box">
 				<Field type="checkbox" id="checkbox" name="checkbox" />
@@ -65,26 +117,8 @@ function FirstForm(props) {
 				</div>
 			</div>
 			<ErrorMessage name="radio" />
-		</form>
-	);
-}
 
-function SecondForm(props) {
-	let btnStyle = { width: "fit-content ", margin: "initial" };
-
-	let addFriend = (helper) => {
-		return helper.push("");
-	};
-
-	let deleteFriend = (helper, index) => {
-		return helper.remove(index);
-	};
-
-	return (
-		<form className="f-20 form" onSubmit={props.values.handleSubmit}>
-			<h4 className="main-color" style={{ textAlign: "center" }}>
-				☺ Formik ☺
-			</h4>
+			<hr />
 
 			<div className="social-contact">
 				<div className="facebook">
@@ -99,11 +133,13 @@ function SecondForm(props) {
 				</div>
 			</div>
 
+			<hr />
+
 			<div className="add-friend">
 				<FieldArray name="friends">
 					{(arrayHelper) => (
-						<>
-							{props.values.values.friends.map((friend, i) => (
+						<Fragment>
+							{values.friends.map((friend, i) => (
 								<div className="friend" key={i}>
 									<label>Friend {i + 1}: </label>
 									<div className="friend-input">
@@ -118,7 +154,7 @@ function SecondForm(props) {
 							<button type="button" className="mybtn" style={btnStyle} onClick={() => addFriend(arrayHelper)}>
 								+
 							</button>
-						</>
+						</Fragment>
 					)}
 				</FieldArray>
 			</div>
@@ -129,5 +165,3 @@ function SecondForm(props) {
 		</form>
 	);
 }
-
-export { FirstForm, SecondForm };

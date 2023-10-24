@@ -1,22 +1,7 @@
-/* status:
-	- 200, 201 -> Success
-	- 400, 401 -> Bad Request [Validate]
-	- 404, 405 -> Error
-*/
 import mongoose from "mongoose";
 import Product from "../models/products.model.js";
 
-export const GET_PRODUCTS = async (req, res) => {
-	/* Search
-		- find                      -> Find All Products, Can To Search By Anu Key
-		- findById                  -> Find Product By ID
-		- findOne                   -> Find Product Any Property
-		Events
-		- limit(num)                -> Limit The Recieved Data
-		- sort({ key: 1 || -1 })    -> Sort By The Key Name, [1, true] -> From Bigger To Smaller | [-1, false] -> From Smaller To Bigger
-		- select({ keys: 1 || -1 }) -> Select What Is Recieved Data
-		- count                     -> The Elements Count 
-    */
+export const GETS = async (req, res) => {
 	try {
 		let all = await Product.find();
 		let has = await Product.find({ age: 23 });
@@ -26,25 +11,11 @@ export const GET_PRODUCTS = async (req, res) => {
 		let count = await Product.find().count();
 		res.status(200).json({ all, has, limited, sorted, selected, count });
 	} catch (reason) {
-		res.json({ GET_PRODUCTS: reason.message });
+		res.json(`GET_PRODUCTS: ${reason.message}`);
 	}
 };
 
-export const GET_PRODUCT = async (req, res) => {
-	/* Queries:
-		- [eq]  -> Equal
-		- [gt]  -> Greater Than
-		- [lt]  -> Leass Than
-		- [gte] -> Greater Than OR Equal
-		- [lte] -> Less Than OR Equal
-		- [in]  -> In This Numbers
-		- [nin] -> Now In This Numbers
-		- [or]    -> Key1 || key2
-		- [and]   -> key1 && key2
-		- [^]   -> Start With /pattern/
-		- [$]   -> End With /pattern/
-		- [.*]  -> Any Where
-    */
+export const GET = async (req, res) => {
 	try {
 		let equal = await Product.find({ price: { $eq: 200 } });
 		let gt = await Product.find({ price: { $gt: 200 } });
@@ -63,44 +34,34 @@ export const GET_PRODUCT = async (req, res) => {
 
 		res.status(200).json({ equal, gt, lt, gtLT, gte, lte, gteLTE, _in, nin, or, and, startWith, endWith, between });
 	} catch (reason) {
-		res.json({ GET_PRODUCT: reason.message });
+		res.json(`GET_PRODUCT: ${reason.message}`);
 	}
 };
 
-export const ADD_PRODUCTS = async (req, res) => {
-	/* Create New Products
-		- new Product() -> Create New Object From The Class Model And Recieve The Data From The User By <Req.body>
-		- save() -> Use To Send The Data To The Database
-		- create() -> Use To Create A New Product Without Save()
-    */
+export const CREATE = async (req, res) => {
 	try {
 		let body = req.body;
-		if (!body.name) return res.status(400).json({ ADD_PRODUCTS: "Name Is Required" });
+		if (!body.name) return res.status(400).json({ error: "Name Is Required" });
 
 		// [1] The First Way
-		// let product1 = new Product(body);
-		// await product1.save();
+		let product = new Product({ ...body, count: [{ count: body.count }] });
+		await product.save();
 
 		// [2] The Second Way
-		let product2 = await Product.create(body);
-		console.log(product2);
+		// let product = await Product.create(body);
+		// console.log(product);
 
-		res.status(200).json({ message: "The Products Was Created Successfully.", product2 });
+		res.status(200).json({ message: "The Products Was Created Successfully.", product });
 	} catch (reason) {
-		res.status(404).json({ ADD_PRODUCTS: reason.message });
+		res.json(`ADD_PRODUCTS: ${reason.message}`);
 	}
 };
 
-export const UPDATE_PRODUCTS = async (req, res) => {
-	/* Update
-		- findById -> Return The User By ID
-		- set      -> Update By Key And Value
-    */
+export const UPDATE = async (req, res) => {
 	try {
 		let { id } = req.params;
-		let { name, price } = req.body;
 
-		if (!mongoose.Types.ObjectId.isValid(id)) return res.status(401).json({ UPDATE_PRODUCTS: "User ID Is Not Valid" });
+		if (!mongoose.Types.ObjectId.isValid(id)) return res.status(401).json({ error: "User ID Is Not Valid" });
 
 		// [1] The First Way
 		let findAndUpdate = await Product.findByIdAndUpdate(id, req.body, { new: true });
@@ -125,38 +86,38 @@ export const UPDATE_PRODUCTS = async (req, res) => {
 		// res.status(200).json(saved);
 
 		// [6] The Sixth Way
-		// let findById = await Product.findById(id);
-		// findById.name = name;
-		// findById.price = price;
-		// let saved = await findById.save();
+		// let manually = await Product.findById(id);
+		// manually.name = name;
+		// manually.price = price;
+		// let saved = await manually.save();
 		// res.status(200).json(saved);
 	} catch (reason) {
-		res.json({ UPDATE_PRODUCTS: reason.message });
+		res.json(`UPDATE_PRODUCTS: ${reason.message}`);
 	}
 };
 
-export const DELETE_PRODUCTS = async (req, res) => {
+export const DELETE = async (req, res) => {
 	try {
 		let { id } = req.params;
 
-		if (!mongoose.Types.ObjectId.isValid(id)) return res.status(401).json({ DELETE_PRODUCTS: "This ID Is Not Defined" });
+		if (!mongoose.Types.ObjectId.isValid(id)) return res.status(401).json({ error: "This ID Is Not Defined" });
 
 		// [1] The First Way
 		await Product.findByIdAndDelete(id);
-		res.status(200).json({ DELETE_PRODUCTS: "The Product Was Deleted" });
+		res.status(200).json({ success: "The Product Was Deleted" });
 
 		// [2] The Second Way
 		// await Product.findOneAndDelete(req.body.name);
-		// res.status(200).json({ DELETE_PRODUCTS: "The Product Was Deleted" });
+		// res.status(200).json({ success: "The Product Was Deleted" });
 
 		// [3] The Third Way
 		// await Product.deleteOne({ name: req.body.name });
-		// res.status(200).json({ DELETE_PRODUCTS: "The Product Was Deleted" });
+		// res.status(200).json({ success: "The Product Was Deleted" });
 
 		// [4] The Forth Way
 		// await Product.deleteMany({ name: req.body.name });
-		// res.status(200).json({ DELETE_PRODUCTS: "The Product Was Deleted" });
+		// res.status(200).json({ success: "The Product Was Deleted" });
 	} catch (reason) {
-		res.json({ DELETE_PRODUCTS: reason.message });
+		res.json(`DELETE_PRODUCTS: ${reason.message}`);
 	}
 };
