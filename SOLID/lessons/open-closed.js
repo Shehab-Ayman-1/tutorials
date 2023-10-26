@@ -1,5 +1,5 @@
 export const openClosed_1 = () => {
-	// Wrong
+	/* Problem -> We Need To Update The _shapePrinter everytime We Need To Append OR Remove One Of The Shapes */
 	class _Rectangle {
 		constructor(width, height) {
 			this.width = width;
@@ -13,34 +13,40 @@ export const openClosed_1 = () => {
 			this.area = width * width;
 		}
 	}
-	class _shapePrinter {
+	class _ShapePrinter {
 		drawShape(shape1, shape2) {
-			if (shape1 && shape2) return `Rectangle Area: ${shape1.area}, And Square Area: ${shape2.area}`;
-			else if (shape1 instanceof _Rectangle) return `Rectangle Area: ${shape1.area}`;
-			else if (shape1 instanceof _Square) return `Square Area: ${shape1.area}`;
+			if (shape1 && shape2) {
+				return `Rectangle Area: ${shape1.area}, And Square Area: ${shape2.area}`;
+			}
+			if (shape1 instanceof _Rectangle) {
+				return `Rectangle Area: ${shape1.area}`;
+			}
+			if (shape1 instanceof _Square) {
+				return `Square Area: ${shape1.area}`;
+			}
 		}
 	}
 	const _rectangle = new _Rectangle(10, 20);
 	const _square = new _Square(10);
-	const _shape = new _shapePrinter();
-	console.log(_shape.drawShape(_square, _rectangle));
+	const _shape = new _ShapePrinter();
+	// console.log(_shape.drawShape(_square, _rectangle));
 
-	// Right
+	/* Currect -> We Don't Need To Update The ShapePrinter everytime We Need To Append OR Remove One Of The Shapes, We Have A Module (Shape), And We Make It Working Multible Job (Rectangle, Square) Area */
 	class Shape {
+		constructor(width, height) {
+			this.width = width;
+			this.height = height;
+			this.area = width * height;
+		}
 		draw() {
-			return "From The Main Draw Method";
+			return "Please Use The Shapes For Current Information";
 		}
 	}
 
 	class Rectangle extends Shape {
 		constructor(width, height) {
-			super();
-			this.width = width;
-			this.height = height;
-			this.area = width * height;
+			super(width, height);
 		}
-
-		// Overwrite The Draw Method From The Main Class
 		draw() {
 			return `Rectangle Area: ${this.area}`;
 		}
@@ -48,47 +54,51 @@ export const openClosed_1 = () => {
 
 	class Square extends Shape {
 		constructor(width) {
-			super();
-			this.width = width;
-			this.area = width * width;
+			super(width, width);
 		}
-
-		// Overwrite The Draw Method From The Main Class
 		draw() {
 			return `Square Area: ${this.area}`;
 		}
 	}
-	const square = new Square(10);
-	const rectangle = new Rectangle(10, 20);
-	// console.log(`${square.draw()}, ${rectangle.draw()}`);
+
+	// Open New Class, And Closed With New Modification
+	class ShapePrinter {
+		drawShape(shape) {
+			return shape.draw();
+		}
+	}
+
+	const square = new Square(5);
+	const rectangle = new Rectangle(10, 5);
+	const shape = new ShapePrinter();
+	console.log(`${shape.drawShape(square)}, ${shape.drawShape(rectangle)}`);
 };
 
 export const openClosed_2 = () => {
 	class Phone {
-		constructor(size, color, price) {
+		constructor(size, color, price, year) {
 			this.size = size;
 			this.color = color;
 			this.price = price;
+			this.year = year;
 		}
 	}
 
-	class Sumsung extends Phone {
-		constructor(size, color, price, brand, year) {
-			super(size, color, price);
-			this.brand = brand;
-			this.year = year;
+	class Samsung extends Phone {
+		constructor(size, color, price, year, module) {
+			super(size, color, price, year);
+			this.module = module;
 		}
 	}
 
 	class Apple extends Phone {
-		constructor(size, color, price, brand, year) {
-			super(size, color, price);
-			this.brand = brand;
-			this.year = year;
+		constructor(size, color, price, year, isTablet) {
+			super(size, color, price, year);
+			this.isTablet = isTablet;
 		}
 	}
 
-	const sumsung = new Sumsung("260 x 380", "red", 220, "S4", 2023);
-	const apple = new Apple("260 x 380", "black", 240, "Note Book", 2022);
-	console.log(sumsung, apple);
+	const samsung = new Samsung("6 inch", "black", 5000, 2022, "A10");
+	const apple = new Apple("5.4 inch", "red", 4500, 2023, true);
+	console.log(samsung, apple);
 };

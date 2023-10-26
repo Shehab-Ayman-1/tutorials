@@ -1,10 +1,10 @@
-export const linkov_1 = () => {
+export const liskov = () => {
 	class Rectangle {
 		constructor(width, height) {
 			this.width = width;
 			this.height = height;
 		}
-		calcArea() {
+		getArea() {
 			return this.width * this.height;
 		}
 	}
@@ -18,7 +18,5 @@ export const linkov_1 = () => {
 
 	const square = new Square(10);
 	const rectangle = new Rectangle(20, 10);
-	console.log(square.calcArea(), rectangle.calcArea());
+	console.log(square.getArea(), rectangle.getArea());
 };
-
-export const linkov_2 = () => {};
