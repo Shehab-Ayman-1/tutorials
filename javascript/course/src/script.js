@@ -16,6 +16,7 @@ import { finding, cutting, checkers } from "../lessons/index.js";
 // [4] Arrays
 import { control, adding, removing, slicing, search } from "../lessons/index.js";
 import { joining, sorting, from, copyWithIn, some, every } from "../lessons/index.js";
+import { groupBy, flat } from "../lessons/index.js";
 
 // [5] Higher Order Functions
 import { map, filter, reduce, forEach } from "../lessons/index.js";
@@ -103,6 +104,8 @@ import { imageURL } from "../lessons/index.js";
 	// copyWithIn();
 	// some();
 	// every();
+	// groupBy();
+	flat();
 })();
 
 // =========================================== Higher Order Functions ============================================

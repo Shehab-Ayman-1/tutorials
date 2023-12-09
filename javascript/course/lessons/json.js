@@ -1,5 +1,5 @@
 export const manageData = () => {
-	fetch("./users.json")
+	fetch("./assets/users.json")
 		.then((response) => response.json())
 		.then((data) => {
 			let stringData = JSON.stringify(data);
@@ -22,7 +22,7 @@ export const synchronous = () => {
     */
 
 	(async function fetchData() {
-		await fetch("./users.json")
+		await fetch("./assets/.json")
 			.then((res) => res.json())
 			.then((data) => console.log(data));
 	})();

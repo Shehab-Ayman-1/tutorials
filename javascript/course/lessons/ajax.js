@@ -9,7 +9,7 @@ export const XMLHttpRequest = () => {
     */
 
 	let req = new XMLHttpRequest();
-	req.open("Get", "./users.json", true); // [req, url, async]
+	req.open("Get", "./assets/users.json", true); // [req, url, async]
 
 	req.onreadystatechange = function () {
 		if (this.readyState === 4 && this.status === 200) {
@@ -30,12 +30,12 @@ export const XMLHttpRequest = () => {
 export const useJquery = () => {
 	("use strict");
 	$(function () {
-		$.get("./users.json", (data, status, xhr) => {
+		$.get("./assets/users.json", (data, status, xhr) => {
 			console.log(data, status, xhr);
 			$.each(data, (index, user) => $("#show").append(`<p>#${index} - ${user.name}</p>`));
 		});
 
 		let body = {};
-		$.post("./users.json", body, (data, status, xhr) => console.log(data));
+		$.post("./assets/users.json", body, (data, status, xhr) => console.log(data));
 	});
 };

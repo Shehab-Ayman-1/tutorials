@@ -34,13 +34,6 @@
 		}
 	}
 	.phrase {
-		& {
-			&.hooks .main-list,
-			&.redux .main-list,
-			&.basics .main-list {
-				max-height: 325px;
-			}
-		}
 		.main-link {
 			@include Flex(space-between, center);
 			color: get(second-color);
@@ -62,7 +55,7 @@
 			}
 		}
 		.main-list {
-			max-height: 150px;
+			max-height: 350px;
 			padding-left: get(p5);
 			transition: all 0.5s linear;
 			overflow: hidden;

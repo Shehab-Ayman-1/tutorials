@@ -15,7 +15,7 @@ import { ComponentWillMount, ComponentDidMount, ComponentDidUnmount, ComponentDi
 import { DefaultForm, FormikForm, ReactHookForm } from "@/lessons/04 forms";
 
 // Ajax Request
-import { GetUsers, GetUser, AddUser, DeleteUser, UpdateUser } from "@/lessons/05 ajax-request";
+import { GetUsers, GetUser, AddUser, DeleteUser, UpdateUser, TrackLoading, UseAxios } from "@/lessons/05 ajax-request";
 
 // Hooks
 import { ContextApi, UseEffect, UseState, UseRef, UseReducer, UseNavigate, UseLocation, CustomeHook } from "@/lessons/06 hooks";
@@ -76,6 +76,8 @@ export const App = () => {
 					<Route path="add-user" element={<AddUser />} />
 					<Route path="update-user" element={<UpdateUser />} />
 					<Route path="delete-user" element={<DeleteUser />} />
+					<Route path="track-loading" element={<TrackLoading />} />
+					<Route path="useAxios" element={<UseAxios />} />
 				</Route>
 
 				{/* Hooks */}

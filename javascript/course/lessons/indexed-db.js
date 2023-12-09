@@ -162,6 +162,6 @@ function DELETE_USER(event) {
 	request.onerror = (err) => {};
 }
 
-fetch("./api.json")
+fetch("./assets/api.json")
 	.then((res) => res.json())
 	.then((data) => indexedDB(data));

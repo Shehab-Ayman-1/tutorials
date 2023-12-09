@@ -17,7 +17,7 @@ export const NavLinks = [
 	},
 	{
 		title: "ajax-request",
-		routes: ["get-users", "add-user", "update-user", "delete-user"],
+		routes: ["get-users", "add-user", "update-user", "delete-user", "track-loading", "useAxios"],
 	},
 	{
 		title: "hooks",
