@@ -2,7 +2,7 @@
     <img src="./toturial.png" width="100%" />
 </div>
     
-# `Convert Website Application To Desktop Application [.exe]`
+# `Convert Website App To Desktop App [.exe]`
 
 -  nativefier "https://domain.com" <!-- With Default Icon -->
 
