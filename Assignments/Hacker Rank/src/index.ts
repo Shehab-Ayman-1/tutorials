@@ -1,10 +1,9 @@
 import { congrats } from "./congrats";
-import { plusMinus, matchingStrings, divisibleSumPairs, camelCase4, breakingRecords, miniMaxSum, timeConversion } from "./weeks";
-import { mockTest2 } from "./weeks";
-import {} from "./weeks";
+import { plusMinus, matchingStrings, divisibleSumPairs, camelCase4, breakingRecords, miniMaxSum, timeConversion } from "./weeks/week-1";
+import { mockTest2 } from "./weeks/week-2";
+import { permutingTwoArrays } from "./weeks/week-3";
 
 congrats();
-
 // ================================================= Weeks-1 =================================================
 // plusMinus();
 // matchingStrings();
@@ -15,9 +14,10 @@ congrats();
 // timeConversion();
 
 // ================================================= Weeks-2 =================================================
-mockTest2();
+// mockTest2();
 
 // ================================================= Weeks-3 =================================================
+permutingTwoArrays();
 
 // ================================================= Weeks-4 =================================================
 
