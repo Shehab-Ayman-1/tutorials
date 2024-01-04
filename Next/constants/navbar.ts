@@ -20,9 +20,13 @@ export const links: LinksProps[] = [
    },
    {
       title: "Ajax",
+      links: [{ name: "Get Static Props", link: "/ajax", icon: "fa fa-market-alt" }],
+   },
+   {
+      title: "Hooks",
       links: [
-         { name: "Get Static Props", link: "/ajax", icon: "fa fa-market-alt" },
-         { name: "POST", link: "/post", icon: "fa fa-market-alt" },
+         { name: "useRouter", link: "/hooks/useRouter", icon: "fa fa-market-alt" },
+         { name: "useCallback", link: "/hooks/useCallback", icon: "fa fa-market-alt" },
       ],
    },
 ];
