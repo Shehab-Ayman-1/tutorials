@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "@/components/ui";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ const RoutingFiles = async () => {
    return (
       <div>
          <h3 className="mb-10">Routing Files 😂</h3>
-         <Link href="/routing/catch-file-not-exist">
+         <Link href="./catch-file-not-exist">
             <Button>Catch All File</Button>
          </Link>
       </div>

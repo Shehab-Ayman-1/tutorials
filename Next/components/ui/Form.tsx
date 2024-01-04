@@ -10,7 +10,8 @@ type FormProps = {
    bodyStyle?: string;
    footerStyle?: string;
    loading?: boolean;
-   onSubmit: (event: FormSubmitEvent) => any;
+   action: (event: FormData) => any;
+   onSubmit?: (event: FormSubmitEvent) => any;
    renderAfterButton?: JSX.Element;
    children: ReactNode;
 };
@@ -23,13 +24,14 @@ export const Form = ({
    bodyStyle = "",
    footerStyle = "",
    loading = false,
+   action,
    onSubmit = () => {},
    renderAfterButton,
    children,
    ...formRest
 }: FormProps) => {
    return (
-      <form onSubmit={onSubmit} {...formRest}>
+      <form onSubmit={onSubmit} action={action} {...formRest}>
          <Card
             className={`border-sp bg-gradient mx-auto mb-2 mt-14 w-[650px] max-w-full overflow-x-visible md:mt-32 ${cardStyle}`}
          >

@@ -11,10 +11,10 @@ type FieldProps = {
    type?: "text" | "email" | "password" | "number" | "date" | "month";
    label: string;
    name: string;
-   value: string;
+   value?: string;
    min?: string | number;
    required?: true | false;
-   onChange: (event: FieldEvent) => any;
+   onChange?: (event: FieldEvent) => any;
    styles?: Styles;
 };
 

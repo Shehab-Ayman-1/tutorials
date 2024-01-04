@@ -13,14 +13,17 @@ export const links: LinksProps[] = [
    {
       title: "Basics",
       links: [
-         { name: "Suspense", link: "/suspend", icon: "fa fa-market-alt" },
-         { name: "Routing Files", link: "/routing", icon: "fa fa-market-alt" },
+         { name: "Suspense", link: "/basics/suspend", icon: "fa fa-market-alt" },
+         { name: "Routing Files", link: "/basics/routing", icon: "fa fa-market-alt" },
          { name: "404 Page", link: "/404Page", icon: "fa fa-market-alt" },
       ],
    },
    {
       title: "Ajax",
-      links: [{ name: "Get Static Props", link: "/ajax", icon: "fa fa-market-alt" }],
+      links: [
+         { name: "CRUD Operator", link: "/ajax/requests", icon: "fa fa-market-alt" },
+         { name: "Forms", link: "/ajax/forms", icon: "fa fa-market-alt" },
+      ],
    },
    {
       title: "Hooks",
