@@ -21,7 +21,18 @@ export const NavLinks = [
 	},
 	{
 		title: "hooks",
-		routes: ["use-state", "use-effect", "use-navigate", "use-location", "use-reducer", "use-ref", "custome-hook", "context-api"],
+		routes: [
+			"use-state",
+			"use-effect",
+			"use-navigate",
+			"use-location",
+			"use-reducer",
+			"use-ref",
+			"use-memo",
+			"use-callback",
+			"custome-hook",
+			"context-api",
+		],
 	},
 	{
 		title: "redux",

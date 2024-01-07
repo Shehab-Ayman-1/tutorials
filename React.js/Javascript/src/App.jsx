@@ -9,16 +9,40 @@ import { Components, Conditions, Props, Loop, Events, JsonLocalServer } from "@/
 import { Style, StyledComponents } from "@/lessons/02 style";
 
 // Life Cicle
-import { ComponentWillMount, ComponentDidMount, ComponentDidUnmount, ComponentDidUpdate } from "@/lessons/03 lifeCicle";
+import {
+	ComponentWillMount,
+	ComponentDidMount,
+	ComponentDidUnmount,
+	ComponentDidUpdate,
+} from "@/lessons/03 lifeCicle";
 
 // Forms
 import { DefaultForm, FormikForm, ReactHookForm } from "@/lessons/04 forms";
 
 // Ajax Request
-import { GetUsers, GetUser, AddUser, DeleteUser, UpdateUser, TrackLoading, UseAxios } from "@/lessons/05 ajax-request";
+import {
+	GetUsers,
+	GetUser,
+	AddUser,
+	DeleteUser,
+	UpdateUser,
+	TrackLoading,
+	UseAxios,
+} from "@/lessons/05 ajax-request";
 
 // Hooks
-import { ContextApi, UseEffect, UseState, UseRef, UseReducer, UseNavigate, UseLocation, CustomeHook } from "@/lessons/06 hooks";
+import {
+	ContextApi,
+	UseEffect,
+	UseState,
+	UseRef,
+	UseReducer,
+	UseNavigate,
+	UseLocation,
+	UseMemo,
+	UseCallback,
+	CustomeHook,
+} from "@/lessons/06 hooks";
 
 // Redux
 import { ReduxCounter, ReduxSign, ReduxTodos, ReduxThunk } from "@/lessons/07 redux";
@@ -89,6 +113,8 @@ export const App = () => {
 					<Route path="use-reducer" element={<UseReducer />} />
 					<Route path="use-navigate" element={<UseNavigate />} />
 					<Route path="use-location" element={<UseLocation />} />
+					<Route path="use-memo" element={<UseMemo />} />
+					<Route path="use-callback" element={<UseCallback />} />
 					<Route path="custome-hook" element={<CustomeHook />} />
 				</Route>
 
