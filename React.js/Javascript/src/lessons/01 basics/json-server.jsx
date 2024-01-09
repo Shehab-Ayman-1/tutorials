@@ -1,7 +1,7 @@
 /* 
 	[1] npm i -g json-server
 	[2] npm i json-server 
-	[3] In package.json/scripts add [ "my-json-server": "json-server --w db/todos.json -p 5000" ]
+	[3] In package.json/scripts add [ "my-json-server": "json-server --w server/db/todos.json -p 5000" ]
 	[4] npm run json-server 
 	[5] Look To The order.jsx Below Now 
 */
@@ -109,7 +109,13 @@ export function JsonLocalServer() {
 
 	return (
 		<div className="to-do-list">
-			<input ref={inputRef} type="text" className="task-input" placeholder="Task Name..." onKeyDown={handleKey} />
+			<input
+				ref={inputRef}
+				type="text"
+				className="task-input"
+				placeholder="Task Name..."
+				onKeyDown={handleKey}
+			/>
 			<button className="mybtn" onClick={addTask}>
 				add Task
 			</button>
@@ -118,11 +124,20 @@ export function JsonLocalServer() {
 				{tasks.map((task, index) => {
 					return (
 						<li className="task" key={index}>
-							<p className="task-content" style={taskContentStyle(task)} onClick={(event) => complitedTask(event, task)}>
+							<p
+								className="task-content"
+								style={taskContentStyle(task)}
+								onClick={(event) => complitedTask(event, task)}>
 								{task.task}
 							</p>
-							<i className="fa fa-share" style={{ ...iconStyle, color: "white" }} onClick={() => updateTask(task, index)}></i>
-							<i className="second-color fa fa-trash" style={iconStyle} onClick={() => deleteTask(task)}></i>
+							<i
+								className="fa fa-share"
+								style={{ ...iconStyle, color: "white" }}
+								onClick={() => updateTask(task, index)}></i>
+							<i
+								className="second-color fa fa-trash"
+								style={iconStyle}
+								onClick={() => deleteTask(task)}></i>
 						</li>
 					);
 				})}

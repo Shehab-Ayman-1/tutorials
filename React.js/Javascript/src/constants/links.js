@@ -42,4 +42,8 @@ export const NavLinks = [
 		title: "multible-langs",
 		routes: ["i18next", "custome"],
 	},
+	{
+		title: "examples",
+		routes: ["ai-image-generation", "videos-downloader"],
+	},
 ];

@@ -50,11 +50,14 @@ import { ReduxCounter, ReduxSign, ReduxTodos, ReduxThunk } from "@/lessons/07 re
 // Multi Languages
 import { I18next, CustomeWay } from "@/lessons/08 multi langs";
 
+import { AIImageGeneration, VideosDownloader } from "@/lessons/09 examples";
+
 export const App = () => {
 	return (
 		<BrowserRouter>
 			<Header />
 			<Sidebar />
+
 			<Routes>
 				{/* Root */}
 				<Route path="/">
@@ -130,6 +133,12 @@ export const App = () => {
 				<Route path="/multible-langs">
 					<Route path="i18next" element={<I18next />} />
 					<Route path="custome" element={<CustomeWay />} />
+				</Route>
+
+				{/* Examples */}
+				<Route path="/examples">
+					<Route path="ai-image-generation" element={<AIImageGeneration />} />
+					<Route path="videos-downloader" element={<VideosDownloader />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
