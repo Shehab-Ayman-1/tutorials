@@ -1,41 +1,38 @@
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 import { NavLinks } from "@/constants";
 import "./style.scss";
 
-export function Sidebar() {
-	let toggleList = (event) => {
-		let head = event.target.closest(".main-link");
-		let angle = head.querySelector(".fas");
+export function Sidebar({ open, setOpen }) {
+	const [openList, setOpenList] = useState({ index: -1, state: false });
 
-		head.nextElementSibling.classList.toggle("hide-height");
-		if (!head.nextElementSibling.classList.contains("hide-height")) angle.style.transform = "rotate(90deg)";
-		else angle.style.transform = "rotate(0deg)";
+	let handleToggleList = (index) => {
+		setOpenList((open) => ({ index: index === open.index ? -1 : index, state: !open.state }));
 	};
 
-	let closeNavbar = () => {
-		let navbar = document.querySelector("nav.nav-bar");
-		navbar.classList.add("hide-left-clip");
+	let handleCloseSidebar = () => {
+		setOpen((open) => !open);
 	};
 
 	return (
-		<nav className="nav-bar hide-left-clip">
+		<nav className={`nav-bar ${open ? "" : "hide-left-clip"}`}>
 			<div className="navbar-head">
-				<Link to="/" className="head-title" onClick={closeNavbar}>
+				<Link to="/" className="head-title" onClick={handleCloseSidebar}>
 					React Tutorial
 				</Link>
-				<i className="fas fa-times cross" onClick={closeNavbar}></i>
+				<i className="fas fa-times cross" onClick={handleCloseSidebar} />
 			</div>
 
 			{NavLinks.map(({ title, routes }, i) => (
 				<div className={`phrase ${title}`} key={i}>
-					<li className="main-link" onClick={toggleList}>
+					<li className="main-link" onClick={() => handleToggleList(i)}>
 						<h3 className="link">{title.replaceAll("-", " ")}</h3>
 						<i className="fas fa-angle-right" />
 					</li>
-					<ul className="main-list hide-height">
+					<ul className={`main-list ${openList.index === i ? "" : "hide-height"}`}>
 						{routes.map((route, i) => (
 							<li className="nested-link" key={i}>
-								<NavLink to={`${title}/${route}`} className="link" onClick={closeNavbar}>
+								<NavLink to={`${title}/${route}`} className="link" onClick={handleCloseSidebar}>
 									{route.replaceAll("-", " ")}
 								</NavLink>
 							</li>

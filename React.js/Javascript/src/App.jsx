@@ -56,7 +56,6 @@ export const App = () => {
 	return (
 		<BrowserRouter>
 			<Header />
-			<Sidebar />
 
 			<Routes>
 				{/* Root */}

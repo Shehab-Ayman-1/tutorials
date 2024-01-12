@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { logo } from "@/assets";
+import { Sidebar } from "..";
 import "./style.scss";
 
 export function Header() {
-	let [time, setTime] = useState(new Date());
-
-	let openNavbar = () => {
-		let navbar = document.querySelector("nav.nav-bar");
-		navbar.classList.remove("hide-left-clip");
-	};
+	const [openSidebar, setOpenSidebar] = useState(false);
+	const [time, setTime] = useState(new Date());
 
 	useEffect(() => {
 		setInterval(() => {
@@ -20,7 +17,7 @@ export function Header() {
 	return (
 		<header className="header">
 			<div className="logo">
-				<i className="fa fa-bars" data-empty onClick={openNavbar}></i>
+				<i className="fa fa-bars" onClick={() => setOpenSidebar((open) => !open)}></i>
 				<Link to="/" className="logo-title">
 					<img src={logo} alt="logo" className="logo-img fa-spin" />
 					React Tutorial
@@ -29,6 +26,7 @@ export function Header() {
 			<h3 className="time-now main-color">
 				Time Now: <span className="second-color">{time.toLocaleTimeString()}</span>
 			</h3>
+			<Sidebar open={openSidebar} setOpen={setOpenSidebar} />
 		</header>
 	);
 }
