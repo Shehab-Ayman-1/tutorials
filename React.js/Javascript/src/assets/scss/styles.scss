@@ -36,8 +36,8 @@
 	&:before,
 	&:after {
 		@include Absolute(tr, 0, 0);
-		background: #f0094a;
 		content: "";
+		background: #f0094a;
 		width: 0;
 		height: 2px;
 		transition: 400ms ease all;
@@ -92,9 +92,29 @@ hr {
 	cursor: pointer;
 }
 
-.flex-start {
+.flex {
 	display: flex;
-	justify-content: flex-start;
-	align-items: center;
 	gap: 10px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.flex-start {
+	@extend .flex;
+	justify-content: flex-start;
+}
+
+.flex-between {
+	@extend .flex;
+	justify-content: space-between;
+}
+
+.flex-around {
+	@extend .flex;
+	justify-content: space-around;
+}
+
+.flex-center {
+	@extend .flex;
+	justify-content: center;
 }

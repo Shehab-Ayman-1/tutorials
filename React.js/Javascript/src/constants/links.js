@@ -44,6 +44,6 @@ export const NavLinks = [
 	},
 	{
 		title: "examples",
-		routes: ["ai-image-generation", "videos-downloader"],
+		routes: ["ai-image-generation", "youtube-downloader"],
 	},
 ];

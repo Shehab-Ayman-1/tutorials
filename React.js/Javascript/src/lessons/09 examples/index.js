@@ -1,2 +1,2 @@
 export * from "./image-generation";
-export * from "./videos-downloader";
+export * from "./youtube-downloader";

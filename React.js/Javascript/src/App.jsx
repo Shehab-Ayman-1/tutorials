@@ -137,7 +137,7 @@ export const App = () => {
 				{/* Examples */}
 				<Route path="/examples">
 					<Route path="ai-image-generation" element={<AIImageGeneration />} />
-					<Route path="videos-downloader" element={<VideosDownloader />} />
+					<Route path="youtube-downloader" element={<VideosDownloader />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

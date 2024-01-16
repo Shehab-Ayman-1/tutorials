@@ -1,33 +1,52 @@
 import express from "express";
-import ytdl from "ytdl-core";
-import fs from "fs";
 import cors from "cors";
-import axios from "axios";
+import ytdl from "ytdl-core";
+import ytpl from "ytpl";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.post("/download-video", async (req, res) => {
-	const { video } = req.body;
+app.post("/youtube-downloader/video", async (req, res) => {
+	const { url, quality } = req.body;
 
-	let stream;
-	if (video.url.includes("youtu")) {
-		const response = ytdl(video.url, { filter: "audioandvideo", quality: "lowestvideo" });
-		stream = response.pipe(fs.createWriteStream(`server/${video?.name || "video"}.mp4`));
-	} else {
-		await axios.get(video.url, { responseType: "stream" });
-		stream = response.data.pipe(fs.createWriteStream(`server/${video?.name || "video"}.mp4`));
-	}
+	const info = await ytdl.getInfo(url);
+	const stream = info.formats.find((item) => item.qualityLabel === quality);
+	const { title, thumbnails } = info.videoDetails;
 
-	stream.on("finish", () => {
-		res.status(200).send("Video downloaded successfully");
+	const video = {
+		title,
+		url,
+		duration: "00,00",
+		thumbnail: thumbnails[2],
+		downloadedUrl: stream.url,
+	};
+	res.status(200).send([video]);
+});
+
+app.post("/youtube-downloader/playlist", async (req, res) => {
+	const { url, quality } = req.body;
+
+	const playlistId = url.slice(url.indexOf("list=") + 5);
+	const playlist = await ytpl(playlistId, { limit: Infinity });
+
+	const items = playlist.items.map(async ({ title, url, duration, thumbnails }, i) => {
+		const name = `${i >= 10 ? i : `0${i + 1}`} ${title}`;
+
+		const info = await ytdl.getInfo(url);
+		const downloadedUrl = info.formats.find((item) => item.qualityLabel === quality).url;
+
+		return {
+			title: name,
+			url,
+			duration,
+			thumbnail: thumbnails[2],
+			downloadedUrl,
+		};
 	});
 
-	stream.on("error", (err) => {
-		console.error(err);
-		res.status(500).send("Error Downloading Video");
-	});
+	const result = await Promise.all(items);
+	res.status(200).json(result);
 });
 
 app.listen(5000, () => console.log("Server Running On [http://localhost:5000]"));
