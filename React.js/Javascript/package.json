@@ -31,6 +31,7 @@
 		"redux-devtools-extension": "^2.13.9",
 		"redux-thunk": "^2.4.1",
 		"styled-components": "^5.3.5",
+		"webview-bridge": "^1.1.0",
 		"ytdl-core": "^4.11.5",
 		"ytpl": "^2.3.0",
 		"yup": "^0.32.11",

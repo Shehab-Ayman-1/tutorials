@@ -1,6 +1,6 @@
 // React
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Start, Header, Sidebar, NotFound } from "@/layout";
+import { Start, Header, NotFound } from "@/layout";
 
 // Basics
 import { Components, Conditions, Props, Loop, Events, JsonLocalServer } from "@/lessons/01 basics";
@@ -9,40 +9,19 @@ import { Components, Conditions, Props, Loop, Events, JsonLocalServer } from "@/
 import { Style, StyledComponents } from "@/lessons/02 style";
 
 // Life Cicle
-import {
-	ComponentWillMount,
-	ComponentDidMount,
-	ComponentDidUnmount,
-	ComponentDidUpdate,
-} from "@/lessons/03 lifeCicle";
+import { ComponentWillMount, ComponentDidMount } from "@/lessons/03 lifeCicle";
+import { ComponentDidUnmount, ComponentDidUpdate } from "@/lessons/03 lifeCicle";
 
 // Forms
 import { DefaultForm, FormikForm, ReactHookForm } from "@/lessons/04 forms";
 
 // Ajax Request
-import {
-	GetUsers,
-	GetUser,
-	AddUser,
-	DeleteUser,
-	UpdateUser,
-	TrackLoading,
-	UseAxios,
-} from "@/lessons/05 ajax-request";
+import { GetUsers, GetUser, AddUser, DeleteUser, UpdateUser } from "@/lessons/05 ajax-request";
+import { TrackLoading, UseAxios } from "@/lessons/05 ajax-request";
 
 // Hooks
-import {
-	ContextApi,
-	UseEffect,
-	UseState,
-	UseRef,
-	UseReducer,
-	UseNavigate,
-	UseLocation,
-	UseMemo,
-	UseCallback,
-	CustomeHook,
-} from "@/lessons/06 hooks";
+import { UseState, UseEffect, UseNavigate, UseLocation, UseReducer } from "@/lessons/06 hooks";
+import { UseRef, UseMemo, UseCallback, ContextApi, CustomeHook } from "@/lessons/06 hooks";
 
 // Redux
 import { ReduxCounter, ReduxSign, ReduxTodos, ReduxThunk } from "@/lessons/07 redux";
@@ -51,6 +30,7 @@ import { ReduxCounter, ReduxSign, ReduxTodos, ReduxThunk } from "@/lessons/07 re
 import { I18next, CustomeWay } from "@/lessons/08 multi langs";
 
 import { AIImageGeneration, VideosDownloader } from "@/lessons/09 examples";
+import { UseImperative } from "./lessons/06 hooks/useImperative/useImperative";
 
 export const App = () => {
 	return (
@@ -117,6 +97,7 @@ export const App = () => {
 					<Route path="use-location" element={<UseLocation />} />
 					<Route path="use-memo" element={<UseMemo />} />
 					<Route path="use-callback" element={<UseCallback />} />
+					<Route path="use-imperative" element={<UseImperative />} />
 					<Route path="custome-hook" element={<CustomeHook />} />
 				</Route>
 

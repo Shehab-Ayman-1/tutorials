@@ -11,17 +11,17 @@ export function UseLocation() {
 
 	return (
 		<div className="f-20">
-			<h1 className="main-color">Use Location Route</h1>
-			{state ? (
-				<Fragment>
-					<h3>
-						First State: <span className="second-color">{state.first}</span>
-					</h3>
-					<h3>
-						Second State: <span className="second-color">{state.second}</span>
-					</h3>
-				</Fragment>
-			) : (
+			<div className="">
+				<h3 className="main-color">UseLocation</h3>
+				<small>It Used To Get The State That Through In useNavigate Hook</small>
+			</div>
+
+			<hr />
+
+			{state && <h3>First State: {state.first}</h3>}
+			{state && <h3>Second State: {state.second}</h3>}
+
+			{!state && (
 				<button className="mybtn" onClick={() => navigate("/hooks/use-navigate")}>
 					To Fetch Data Navigate To Use Navigate Route
 				</button>

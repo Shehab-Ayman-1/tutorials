@@ -1,0 +1,48 @@
+{% extends "layout/structor.html" %} {% block content %}
+
+<style>
+	.products {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		gap: 20px;
+	}
+	.product-card {
+		background-color: #333;
+		width: 300px;
+		padding: 20px;
+		margin: auto;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		box-shadow: 0 0 10px white;
+	}
+	.product-image {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+</style>
+
+<section>
+	<h3>Welcome To Products Page</h3>
+</section>
+
+<p>Search Results: {{ count }}</p>
+<section class="products">
+	{% for product in products %}
+	<div class="product-card">
+		<img src="{{product.image.url}}" alt="{{product.image.url}}" class="product-image" /> <br />
+		<small>{{ product.category }}</small>
+		<h2>{{ product.name }}</h2>
+		<p>{{ product.price }}L.E</p>
+		<p>{{ product.createdAt }}</p>
+		<p>Feature: {{ product.feature }}</p>
+		<a href="/product/{{ product.id }}">
+			<button class="btn">Show Product</button>
+		</a>
+	</div>
+	{% endfor %}
+</section>
+{% endblock content %}

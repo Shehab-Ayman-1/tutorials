@@ -23,9 +23,16 @@ export const UseMemo = () => {
 
 	return (
 		<div className="f-30">
-			<p>Problem: - React Go To Find The Admin User Each Time The Count Is Changing</p>
-			<p>Solve: - We Use useMemo Hook To Mind Rerender Function That Is Not Neccessry Do It</p>
-			<br />
+			<div className="">
+				<h3 className="main-color">UseLocation</h3>
+				<p>Problem</p>
+				<small> - React Go To Find The Admin User Each Time The Count Is Changing</small>
+				<p>Solve</p>
+				<small>- We Use useMemo Hook To Mind Rerender Function That Is Not Neccessry Do It</small>
+			</div>
+
+			<hr />
+
 			<p>count: {count}</p>
 			<p>Admin User: {admin?.name}</p>
 			<button className="mybtn" onClick={() => setCount((c) => c + 1)}>

@@ -35,14 +35,25 @@ export function UseEffect() {
 	};
 
 	return (
-		<div className="f-20 main-color">
-			<label htmlFor="username">Username</label>
-			<br />
-			<input type="text" name="name" placeholder="username" onChange={handleValue} />
-			<br />
-			<label htmlFor="age">age</label>
-			<br />
-			<input type="text" name="age" placeholder="age" onChange={handleValue} />
+		<div className="f-20">
+			<div className="">
+				<h3 className="main-color">UseEffect</h3>
+				<small>It Is Used To Mind The Life Cycle In The Components Depends On Deps Variables</small>
+			</div>
+
+			<hr />
+
+			<div className="">
+				<div className="">
+					<label htmlFor="username">Username</label> <br />
+					<input type="text" name="name" placeholder="username" onChange={handleValue} />
+				</div>
+				<div className="">
+					<label htmlFor="age">age</label> <br />
+					<input type="text" name="age" placeholder="age" onChange={handleValue} />
+				</div>
+			</div>
+
 			<hr />
 			<h3>Count: {count}</h3>
 		</div>

@@ -1,0 +1,7 @@
+{
+	"scripts": {
+		"server": "python ./app/manage.py runserver 5000",
+		"migrate": "python ./app/manage.py makemigrations && python ./app/manage.py migrate",
+		"create-app": "python ./app/manage.py startapp"
+	}
+}

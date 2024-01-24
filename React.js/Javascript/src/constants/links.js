@@ -30,6 +30,7 @@ export const NavLinks = [
 			"use-ref",
 			"use-memo",
 			"use-callback",
+			"use-imperative",
 			"custome-hook",
 			"context-api",
 		],

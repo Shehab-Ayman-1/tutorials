@@ -1,0 +1,34 @@
+{% extends "layout/structor.html" %} {% block content %}
+
+<style>
+	.product-card {
+		background-color: #333;
+		width: 400px;
+		padding: 20px;
+		margin: auto;
+		border-radius: 5px;
+		border: 1px solid #ccc;
+		box-shadow: 0 0 10px white;
+	}
+	.product-image {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
+</style>
+
+<section>
+	<h3>Welcome To Product Page</h3>
+</section>
+
+<div class="product-card">
+	<img src="{{product.image.url}}" alt="{{product.image.url}}" class="product-image" /> <br />
+	<p>ID: {{product.id}}</p>
+	<p>category: {{product.category}}</p>
+	<p>name: {{product.name}}</p>
+	<p>price: {{product.price}}</p>
+	<p>feature: {{product.feature}}</p>
+	<p>description: {{product.description}}</p>
+</div>
+{% endblock content %}

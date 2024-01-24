@@ -1,0 +1,55 @@
+{% extends "layout/structor.html" %}
+
+<!-- Title -->
+{% block title %}
+<title>Home Page</title>
+{% endblock title %}
+
+<!-- Page Content -->
+{% block content %}
+<section class="">
+	<h3>Welcome To Home Page</h3>
+</section>
+
+<hr />
+
+<section class="filters">
+	<h3>Filters</h3>
+	<ul>
+		<li>Name: {{ name }}</li>
+		<li>Capfirst: {{ name | capfirst }}</li>
+		<li>Empty: {{ empty | default:"Not Found" }}</li>
+		<li>Slice: {{ name | slice:":4" }}</li>
+		<li>Length: {{ name | length }}</li>
+		<li>Add: {{ name | add:" Ayman" }}</li>
+		<li>Cut: {{ name | cut:"h" }}</li>
+		<li>Size: {{ size | filesizeformat }}</li>
+	</ul>
+</section>
+
+<hr />
+
+<section class="conditions">
+	<h3>Conditions</h3>
+
+	{% if age > 40 %}
+	<p>You Are Old</p>
+
+	{% elif age > 20 %}
+	<p>You Are Guy</p>
+
+	{% else %}
+	<p>You Are Baby</p>
+
+	{% endif %}
+</section>
+
+<hr />
+
+<section class="for-loop">
+	<h3>For Loop</h3>
+	{% for skill in skills %}
+	<p>{{ skill }}</p>
+	{% endfor %}
+</section>
+{% endblock content %}

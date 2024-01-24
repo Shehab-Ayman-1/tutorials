@@ -49,6 +49,46 @@ export const UseCallback = () => {
 
 	return (
 		<div className="f-30">
+			<div className="">
+				<h3 className="main-color">UseCallback</h3>
+				<div className="">
+					<p>Problem:</p>
+					<small>
+						- Each Time We Change The Valud OR Shuffle The Users Array, Its Rerender SearchInput Component
+					</small>{" "}
+					<br />
+					<small>
+						- Although We Use memo() Without useCallback() Its Still Render The Input While We Use Shuffle
+						Function And We Don't Change The SearchText Value That Because useCallback() Make A Fixed ID For
+						The Function That
+					</small>
+				</div>
+				<div className="">
+					<p>memo:</p>
+					<small>- Memo Is Used To Render The Component Just If Any Of The Props Are Change</small> <br />
+					<small>
+						- In Our Example, If onChange Prop Is Change, So It Will Rerender The Input Component Else, It
+						Wonn't
+					</small>
+				</div>
+				<div className="">
+					<p>useCallback:</p>
+					<small>- Use To Freeze Everything In The Functions</small> <br />
+					<small>
+						- Each Time handleSearch Log 'shehab', Because useCallback Freeze The Users[0], So That Each
+						Render Its Not Get The Change In The Users
+					</small>
+				</div>
+				<div className="">
+					<p>Look For:</p>
+					<small>
+						- https://www.youtube.com/watch?v=MxIPQZ64x0I&list=PLApy4UwQM3UrZsBTY111R6P4frt6WK-G2&index=4
+					</small>
+				</div>
+			</div>
+
+			<hr />
+
 			<form className="">
 				<SearchInput onChange={setSearchText} />
 				<button type="submit" className="mybtn" onClick={handleSearch}>

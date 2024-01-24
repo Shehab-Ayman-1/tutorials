@@ -1,0 +1,55 @@
+<style>
+	.navbar {
+		background: #333;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+		border-radius: 15px;
+	}
+	.navbar-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+	}
+	.navbar-anchor {
+		color: white;
+		text-decoration: none;
+		padding: 14px 16px;
+		font-size: 14px;
+		&:hover {
+			color: #aaa;
+		}
+	}
+</style>
+
+<nav class="navbar">
+	<h3 class="navbar-logo">Django Toturial</h3>
+	<ul class="navbar-links">
+		<li>
+			<a class="navbar-anchor" href="/"> Home </a>
+		</li>
+		<li>
+			<a class="navbar-anchor" href="/about/"> About </a>
+		</li>
+		<li>
+			<a class="navbar-anchor" href="/products/"> Products </a>
+		</li>
+		<li>
+			<a class="navbar-anchor" href="/services/"> Services </a>
+		</li>
+		<li>
+			<a class="navbar-anchor" href="/register/"> Register </a>
+		</li>
+		<li>
+			<a class="navbar-anchor" href="/admin/" target="_blank"> Admin </a>
+		</li>
+	</ul>
+
+	<ul class="navbar-links">
+		<li>
+			<a class="navbar-anchor" href="/api/get-products/">Products API</a>
+		</li>
+	</ul>
+</nav>
