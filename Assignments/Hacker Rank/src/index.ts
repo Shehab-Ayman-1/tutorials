@@ -1,5 +1,6 @@
 import { congrats } from "./congrats";
-import { plusMinus, matchingStrings, divisibleSumPairs, camelCase4, breakingRecords, miniMaxSum, timeConversion } from "./weeks/week-1";
+import { plusMinus, matchingStrings, divisibleSumPairs, camelCase4 } from "./weeks/week-1";
+import { breakingRecords, miniMaxSum, timeConversion } from "./weeks/week-1";
 import { mockTest2 } from "./weeks/week-2";
 import { permutingTwoArrays } from "./weeks/week-3";
 

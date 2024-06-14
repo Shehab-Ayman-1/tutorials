@@ -1,0 +1,32 @@
+=====================
+# Notes:
+=====================
+- Parcentage: Is The Knowledge About The Courses
+- Brackets: The Suggestion Choose
+
+=====================
+# Frontend Developer:
+=====================
+1- Very Basics: 
+   - (100%)    (Elzero + DaveGray)        HTML
+   - (100%)    (Elzero + DaveGray)        CSS
+   - (100%)    (Elzero + DaveGray)        Javascript
+
+2- Basics: 
+   - (100%)    (Elzero)                   CMD Commands
+   - (100%)    (Elzero + DaveGray)        Git: ( Github ), Gitlab
+   - (100%)    (Elzero)                   Css Preprocessor: ( Sass ), stylish, postcss
+   - (70%)     (Elzero)                   Template Engine: ( Pug ), EJS, Mustache, HandleBars
+   - (100%)    (DOCS + freeCodeCamp)      Styling Framework: ( Tailwindcss ), Bootstrab, chakra
+   - (70%)     (DOCS + freeCodeCamp)      Task Runner: ( Webpack ), Gulp, Grunt
+
+3- Advanced (Very Important):
+   - (100%)    (Elzero)                   Typescript
+   - (100%)    (DOCS + freeCodeCamp)      Javascript Framework: ( React + Next ), Angular, Vue + Nuxt
+   - (100%)    (Elzero)                   Unit Testing: ( Jest ), Mocha
+
+=====================
+# Backend Developer:
+=====================
+- Backend Language: node, Go, C#, PHP, And More Other
+- I Can't Tell You Any Roodmap For This Path Because It Depend On The Programming Language

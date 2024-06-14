@@ -1,0 +1,25 @@
+{
+	"name": "prisma",
+	"version": "1.0.0",
+	"description": "",
+	"main": "script.js",
+	"scripts": {
+		"dev": "nodemon ./script.ts",
+		"migrate": "npx prisma migrate dev --name init && npx prisma generate",
+		"db-push": "npx prisma db push && npx prisma generate"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@prisma/client": "^5.9.1",
+		"postgresql": "^0.0.1",
+		"typescript": "^5.0.4"
+	},
+	"devDependencies": {
+		"@types/node": "^20.11.17",
+		"nodemon": "^3.0.3",
+		"prisma": "^5.9.1",
+		"ts-node": "^10.9.2"
+	}
+}

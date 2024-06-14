@@ -1,0 +1,147 @@
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+   provider = "prisma-client-js"
+}
+
+datasource db {
+   url      = env("DATABASE_URL")
+   provider = "postgresql"
+}
+
+enum ROLE {
+   ADMIN
+   MODERATOR
+   USER
+}
+
+enum PLACE {
+   STORE
+   SHOP
+}
+
+enum PERSON {
+   CLIENT
+   SUPPLIER
+   UNKNOWN
+}
+
+enum METHOD {
+   VISA
+   CASH
+   LOCKER
+}
+
+model Organization {
+   id       String @id @default(uuid())
+   name     String @unique
+   imageUrl String
+
+   profiles     Profile[]
+   categories   Category[]
+   transactions Transaction[]
+}
+
+model Profile {
+   id     String @id @default(uuid())
+   userId String @unique
+
+   imageUrl String
+   name     String
+   email    String
+   phone    String
+   role     ROLE
+
+   orgId String
+   org   Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+   @@unique([orgId, email])
+   @@index([orgId])
+}
+
+model Category {
+   id   String @id @default(uuid())
+   name String
+
+   orgId String
+   org   Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+   companies Company[]
+
+   @@unique([orgId, name])
+   @@index([orgId])
+}
+
+model Company {
+   id   String @id @default(uuid())
+   name String
+
+   categoryId String
+   category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+   Product Product[]
+
+   @@unique([categoryId, name])
+   @@index([categoryId])
+}
+
+model Product {
+   id      String @id @default(uuid())
+   name    String
+   place   PLACE
+   barcode Int
+   min     Int
+   max     Int
+   price   Int
+   count   Int
+
+   companyId String
+   company   Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+   @@unique([companyId, name, place])
+   @@index([companyId])
+}
+
+model Transaction {
+   id        String  @id @default(uuid())
+   method    METHOD
+   paid      Int
+   discount  Int     @default(0)
+   completed Boolean @default(false)
+
+   orgId String
+   org   Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+   transactionProducts TransactionProduct[]
+   persons             Person[]
+
+   createdAt DateTime @default(now())
+   updatedAt DateTime @updatedAt
+
+   @@index([orgId])
+}
+
+model TransactionProduct {
+   id            String @id @default(uuid())
+   name          String
+   count         Int
+   purchasePrice Int?   @default(0)
+   sellingPrice  Int?   @default(0)
+
+   transactionId String
+   transaction   Transaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+
+   @@index([transactionId])
+}
+
+model Person {
+   id    String @id @default(uuid())
+   name  String
+   type  PERSON @default(UNKNOWN)
+   phone Int
+
+   transactionId String
+   transaction   Transaction @relation(fields: [transactionId], references: [id], onDelete: Cascade)
+
+   @@unique([name, type])
+}
