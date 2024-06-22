@@ -53,19 +53,19 @@ void pointerWithArray()
    cout << "Pointer OR Value Address = " << ptr << endl;
    cout << "Pointer Value = " << *nums << endl;
 
-   cout << "\n============= First Element ===============\n\n";
+   cout << "\n============= Second Element ===============\n\n";
    cout << "Number Value = " << nums[0] << endl;
    cout << "Pointer OR Value Address = " << &nums[0] << endl;
    cout << "Pointer OR Value Address = " << ptr << endl;
    cout << "Pointer Value = " << *ptr << endl;
 
-   cout << "\n============= Second Element ===============\n\n";
+   cout << "\n============= Third Element ===============\n\n";
    cout << "Number Value = " << nums[1] << endl;
    cout << "Pointer OR Value Address = " << &nums[1] << endl;
    cout << "Pointer OR Value Address = " << ptr + 1 << endl;
    cout << "Pointer Value = " << *(ptr + 1) << endl;
 
-   cout << "\n============= Second Element ===============\n\n";
+   cout << "\n============= Fourth Element ===============\n\n";
    cout << "Number Value = " << nums[1] << endl;
    cout << "Pointer OR Value Address = " << &nums[1] << endl;
    cout << "Pointer OR Value Address = " << ptr + 1 << endl;
@@ -108,7 +108,7 @@ int main()
 
    // pointerWithArray();
 
-   arithmetic();
+   // arithmetic();
 
    cout << "============================\n";
 
